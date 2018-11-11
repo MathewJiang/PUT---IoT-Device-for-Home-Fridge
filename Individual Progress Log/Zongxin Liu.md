@@ -9,3 +9,22 @@
 
 ![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0438.jpeg?raw=true "Sensor")
 
+
+### Example output while pressing the sensor with hand
+```
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 26.312
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 26.312
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 26.312
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 26.687
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 27.187
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 27.625
+pi@raspberrypi:~/proj $ ./readout.pl 
+Temperature is 28
+pi@raspberrypi:~/proj $ ```
+
