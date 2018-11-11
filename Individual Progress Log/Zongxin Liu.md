@@ -6,3 +6,6 @@
 * It requires one extra 4.7k resistor.
 * Objective is to fully understand the bytes it sends and decode useing Perl instead of random Python code avalible online. 
 * Sensor comes with no pins, already soldered jump wires for this in design centre.
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0438.jpeg?raw=true "Sensor")
+
