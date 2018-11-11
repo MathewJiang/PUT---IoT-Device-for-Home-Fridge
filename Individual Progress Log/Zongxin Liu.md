@@ -26,6 +26,7 @@ pi@raspberrypi:~/proj $ ./readout.pl
 Temperature is 27.625
 pi@raspberrypi:~/proj $ ./readout.pl 
 Temperature is 28
-pi@raspberrypi:~/proj $ ```
+pi@raspberrypi:~/proj $ 
+```
 
 ![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0439.jpeg?raw=true "Configure sensor")
