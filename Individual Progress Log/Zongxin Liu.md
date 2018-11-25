@@ -26,7 +26,7 @@ Sun 25 Nov 17:38:55 EST 2018, 9.625
 Sun 25 Nov 17:38:57 EST 2018, 9.625
 ```
 ### Plot 24h change in temperature
-![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/temp_log_demo_nov_2425.jpeg?raw=true "24h plot")
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/temp_log_demo_nov_2425.jpg?raw=true "24h plot")
 ### Mountware
 ![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0517.jpeg?raw=true "mount")
 ### Interior
