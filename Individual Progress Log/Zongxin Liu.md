@@ -1,7 +1,32 @@
 # Zongxin Liu
 ## Comming next
 ### Camera module
-* Ordered camera extension cable and working on light/flash system to take pictures
+* Ordered wideangle camera and working on USB power switches
+
+## Nov. 29 2018
+### Development of interiror camera
+* The long extension cable works well
+* Be able to shoot image inside the fridge
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/init_interior.jpg?raw=true "initial interior photo")
+
+* Interconnect throught the door is working ok
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0539.jpg?raw=true "inter connect")
+
+* Using tapes for initial developement
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0540.jpg?raw=true "camera placement")
+
+* Update exterior look with added connections
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/IMG_0541.jpg?raw=true "exterior update")
+
+                                                                           
+
+### Issues
+* Camera in stock cannot shoot much -> buy a wideangle one
+* Lighting is not ideal and it cannot switch on and off yet -> building MOSFET to switch it (controlled by one GPIO)
 
 ## Nov. 25 2018
 ### Development of demo mountware for development
