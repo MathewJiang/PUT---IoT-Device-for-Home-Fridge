@@ -1,7 +1,18 @@
 # Zongxin Liu
 ## Comming next
-### Camera module
-* Ordered wideangle camera and working on USB power switches
+### MOSFET
+* Working on USB power switches
+
+## Dec. 29 2018
+### Exchange camera module with fisheye model
+
+* Fisheye camera can reach 2 levels of fridge. Better than regualr models
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/egg_after.jpg?raw=true "egg after")
+
+* Demo on that we can clearly see the number of eggs was more in the past
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/egg_before.jpg?raw=true "egg before")
 
 ## Nov. 29 2018
 ### Development of interiror camera
