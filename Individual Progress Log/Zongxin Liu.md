@@ -2,7 +2,7 @@
 ## Comming next
 ### MOSFET
 * Working on USB power switches
-* Working light sensors (LDR) to know if the fridge is on or off
+* Working light sensors (LDR) to know if the fridge door is open or shut
 
 ## Dec. 17 2018
 ### Webserver act as API interface
