@@ -4,7 +4,12 @@ package PutsWebServer;
  
 use HTTP::Server::Simple::CGI;
 use base qw(HTTP::Server::Simple::CGI);
- 
+
+my $usb_control = `readlink -f ../thirdparty/uhubctl/uhubctl`;
+chomp $usb_control;
+
+print "USB control located at $usb_control \n";
+
 my %dispatch = (
     '/' => \&resp_root,
     '/show_fridge_image' => \&resp_image,
@@ -32,14 +37,16 @@ sub handle_request {
     }
 }
 sub resp_image {
-	`./camera_api/take_a_photo.pl`;
+	#`./camera_api/take_a_photo.pl $usb_control`;
 	my @output = `./show_fridge_image.pl`;
 	print @output;
 }	
 sub resp_root {
-    my $cgi  = shift;   # CGI.pm object
+    
+my $cgi  = shift;   # CGI.pm object
     return if !ref $cgi;
-     
+    `./camera_api/take_a_photo.pl $usb_control`;
+
     my $who = $cgi->param('name');
     
     my $temperature = `cat ../sensor_codes/temp.log | tail -n 1`;
