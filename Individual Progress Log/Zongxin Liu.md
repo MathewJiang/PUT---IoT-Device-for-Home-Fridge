@@ -2,8 +2,17 @@
 ## Comming next
 ### MOSFET
 * Working on USB power switches
+* Working light sensors (LDR) to know if the fridge is on or off
 
-## Dec. 29 2018
+## Dec. 17 2018
+### Webserver act as API interface
+* Be able to get sensor values using HTTP GET (temperature and interrior camera)
+* Working on responsiveness
+* Working on robustiveness and error handling
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/webapi.jpg?raw=true "website")
+
+## Dec. 9 2018
 ### Exchange camera module with fisheye model
 
 * Fisheye camera can reach 2 levels of fridge. Better than regualr models
