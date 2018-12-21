@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PUTS</string>
+
+    <!--String literals for activity_main-->
+    <string name="main_text_input_Storage_ID">Storage ID</string>
+    <string name="main_button_Enter">Enter</string>
+
+    <!--String literals for the activity_display_info-->
+    <string name="info_display_text_infoMsg">This is what currently in the storage: (Currently what you have just entered)</string>
+
+</resources>
