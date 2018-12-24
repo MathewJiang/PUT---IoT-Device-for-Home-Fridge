@@ -102,7 +102,7 @@ sub punlock {
 my $pid = PutsWebServer->new(8080)->background();
 print "Use 'kill $pid' to stop server.\n";
 print "lock_file is $lock_file\n";
-async {`./camera_api/spin_taking_photo.pl $usb_control $lock_file`};
+async {`./camera_api/light_goes_on_then_off_wait_10s_take_photo_log.pl $usb_control $lock_file`};
 #MyWebServer->new(8080);
 
 
