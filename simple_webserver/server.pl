@@ -21,6 +21,7 @@ print "USB control located at $usb_control \n";
 my %dispatch = (
     '/' => \&resp_root,
     '/show_fridge_image' => \&resp_image,
+    '/hello_world' => \&resp_hello,
     # ...
 );
  
@@ -43,6 +44,16 @@ sub handle_request {
 	      $cgi->h2("CODE is $path");
               $cgi->end_html;
     }
+}
+
+sub resp_hello {
+	my $cgi = shift;
+	 return if !ref $cgi;
+    my $who = $cgi->param('name');
+    print $cgi->header,
+          $cgi->start_html("test communication"),
+          $cgi->h1("Hi, Android"),
+	  $cgi->end_html;
 }
 sub resp_image {
 	#`./camera_api/take_a_photo.pl $usb_control`;
