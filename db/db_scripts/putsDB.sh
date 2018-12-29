@@ -12,4 +12,4 @@ if [ $# -ne 1 ]; then
   exit 1;
 fi
 
-sudo mysql -h $host -P $port -u$user -p$passwd -e "use $db; $1" $format_args;
+sudo mysql -h $host -P $port -u$user -p$passwd -e "use $db; $1" $format_args 2> /dev/null;

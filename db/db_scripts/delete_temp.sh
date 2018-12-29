@@ -19,4 +19,4 @@ if [[ ! $1 =~ ^[0-9]+$ ]] ; then
 fi
 
 delete_query="use $db; delete from $table where rid = $1;"
-sudo mysql -h $host -P $port -u$user -p$passwd -e "$delete_query" $format_args;
+sudo mysql -h $host -P $port -u$user -p$passwd -e "$delete_query" $format_args 2> /dev/null;
