@@ -31,3 +31,7 @@
 
 #### **/write_testfile/\<data\>**
 * Data is overwriten with new data
+
+## Database
+#### **/raw_sql/\<data\>**
+* by pass all sql command and return data seperated by ; for \n.
