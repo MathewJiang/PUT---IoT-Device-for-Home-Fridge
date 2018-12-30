@@ -1,8 +1,26 @@
 # Zongxin Liu
 ## Comming next
-### MOSFET
-* Working on USB power switches
-* Working light sensors (LDR) to know if the fridge door is open or shut
+### Weight sensor
+* after research order placed a load cell and a HX711 sensor
+
+### Air quality sensor
+* It can expand out objective to see if we can conclude something from air quality
+
+## Dec. 30 2018
+### Sql interface enabled
+* Build tunnel for APP to talk with DB.
+* Update command documentation.
+
+## Dec. 26 2018
+### Photo taken with light sensor
+* Finished inplementation of light sensor, so the fridge only takes photo after the door is opened and closed for 10s.
+* Old photo is kept for future use.
+* Light sensor relies on RC time from 0 to 1 with 1uF capacitor. RC time swings from 200 (complete dark) to 900 (somewhat bright after the door is open)
+* Assume fridge performs ok so this swing is good enough so we can ignore temperature affect on resistance.
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/light_sensor.jpg?raw=true "light sensor")
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/board_with_LDR.jpg?raw=true "pin 6 used")
 
 ## Dec. 17 2018
 ### Webserver act as API interface
@@ -14,6 +32,10 @@
 
 ## Dec. 9 2018
 ### Exchange camera module with fisheye model
+
+* Camera looks like this
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/camera.jpg?raw=true "camera")
 
 * Fisheye camera can reach 2 levels of fridge. Better than regualr models
 
