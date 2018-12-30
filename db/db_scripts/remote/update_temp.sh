@@ -1,4 +1,8 @@
 #!/bin/bash
+port=1521
+user='puts'
+passwd='wearethewinner'
+host='culinut.ddns.net'
 format_args='-N -s -r'
 
 db='putsDB'
@@ -17,7 +21,7 @@ fi
 time_stamp=`date '+%Y-%m-%d %H:%M:%S'`
 
 update_query="use $db; insert into $table (time, temperature) values ('$time_stamp', $1);"
-sudo mysql -e "$update_query" $format_args;
+sudo mysql -h $host -P $port -u$user -p$passwd -e "$update_query" $format_args 2> /dev/null;
 
 read_query="use $db; select * from $table where rid = (select MAX(rid) from $table);"
-sudo mysql -e "$read_query" $format_args;
+sudo mysql -h $host -P $port -u$user -p$passwd -e "$read_query" $format_args 2> /dev/null;
