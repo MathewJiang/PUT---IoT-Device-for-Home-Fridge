@@ -2,34 +2,30 @@
 
 ## Dec. 27 2018
 ### Wrapper scripts to access DB remotely
-* Spun up MySQL server on local Raspberry Pi.
-* Configured local network for remote access.
+- Spun up MySQL server on local Raspberry Pi.
+- Configured local network for remote access.
+- Steps to setup MySQL and import DB schema locally:
+- Install [MySQL environment](http://raspberrywebserver.com/sql-databases/using-mysql-on-a-raspberry-pi.html) on Linux 
+- Import [putsDB schema](https://github.com/WyattLiu/ECE496-PUT/blob/database/db/putsDB.sql) into local DB by executing
+```
+% sudo mysql -t < putsDB.sql
+```
+- If you don't want sample data to be imported, comment out the last line in `putsDB.sql`:
+```
+-- source putsDB_testData.sql; 
+```
 
-The putsDB can be accessed either:
-- Locally
-  - Install [MySQL environment](http://raspberrywebserver.com/sql-databases/using-mysql-on-a-raspberry-pi.html) on Linux 
-  - Import [putsDB schema](https://github.com/WyattLiu/ECE496-PUT/blob/database/db/putsDB.sql) into local DB by executing
-    ```
-    % sudo mysql -t < putsDB.sql
-    ```
-  - If you don't want sample data to be imported, comment out the last line in `putsDB.sql`:
-    ```
-    -- source putsDB_testData.sql; 
-    ```
-
-or
-- Via remote DB access [scripts](https://github.com/WyattLiu/ECE496-PUT/tree/database/db/db_scripts)
-  - Install [MySQL environment](http://raspberrywebserver.com/sql-databases/using-mysql-on-a-raspberry-pi.html) on Linux 
-  - Execute one of the shell scripts under `/db_scripts` directory. Example:
-    ```
-    % sudo ./update_temp.sh -3.57 
-    ```
-    will insert a new record in `temperature_data` table looking like:
-    ```
-    rid time                temperature 
-     10 2018-12-29 17:30:46       -3.57 
-    ```
-    with record id `10`,  temperature value `-3.57` and `live timestamp`.
+- DB can also be accessed via [shell scripts](https://github.com/WyattLiu/ECE496-PUT/tree/database/db/db_scripts). Example:
+```
+% sudo ./update_temp.sh -3.57
+```
+will insert a new record in `temperature_data` table looking like:
+```
+rid time                temperature 
+10 2018-12-29 17:30:46       -3.57 
+```
+with record id `10`,  temperature value `-3.57` and `live timestamp`.
+- A demo DB server on my rpi can be remotely accessed via [remote scripts](https://github.com/WyattLiu/ECE496-PUT/tree/database/db/db_scripts/remote)
 
 ## Dec. 25 2018
 ### MySQL Server deployment on Raspberry Pi
