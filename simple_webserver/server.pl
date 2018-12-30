@@ -6,6 +6,7 @@ our $usb_control = `readlink -f ../thirdparty/uhubctl/uhubctl`;
 chomp $usb_control;
 our $testfile = `readlink -f ./testfile.txt`;
 our $data_delivery_on_path = "VOID";
+our $raw_sql = "readlink -f ../db/db_scripts/putsDB.sh";
 {
 package PutsWebServer;
  
@@ -42,6 +43,9 @@ sub handle_request {
     } elsif($path =~ /\/write_testfile\/(.*)/) {
 	$handler = \&resp_write_testfile;
 	$data_delivery_on_path = $1;
+    } elsif($path =~ /\/raw_sql\/(.*)/) {
+	$handler = \&resp_raw_sql;
+	$data_delivery_on_path = $1;	
     } else {
     	$handler = $dispatch{$path};
     }
@@ -58,6 +62,27 @@ sub handle_request {
               $cgi->end_html;
     }
 }
+
+sub resp_raw_sql {
+	 
+	my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $who = $cgi->param('name');
+    my @response = `sudo mysql -e "$data_delivery_on_path" -N -s -r`;
+    print STDERR "DEBUG: data_delivery_on_path $data_delivery_on_path\n";
+    my $response_string = "";
+    foreach my $line (@response) {
+	$response_string .=$line;
+	$response_string .=";";
+    }
+    print STDERR "DEBUG: response string is $response_string\n";
+    print $cgi->header,
+          $cgi->start_html("sql response"),
+	  $cgi->h1($response_string);
+	  $cgi->end_html;
+
+}
+
 sub resp_show_temperature {
     
 my $cgi  = shift;   # CGI.pm object
