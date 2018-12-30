@@ -18,7 +18,11 @@
 * Light sensor relies on RC time from 0 to 1 with 1uF capacitor. RC time swings from 200 (complete dark) to 900 (somewhat bright after the door is open)
 * Assume fridge performs ok so this swing is good enough so we can ignore temperature affect on resistance.
 
+* Sensor inside the fridge
+
 ![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/light_sensor.jpg?raw=true "light sensor")
+
+* External look of the board
 
 ![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/board_with_LDR.jpg?raw=true "pin 6 used")
 
