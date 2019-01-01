@@ -8,7 +8,8 @@ CREATE DATABASE IF NOT EXISTS putsDB;
 USE putsDB;
 
 DROP TABLE IF EXISTS 
-		units,
+		content_units,
+		package_units,
 		brands,
 		vendors,
 		statuses,

@@ -9,7 +9,8 @@ The PUTS database consists of four kinds of tables:
 #### Enum tables
 
 ***Enum tables*** hold pre-defined enumeration entries like `item_status`, `user_action` and `units`. These tables are typically **single column** and frequently referenced by other tables. In PUTS DB, such tables are:
-- `units` (e.g. box)
+- `package_units` (e.g. box)
+- `content_units` (e.g. ml)
 - `statuses` (e.g. expired)
 - `actions` (e.g. consumption)
 
