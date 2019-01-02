@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PUTS</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Sample User</string>
+    <string name="nav_header_subtitle">sample.user@mail.utoronto.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="addButtonName">ADD</string>
+    <string name="enterFoodNameText">Enter the name of the food</string>
+    <string name="startDateText">Start Date (yyyy-mm-dd/Optional)</string>
+    <string name="expirationDateText">Expiration Date (yyyy-mm-dd/Optional)</string>
+
+</resources>
+
