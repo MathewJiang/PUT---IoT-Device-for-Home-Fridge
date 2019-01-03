@@ -26,6 +26,7 @@ while(1) {
 	#print "take a photo\n";	
 	my $lock_h =plock();
 	take_photo();
+	
 	#print "$PID is taking photo\n";
 	punlock($lock_h);
 }
@@ -42,12 +43,18 @@ sub punlock {
 	close($fh) or die "cannot unlock\n";
 }
 
+sub write_to_weight_file {
+	`cat /dev/ttyUSB0 | /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.pl > /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.log`;
+}
+
 sub take_photo {
 	`sudo $ARGV[0] -a on -p 2`;
 	`raspistill -vf -hf -w 1920 -h 1080 -q 75 -o /home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/latest.jpg`;
+	 write_to_weight_file();
 	`sudo $ARGV[0] -a off -p 2`;
 
 	my $date = `/home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/date_photo.pl`;
 	chomp $date;
 	`cp /home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/latest.jpg /home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/$date.jpg`;
 	}
+

@@ -8,7 +8,7 @@ our $testfile = `readlink -f ./testfile.txt`;
 our $data_delivery_on_path = "VOID";
 our $raw_sql = "readlink -f ../db/db_scripts/putsDB.sh";
 {
-package PutsWebServer;
+package PutsWebServerA1;
  
 use HTTP::Server::Simple::CGI;
 use base qw(HTTP::Server::Simple::CGI);
@@ -26,7 +26,8 @@ my %dispatch = (
     '/hello_world' => \&resp_hello,
     '/read_testfile' => \&resp_read_testfile,
     '/show_temperature' => \&resp_show_temperature,
-    '/show_latest_fridge_image_date' => \&resp_show_latest_fridge_image_date
+    '/show_latest_fridge_image_date' => \&resp_show_latest_fridge_image_date,
+    '/get_weight' => \&resp_get_weight
     # ...
 );
 
@@ -83,6 +84,22 @@ sub resp_raw_sql {
 
 }
 
+sub resp_get_weight {
+	 
+	my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $scale = `cat ../sensor_codes/read_scale.log | tail -n 1`;
+	if($scale =~ /(.*),/) {
+		$scale = $1;
+	}
+    my $who = $cgi->param('name');
+    print $cgi->header,
+          $cgi->start_html("sql response"),
+	  $cgi->h1($scale);
+	  $cgi->end_html;
+
+}
+
 sub resp_show_temperature {
     
 my $cgi  = shift;   # CGI.pm object
@@ -123,13 +140,15 @@ my $cgi  = shift;   # CGI.pm object
     my $who = $cgi->param('name');
     
     my $temperature = `cat ../sensor_codes/temp.log | tail -n 1`;
+    my $scale = `cat ../sensor_codes/read_scale.log | tail -n 1`;
     my $time_stamp = `ls -lt ./camera_api/latest.jpg | awk '{print \$6,\$7,\$8}'`;
     chomp $temperature;
+    chomp $scale;
     chomp $time_stamp;
     print $cgi->header,
           $cgi->start_html("Root"),
-          $cgi->h1("ECE496 Puts projects low level interfaces tester server(Production)"),
-	  $cgi->h3("$temperature C");
+          $cgi->h1("ECE496 Puts projects low level interfaces tester server (Production)"),
+	  $cgi->h3("Temperature is $temperature C, Scale is $scale");
 	  print "<p>picture is taken at $time_stamp</p>";
 	print "<style>
         	* {
@@ -212,42 +231,6 @@ sub resp_image {
 	my @output = `./show_fridge_image.pl $lock_file`;
 	print @output;
 }	
-sub resp_root {
-    
-my $cgi  = shift;   # CGI.pm object
-    return if !ref $cgi;
-    #`./camera_api/take_a_photo.pl $usb_control`;
-
-    my $who = $cgi->param('name');
-    
-    my $temperature = `cat ../sensor_codes/temp.log | tail -n 1`;
-    my $time_stamp = `ls -lt ./camera_api/latest.jpg | awk '{print \$6,\$7,\$8}'`;
-    chomp $temperature;
-    chomp $time_stamp;
-    print $cgi->header,
-          $cgi->start_html("Root"),
-          $cgi->h1("ECE496 Puts projects low level interfaces tester server(Testing)"),
-	  $cgi->h3("$temperature C");
-	  print "<p>picture is taken at $time_stamp</p>";
-	print "<style>
-        	* {
-            margin: 0;
-            padding: 0;
-        }
-        .imgbox {
-            display: grid;
-            height: 100%;
-        }
-        .center-fit {
-            max-width: 100%;
-            max-height: 100vh;
-            margin: auto;
-        }
-    	</style>";
-	  print "<html><body><div class='imgbox'><img class='center-fit 'src=\"show_fridge_image\"></div></body></html>";
-	  
-	  $cgi->end_html;
-}
 
 sub plock {
 	open(my $fh, '>>', $lock_) or die "Cannot lock $lock_\n";
@@ -262,7 +245,7 @@ sub punlock {
 } 
  
 # start the server on port 8080
-my $pid = PutsWebServer->new(8080)->background();
+my $pid = PutsWebServerA1->new(8080)->background();
 print "Use 'kill $pid' to stop server.\n";
 print "lock_file is $lock_file\n";
 print "Testfile is $testfile\n";
