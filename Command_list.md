@@ -15,7 +15,10 @@
 * Same fashion as show_fridge_image
 
 #### **/show_temperature**
-* return in h1 html in C (no C) in decimal i.e. ``<time stamp>, 3.231``
+* Return in h1 html in C (no C) in decimal i.e. ``<time stamp>, 3.231``
+
+#### **/get_weight**
+* Return in kg inside h1
 
 ## data I/O
 #### **/hello_world**
