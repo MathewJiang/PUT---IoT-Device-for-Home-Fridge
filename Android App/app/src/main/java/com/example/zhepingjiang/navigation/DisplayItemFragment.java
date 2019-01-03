@@ -25,6 +25,13 @@ public class DisplayItemFragment extends Fragment {
     public String dbResult;
     public Handler handler;
 
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.displayitem_layout, container, false);
+    }
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -39,7 +46,27 @@ public class DisplayItemFragment extends Fragment {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                textView.setText("response is: " + response);
+//                textView.setText("response is: " + response);
+                dbResult = response;
+                Log.i(TAG, "onResponse: " + dbResult);
+
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (dbResult != null) {
+                            dbResult = dbResult.substring(dbResult.indexOf("<h1>") + 4, dbResult.indexOf("</h1>"));
+                        }
+
+                        textView.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                textView.setText(dbResult);
+                            }
+                        });
+                    }
+                });
+
+                t.start();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -49,6 +76,8 @@ public class DisplayItemFragment extends Fragment {
         });
 
         queue.add(stringRequest);
+
+
 //        handler = new Handler(getContext().getMainLooper());
 //
 //        new Thread(new Runnable() {
@@ -64,12 +93,13 @@ public class DisplayItemFragment extends Fragment {
 //                    });
 //            }
 //        }).start();
-
+        
     }
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.displayitem_layout, container, false);
+    private String extractString(String result_str){
+        result_str = result_str.replace("<!DOCTYPE html    PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"     \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-US\" xml:lang=\"en-US\"><head><title>sql response</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" /></head><body><h1>",
+                "");
+        result_str = result_str.replace("</h1>", "");
+        return result_str;
     }
 }
