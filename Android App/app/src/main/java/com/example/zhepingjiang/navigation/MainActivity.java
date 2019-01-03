@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity
                 f = new DeleteItemFragment();
                 break;
             default:
+                f = new DisplayItemFragment();
                 break;
         }
 
