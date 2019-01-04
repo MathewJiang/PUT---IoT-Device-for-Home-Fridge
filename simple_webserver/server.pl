@@ -1,5 +1,9 @@
 #!/usr/bin/perl
+use strict;
+use warnings;
 use threads;
+use Fcntl qw< LOCK_EX SEEK_END >;
+
 our $lock_file = `readlink -f ./camera_api/lock`;
 chomp $lock_file;
 our $usb_control = `readlink -f ../thirdparty/uhubctl/uhubctl`;
@@ -27,7 +31,8 @@ my %dispatch = (
     '/read_testfile' => \&resp_read_testfile,
     '/show_temperature' => \&resp_show_temperature,
     '/show_latest_fridge_image_date' => \&resp_show_latest_fridge_image_date,
-    '/get_weight' => \&resp_get_weight
+    '/get_weight' => \&resp_get_weight,
+    '/ls_barcode_cache' => \&resp_ls_barcode_cache
     # ...
 );
 
@@ -47,6 +52,9 @@ sub handle_request {
     } elsif($path =~ /\/raw_sql\/(.*)/) {
 	$handler = \&resp_raw_sql;
 	$data_delivery_on_path = $1;	
+    } elsif($path =~ /\/barcode_lookup\/(.*)/) {
+	$handler = \&resp_barcode_lookup;
+	$data_delivery_on_path = $1;	
     } else {
     	$handler = $dispatch{$path};
     }
@@ -64,19 +72,86 @@ sub handle_request {
     }
 }
 
+sub resp_barcode_lookup {
+	#printf STDERR "DEBUG: inside handler\n";
+    my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $in = `readlink -f ./key_value_pair_db/db.cmd_in`;
+    chomp $in;
+    my $out = `readlink -f ./key_value_pair_db/db.data_out`;
+    chomp $out;
+    my $digits = $data_delivery_on_path;
+    # print STDERR "DEBUG: $digits\n";
+    my $who = $cgi->param('name');
+    my $command = "echo 'find<OpDiv>$digits' > $in; cat $out";
+    #print STDERR "DEBUG: cmd is $command";
+    my @search_result = `$command`;
+    my $search_result = "";
+    foreach my $line (@search_result) {
+	chomp $line;
+	$search_result .= $line;
+    }
+    my $response = "";
+    #print STDERR "DEBUG: search_result is $search_result\n"; 
+    if($search_result eq "VOID") {
+	my @lookup = `echo $digits | ./key_value_pair_db/look_up_barcode.py`;
+	if(scalar @lookup == 0) {
+		$response = "Not found, consider insert one entry";
+	} else {
+		foreach my $line (@lookup) {
+			$response .= $line;	
+		}
+	chomp $response;	
+		my $command = "echo 'insert<OpDiv>$digits<MaGiCDiv>$response' > $in; cat $out";	
+	#	print STDERR "DEBUG trying insert with $command\n";
+		`$command`;
+	}
+    } else {
+	$response = $search_result;
+    }
+
+    print $cgi->header,
+          $cgi->start_html("barcode lookup response"),
+	  $cgi->h1($response);
+	  $cgi->end_html;
+
+
+}
+
+sub resp_ls_barcode_cache {
+    my $in = `readlink -f ./key_value_pair_db/db.cmd_in`;
+    chomp $in;
+    my $out = `readlink -f ./key_value_pair_db/db.data_out`;
+    chomp $out; 
+    my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $who = $cgi->param('name');
+    my @response = `echo 'ls<OpDiv>' > $in; cat $out`;
+    print $cgi->header,
+          $cgi->start_html("sql response");
+	  print "<p>";
+	  foreach my $line (@response) {
+    		print $line;
+		print "<br>";	
+	  }
+	print "</p>";
+	  print $cgi->end_html;
+
+}
+
 sub resp_raw_sql {
 	 
 	my $cgi  = shift;   # CGI.pm object
     return if !ref $cgi;
     my $who = $cgi->param('name');
     my @response = `sudo mysql -e "$data_delivery_on_path" -N -s -r`;
-    print STDERR "DEBUG: data_delivery_on_path $data_delivery_on_path\n";
+    #print STDERR "DEBUG: data_delivery_on_path $data_delivery_on_path\n";
     my $response_string = "";
     foreach my $line (@response) {
 	$response_string .=$line;
 	$response_string .=";";
     }
-    print STDERR "DEBUG: response string is $response_string\n";
+    #print STDERR "DEBUG: response string is $response_string\n";
     print $cgi->header,
           $cgi->start_html("sql response"),
 	  $cgi->h1($response_string);
@@ -147,7 +222,7 @@ my $cgi  = shift;   # CGI.pm object
     chomp $time_stamp;
     print $cgi->header,
           $cgi->start_html("Root"),
-          $cgi->h1("ECE496 Puts projects low level interfaces tester server (Production)"),
+          $cgi->h1("ECE496 Puts projects low level interfaces tester server (Test Jan 4)"),
 	  $cgi->h3("Temperature is $temperature C, Scale is $scale");
 	  print "<p>picture is taken at $time_stamp</p>";
 	print "<style>
@@ -232,16 +307,17 @@ sub resp_image {
 	print @output;
 }	
 
-sub plock {
-	open(my $fh, '>>', $lock_) or die "Cannot lock $lock_\n";
-	my $ret = flock($fh, LOCK_EX);
-	return $fh;
-}
-
-sub punlock {
-	my $fh = shift;
-	close($fh) or die "cannot unlock\n";
-}
+#sub plock {
+#	my $lock_ = shift;
+#	open(my $fh, '>>', $lock_) or die "Cannot lock $lock_\n";
+#	my $ret = flock($fh, LOCK_EX);
+#	return $fh;
+#}
+#
+#sub punlock {
+#	my $fh = shift;
+#	close($fh) or die "cannot unlock\n";
+#}
 } 
  
 # start the server on port 8080

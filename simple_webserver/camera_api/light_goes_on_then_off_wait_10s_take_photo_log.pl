@@ -7,7 +7,7 @@ use Fcntl ':flock';
 my $light_sensor = "/home/pi/proj/gited/ECE496-PUT/sensor_codes/Light_Sensor/light_sensor.py";
 
 my $lock = $ARGV[1];
-my $threshold = 500;
+my $threshold = 900;
 while(1) {
 	my $rc_time = 0;
 	do {
@@ -44,7 +44,7 @@ sub punlock {
 }
 
 sub write_to_weight_file {
-	`cat /dev/ttyUSB0 | /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.pl > /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.log`;
+	`cat /dev/ttyUSB0 | /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.pl >> /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.log`;
 }
 
 sub take_photo {
