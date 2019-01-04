@@ -38,3 +38,15 @@
 ## Database
 #### **/raw_sql/\<data\>**
 * by pass all sql command and return data seperated by ; for \n.
+
+## Memcache
+#### **/ls_barcode\_cache**
+* This will return all stored entry in key value pairs in human readable html
+* Some example on it can deal with dangerous char has been shown
+
+#### **/barcode_lookup/\<digits\>**
+* This will return name string, if a cache hit, 0.001s.
+* And if there is not hit in local cache, it will go online (a few seconds), and if it is not there, error message will return asking for manual update.
+* If it found it online, it will update cache, write to disk and response, so next query will save time and quota. Example:
+``http://<URL>:8080/barcode_lookup/4901777227071``
+returns ``Japan Limited, "coca Cola Clear", Transparent Cola, 280ml``.
