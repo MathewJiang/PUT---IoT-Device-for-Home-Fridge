@@ -1,5 +1,21 @@
 # Shifan Gu
 
+## Jan. 3 2019
+- Add script to access barcode scanner via `/dev/ttyACM0` COM interface. Run
+```
+% ./read_barcode.sh
+```
+to get one barcode. To get barcodes continuously at one line each time, add argument `1`:
+```
+% ./read_barcode.sh 1
+```
+instead.
+
+## Jan. 2 2019
+- Add introduction docs to explain for organization and relationship across tables in putsDB.
+- Add example usage to demo for DB transactions under various use cases.
+- Add default values for enum/reference tables in putsDB as discussed.
+
 ## Dec. 27 2018
 ### Wrapper scripts to access DB remotely
 - Spun up MySQL server on local Raspberry Pi.
