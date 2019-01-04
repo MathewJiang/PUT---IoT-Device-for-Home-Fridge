@@ -166,65 +166,63 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    /*
-     * The three types used by an asynchronous task are the following:
-     * Params, the type of the parameters sent to the task upon execution.
-     * Progress, the type of the progress units published during the background computation.
-     * Result, the type of the result of the background computation.
-     */
-    private class downloadDBResultTask extends AsyncTask<String, Void, String> {
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-            try {
-
-                String url_str = "http://ece496puts.ddns.net:59496/raw_sql/use putsDB;select std_name from purchase_history;";
-                url_str = url_str.replaceAll(" ", "%20");
-                System.out.println("url_str is " + url_str);
-
-                URL url = new URL(url_str);
-
-
-                StringBuilder result = new StringBuilder();
-                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                conn.setRequestMethod("GET");
-                BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                String line;
-                while ((line = rd.readLine()) != null) {
-                    result.append(line);
-                }
-                rd.close();
-
-                System.out.println("\n>>>>Start printing result>>>>\n");
-                String result_str = result.toString();
-
-                result_str = result_str.replace("<!DOCTYPE html    PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"     \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-US\" xml:lang=\"en-US\"><head><title>sql response</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" /></head><body><h1>",
-                        "");
-                result_str = result_str.replace("</h1>", "");
-                System.out.println(result_str);
-
-                System.out.println("\n>>>>End printing result>>>>\n");
-
-                return result_str;
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-        }
-    }
-
-
+//    /*
+//     * The three types used by an asynchronous task are the following:
+//     * Params, the type of the parameters sent to the task upon execution.
+//     * Progress, the type of the progress units published during the background computation.
+//     * Result, the type of the result of the background computation.
+//     */
+//    private class downloadDBResultTask extends AsyncTask<String, Void, String> {
+//
+//        @Override
+//        protected void onPreExecute() {
+//            super.onPreExecute();
+//        }
+//
+//        @Override
+//        protected String doInBackground(String... strings) {
+//            try {
+//
+//                String url_str = "http://ece496puts.ddns.net:59496/raw_sql/use putsDB;select std_name from purchase_history;";
+//                url_str = url_str.replaceAll(" ", "%20");
+//                System.out.println("url_str is " + url_str);
+//
+//                URL url = new URL(url_str);
+//
+//
+//                StringBuilder result = new StringBuilder();
+//                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+//                conn.setRequestMethod("GET");
+//                BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+//                String line;
+//                while ((line = rd.readLine()) != null) {
+//                    result.append(line);
+//                }
+//                rd.close();
+//
+//                System.out.println("\n>>>>Start printing result>>>>\n");
+//                String result_str = result.toString();
+//
+//                result_str = result_str.replace("<!DOCTYPE html    PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"     \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en-US\" xml:lang=\"en-US\"><head><title>sql response</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" /></head><body><h1>",
+//                        "");
+//                result_str = result_str.replace("</h1>", "");
+//                System.out.println(result_str);
+//
+//                System.out.println("\n>>>>End printing result>>>>\n");
+//
+//                return result_str;
+//
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            return null;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(String s) {
+//            super.onPostExecute(s);
+//        }
+//    }
 
 }

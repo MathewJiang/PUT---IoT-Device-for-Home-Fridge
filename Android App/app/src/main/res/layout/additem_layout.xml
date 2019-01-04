@@ -21,7 +21,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/enterFoodEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
@@ -30,68 +30,68 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/addOptionalInfoTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="\n\n\nThe following fields are all optional: " />
+                android:text="@string/enterOptionalInfoText" />
 
             <EditText
-                android:id="@+id/editText2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/startDateText"
-                android:inputType="textPersonName"
-                android:autofillHints="" />
-
-            <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/enterStartDateEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="@string/expirationDateText"
-                android:inputType="textPersonName" />
+                android:hint="@string/enterStartDateText"
+                android:inputType="date" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/enterEndDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/enterExpirationDateText"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/enterQuantityEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Quantity (Optional)"
-                android:inputType="textPersonName" />
+                android:hint="@string/enterQuantityText"
+                android:inputType="number" />
 
             <EditText
-                android:id="@+id/editText12"
+                android:id="@+id/enterUnitEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Unit (Optional)"
-                android:inputType="textPersonName" />
+                android:hint="@string/enterUnitText"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/editText15"
+                android:id="@+id/enterCategoryEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Category (Optional)"
-                android:inputType="textPersonName" />
+                android:hint="@string/enterCategoryText"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/editText13"
+                android:id="@+id/enterBrandNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Brand Name (Optional)"
-                android:inputType="textPersonName" />
+                android:hint="@string/enterBrandNameText"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/editText14"
+                android:id="@+id/enterVendorNameEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Vendor Name (Optional)"
-                android:inputType="textPersonName" />
+                android:hint="@string/enterVendorNameText"
+                android:inputType="text" />
 
         </LinearLayout>
     </ScrollView>

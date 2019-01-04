@@ -6,10 +6,18 @@
     <string name="nav_header_subtitle">sample.user@mail.utoronto.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+
     <string name="addButtonName">ADD</string>
     <string name="enterFoodNameText">Enter the name of the food</string>
-    <string name="startDateText">Start Date (yyyy-mm-dd/Optional)</string>
-    <string name="expirationDateText">Expiration Date (yyyy-mm-dd/Optional)</string>
+    <string name="enterStartDateText">Start Date (yyyy-mm-dd/Optional)</string>
+    <string name="enterExpirationDateText">Expiration Date (yyyy-mm-dd/Optional)</string>
+    <string name="enterOptionalInfoText">\n\n\nThe following fields are all optional:</string>
+    <string name="enterQuantityText">Quantity (Optional)</string>
+    <string name="enterUnitText">Unit (Optional)</string>
+    <string name="enterBrandNameText">Brand Name (Optional)</string>
+    <string name="enterCategoryText">Category (Optional)</string>
+    <string name="enterVendorNameText">Vendor Name (Optional)</string>
 
 </resources>
 
