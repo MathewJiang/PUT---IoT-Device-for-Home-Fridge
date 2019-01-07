@@ -32,7 +32,8 @@ my %dispatch = (
     '/show_temperature' => \&resp_show_temperature,
     '/show_latest_fridge_image_date' => \&resp_show_latest_fridge_image_date,
     '/get_weight' => \&resp_get_weight,
-    '/ls_barcode_cache' => \&resp_ls_barcode_cache
+    '/ls_barcode_cache' => \&resp_ls_barcode_cache,
+    '/get_ccs811' => \&resp_ccs811
     # ...
 );
 
@@ -70,6 +71,22 @@ sub handle_request {
 	      $cgi->h2("CODE is $path");
               $cgi->end_html;
     }
+}
+
+sub resp_ccs811 {
+    my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $scale = `cat ../sensor_codes/CCS811/css811.log | tail -n 2 | head -n 1`;
+	if($scale =~ /(.*),/) {
+		$scale = $1;
+	}
+    my $who = $cgi->param('name');
+    print $cgi->header,
+          $cgi->start_html("ccs811 response"),
+	  $cgi->h1($scale);
+	  $cgi->end_html;
+
+
 }
 
 sub resp_barcode_lookup {
@@ -169,7 +186,7 @@ sub resp_get_weight {
 	}
     my $who = $cgi->param('name');
     print $cgi->header,
-          $cgi->start_html("sql response"),
+          $cgi->start_html("scale response"),
 	  $cgi->h1($scale);
 	  $cgi->end_html;
 
@@ -327,5 +344,6 @@ print "lock_file is $lock_file\n";
 print "Testfile is $testfile\n";
 #async {`./camera_api/light_goes_on_then_off_wait_10s_take_photo_log.pl $usb_control $lock_file`};
 #MyWebServer->new(8080);
+
 
 
