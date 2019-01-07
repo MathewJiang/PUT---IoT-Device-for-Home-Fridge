@@ -19,5 +19,10 @@
     <string name="enterCategoryText">Category (Optional)</string>
     <string name="enterVendorNameText">Vendor Name (Optional)</string>
 
+    <string-array name="types">
+        <item>Mobile</item>
+        <item>Office</item>
+        <item>Home</item>
+    </string-array>
 </resources>
 

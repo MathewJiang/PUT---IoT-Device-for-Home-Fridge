@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity
 //            @Override
 //            public void run() {
 //                while (true) {
-////                    dbResult = ServerRequestHandler.getAlltemp();
-//                    Log.i(TAG, "The value for dbResult is: " + dbResult);
+////                    f_dbResult = ServerRequestHandler.getAlltemp();
+//                    Log.i(TAG, "The value for f_dbResult is: " + f_dbResult);
 //                    handler.post(new Runnable() {
 //                        @Override
 //                        public void run() {
@@ -224,5 +224,4 @@ public class MainActivity extends AppCompatActivity
 //            super.onPostExecute(s);
 //        }
 //    }
-
 }
