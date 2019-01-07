@@ -15,15 +15,20 @@ while(1) {
 	chomp $rc_time;
 	#print "Dark\n";
 	} while($rc_time > $threshold); # this is dark
-	
+LOOP:
 	do {
 	$rc_time = `$light_sensor`;
 	chomp $rc_time;
 	#print "Bright\n";
 	} while($rc_time < $threshold); # this is bridgt and flash is done
 
-	sleep(10);
-	#print "take a photo\n";	
+	sleep(100);
+	#print "take a photo\n";
+	$rc_time = `$light_sensor`;
+
+	if($rc_time < $threshold) {
+		goto LOOP;
+	}	
 	my $lock_h =plock();
 	take_photo();
 	
