@@ -20,6 +20,9 @@
 #### **/get_weight**
 * Return in kg inside h1
 
+#### **/get_ccs811**
+* Return eCO2 and TVOC readings, unit should be ppm
+
 ## data I/O
 #### **/hello_world**
 * html, "Hi Android"

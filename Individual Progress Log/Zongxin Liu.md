@@ -1,10 +1,25 @@
 # Zongxin Liu
 ## Comming next
+* Migrate current design into new hardware layout with new Rpi 3B+
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/latetest_connections.jpeg?raw=true "board")
+
+
+## Jan. 6 2019
 ### Weight sensor
-* after research order placed a load cell and a HX711 sensor
+* Use sparkfan OpenScale, accracy is within 1g compare to reference scale.
+* Machanical part is using one out the shelf scale but disassembed for this project.
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/scale.jpeg?raw=true "weight sensor")
 
 ### Air quality sensor
-* It can expand out objective to see if we can conclude something from air quality
+* TVOC can be helpful indicating if something goes bad inside a fridge.
+* Test against one bag of organic garbage, readings reaches maxium otherwise very low.
+* eCO2 can also change overtime, give an idea how CO2 is building up with bacteria.
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/css811.jpeg?raw=true "air quality sensor")
+
+#### Both readings can be accessed from webserver
 
 ## Dec. 30 2018
 ### Sql interface enabled
