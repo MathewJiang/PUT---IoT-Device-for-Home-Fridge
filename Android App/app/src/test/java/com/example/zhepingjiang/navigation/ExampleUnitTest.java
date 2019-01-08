@@ -1,5 +1,7 @@
 package com.example.zhepingjiang.navigation;
 
+import com.example.zhepingjiang.db.DBAccess;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -14,4 +16,6 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+    @Test
+    public void canAccessDBClassvalues () { assertEquals( 1, DBAccess.DUMMY_VALUE); }
 }
