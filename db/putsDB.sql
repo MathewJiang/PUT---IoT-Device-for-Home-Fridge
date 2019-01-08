@@ -116,7 +116,7 @@ CREATE TABLE grocery_storage (
     content_quantity        INT             NOT NULL CHECK (content_quantity > 0),
     content_unit            VARCHAR(30)     NOT NULL,
     last_updated            DATETIME        NOT NULL,
-    purchased_date          DATE            NOT NULL,
+    purchase_date           DATE            NOT NULL,
     expiry_date             DATE            NOT NULL,
     status                  VARCHAR(30)     NOT NULL,
     FOREIGN KEY (uid)                       REFERENCES purchase_history (uid)   ON DELETE CASCADE,
@@ -130,7 +130,7 @@ CREATE TABLE barcodes (
     barcode                 VARCHAR(60)     NOT NULL,
     brand                   VARCHAR(30)     NOT NULL,
     std_name                VARCHAR(30)     NOT NULL,
-    content_quantity        VARCHAR(30)     NOT NULL CHECK (content_quantity > 0),
+    content_quantity        INT             NOT NULL CHECK (content_quantity > 0),
     content_unit            VARCHAR(30)     NOT NULL,
     is_packaged             CHAR(1)         NOT NULL CHECK (is_packaged IN ('T', 'F')), -- T/F
     package_unit            VARCHAR(30)     NOT NULL,

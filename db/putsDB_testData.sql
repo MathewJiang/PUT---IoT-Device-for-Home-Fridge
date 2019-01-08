@@ -4,7 +4,7 @@ INSERT INTO `vendors` VALUES ('Metro'), ('Loblaws'), ('Sobbeys'), ('Veda'), ('Mc
 INSERT INTO `brands` VALUES ('Dole'), ('Natrel'), ('Sealtest'), ('Lucky Moose'), ('Prestige'), ('Fanny Bay'), ('default');
 INSERT INTO `actions` VALUES ('consumption'), ('disposal'), ('default');
 INSERT INTO `categories` VALUES ('drink'), ('fruit'), ('dairy'), ('egg'), ('seafood'), ('meat'), ('uncategorized');
-INSERT INTO `statuses` VALUES ('good'), ('finished'), ('disposed'), ('expired'), ('unknown');
+INSERT INTO `statuses` VALUES ('good'), ('finished'), ('disposed'), ('expired'), ('unopened'), ('unknown');
 INSERT INTO `std_names` VALUES
                 ('3.25% milk', 'dairy'),
                 ('whole chicken', 'meat'),
