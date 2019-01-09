@@ -53,6 +53,12 @@ sub handle_request {
     } elsif($path =~ /\/raw_sql\/(.*)/) {
 	$handler = \&resp_raw_sql;
 	$data_delivery_on_path = $1;	
+    } elsif($path =~ /\/raw_sql_br\/(.*)/) {
+	$handler = \&resp_raw_sql_br;
+	$data_delivery_on_path = $1;	
+    } elsif($path =~ /\/raw_sql_html\/(.*)/) {
+	$handler = \&resp_raw_sql_html;
+	$data_delivery_on_path = $1;	
     } elsif($path =~ /\/barcode_lookup\/(.*)/) {
 	$handler = \&resp_barcode_lookup;
 	$data_delivery_on_path = $1;	
@@ -167,6 +173,57 @@ sub resp_raw_sql {
     foreach my $line (@response) {
 	$response_string .=$line;
 	$response_string .=";";
+    }
+    #print STDERR "DEBUG: response string is $response_string\n";
+    print $cgi->header,
+          $cgi->start_html("sql response"),
+	  $cgi->h1($response_string);
+	  $cgi->end_html;
+
+}
+
+sub resp_raw_sql_html {
+	 
+	my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $who = $cgi->param('name');
+    my @response = `sudo mysql -e "$data_delivery_on_path" -N -s -r -H`;
+    #print STDERR "DEBUG: data_delivery_on_path $data_delivery_on_path\n";
+    my $response_string = "";
+    foreach my $line (@response) {
+		$response_string .=$line;
+    }
+    #print STDERR "DEBUG: response string is $response_string\n";
+    print $cgi->header,
+          $cgi->start_html("sql response"),
+	  $cgi->h1($response_string);
+	  $cgi->end_html;
+
+}
+sub resp_raw_sql_br {
+	 
+	my $cgi  = shift;   # CGI.pm object
+    return if !ref $cgi;
+    my $who = $cgi->param('name');
+    my @response = `sudo mysql -e "$data_delivery_on_path" -N -s -r -vvv`;
+    #print STDERR "DEBUG: data_delivery_on_path $data_delivery_on_path\n";
+    my $response_string = "";
+    my $inner_entries = 0;
+    foreach my $line (@response) {
+	
+	if($line =~ /\+\-/) {
+		if($inner_entries == 0) {
+			$inner_entries = 1;
+		} else {
+			$inner_entries = 0;
+		}
+		next;
+	}
+	if($inner_entries == 1) {
+		chomp $line;
+		$response_string .=$line;
+		$response_string .="<br>";
+	}
     }
     #print STDERR "DEBUG: response string is $response_string\n";
     print $cgi->header,
