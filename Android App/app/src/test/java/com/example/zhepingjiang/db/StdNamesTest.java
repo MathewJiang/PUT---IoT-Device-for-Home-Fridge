@@ -1,6 +1,11 @@
 package com.example.zhepingjiang.db;
 
+import com.google.common.collect.Lists;
+
+import org.jsoup.Jsoup;
 import org.junit.Test;
+
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -123,5 +128,140 @@ public class StdNamesTest {
         final String actualQuery = StdNames.GetSelectAllQueryStatic();
 
         assertEquals(expectedQuery, actualQuery);
+    }
+
+    @Test
+    public void testFromHTMLTableStr_singleEntry_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>juice</TD></TR>" +
+                "</TABLE>";
+
+        final Set<StdNames> convertedObjs = StdNames.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(1, convertedObjs.size());
+        final StdNames convertedObj = Lists.newArrayList(convertedObjs).get(0);
+        assertEquals("orange juice", convertedObj.getStdName());
+        assertEquals("juice", convertedObj.getCategory().getCategory());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleEntries_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>juice</TD></TR>" +
+                "<TR><TD>apple</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>oxtail</TD><TD>meat</TD></TR>" +
+                "<TR><TD>banana</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>Coco-cola</TD><TD>drink</TD></TR>" +
+                "<TR><TD>chocolate</TD><TD>snack</TD></TR>" +
+                "</TABLE>";
+
+        final Set<StdNames> convertedObjs = StdNames.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(6, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_emptyTable_returnsEmptySet() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "</TABLE>";
+
+        final Set<StdNames> convertedObjs = StdNames.FromHTMLTableStr(htmlTableStr);
+
+        assertTrue(convertedObjs.isEmpty());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesAllValid_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>juice</TD></TR>" +
+                "<TR><TD>apple</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>oxtail</TD><TD>meat</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BOARDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "<TR><TD>banana</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>Coco-cola</TD><TD>drink</TD></TR>" +
+                "<TR><TD>chocolate</TD><TD>snack</TD></TR>" +
+                "</TABLE>";
+
+        final Set<StdNames> convertedObjs = StdNames.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(6, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesOneValid_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>juice</TD></TR>" +
+                "<TR><TD>apple</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>oxtail</TD><TD>meat</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BOARDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH><TH>other_field</TH></TR>" +
+                "<TR><TD>banana</TD><TD>fruit</TD><TD>blah1</TD></TR>" +
+                "<TR><TD>Coco-cola</TD><TD>drink</TD><TD>blah2</TD></TR>" +
+                "<TR><TD>chocolate</TD><TD>snack</TD><TD>blah3</TD></TR>" +
+                "</TABLE>";
+
+        final Set<StdNames> convertedObjs = StdNames.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(3, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesNoneValid_returnsEmptyTable() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH><TH>other_field</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>blah1</TD><TD>juice</TD></TR>" +
+                "<TR><TD>apple</TD><TD>blah2</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>oxtail</TD><TD>blah3</TD><TD>meat</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BOARDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH><TH>other_field</TH></TR>" +
+                "<TR><TD>banana</TD><TD>fruit</TD><TD>blah1</TD></TR>" +
+                "<TR><TD>Coco-cola</TD><TD>drink</TD><TD>blah2</TD></TR>" +
+                "<TR><TD>chocolate</TD><TD>snack</TD><TD>blah3</TD></TR>" +
+                "</TABLE>";
+
+        final Set<StdNames> convertedObjs = StdNames.FromHTMLTableStr(htmlTableStr);
+
+        assertTrue(convertedObjs.isEmpty());
+    }
+
+
+    @Test
+    public void testIsValidTableSchema_schemaValid_returnsTrue() {
+        final String validTableSchema = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>juice</TD></TR>" +
+                "<TR><TD>apple</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>oxtail</TD><TD>meat</TD></TR>" +
+                "<TR><TD>banana</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>Coco-cola</TD><TD>drink</TD></TR>" +
+                "<TR><TD>chocolate</TD><TD>snack</TD></TR>" +
+                "</TABLE>";
+
+        final boolean isValidSchema = StdNames.isValidTableSchema(Jsoup.parse(validTableSchema));
+
+        assertTrue(isValidSchema);
+    }
+
+    @Test
+    public void testIsValidTableSchema_extraFields_returnsFalse() {
+        final String extraFieldTableSchema = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>category</TH><TH>other_field</TH></TR>" +
+                "<TR><TD>orange juice</TD><TD>blah1</TD><TD>juice</TD></TR>" +
+                "<TR><TD>apple</TD><TD>blah2</TD><TD>fruit</TD></TR>" +
+                "<TR><TD>oxtail</TD><TD>blah3</TD><TD>meat</TD></TR>" +
+                "</TABLE>";
+
+        final boolean isValidSchema = StdNames.isValidTableSchema(Jsoup.parse(extraFieldTableSchema));
+
+        assertFalse(isValidSchema);
     }
 }

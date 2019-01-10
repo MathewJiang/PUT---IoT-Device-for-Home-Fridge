@@ -1,6 +1,11 @@
 package com.example.zhepingjiang.db;
 
+import com.google.common.collect.Lists;
+
+import org.jsoup.Jsoup;
 import org.junit.Test;
+
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -34,7 +39,7 @@ public class PurchaseHistoryTest {
         final Vendors defaultVendor = new Vendors();
         final Brands defaultBrand = new Brands();
         final int defaultContentQuantity = 0;
-        final char defaultIsPackaged = 'F';
+        final boolean defaultIsPackaged = false;
         final ContentUnits defaultContentUnit = new ContentUnits();
         final PackageUnits defaultPackageUnit = new PackageUnits();
         final String defaultPurchaseDate = "2019-01-01";
@@ -47,7 +52,7 @@ public class PurchaseHistoryTest {
         assertEquals(defaultVendor, defaultObj.getVendor());
         assertEquals(defaultBrand, defaultObj.getBrand());
         assertEquals(defaultContentQuantity, defaultObj.getContentQuantity());
-        assertEquals(defaultIsPackaged, defaultObj.getIsPackaged());
+        assertEquals(defaultIsPackaged, defaultObj.isPackaged());
         assertEquals(defaultContentUnit, defaultObj.getContentUnit());
         assertEquals(defaultPackageUnit, defaultObj.getPackageUnit());
         assertEquals(defaultPurchaseDate, defaultObj.getPurchaseDate());
@@ -61,7 +66,7 @@ public class PurchaseHistoryTest {
         final Vendors vendor = new Vendors("Loblaws");
         final Brands brand = new Brands("Dole");
         final int contentQuantity = 1000;
-        final char isPackaged = 'T';
+        final boolean isPackaged = true;
         final ContentUnits contentUnit = new ContentUnits("ml");
         final PackageUnits packageUnit = new PackageUnits("box");
         final String purchaseDate = "2019-01-07";
@@ -75,7 +80,7 @@ public class PurchaseHistoryTest {
         assertEquals(vendor, allArgsObj.getVendor());
         assertEquals(brand, allArgsObj.getBrand());
         assertEquals(contentQuantity, allArgsObj.getContentQuantity());
-        assertEquals(isPackaged, allArgsObj.getIsPackaged());
+        assertEquals(isPackaged, allArgsObj.isPackaged());
         assertEquals(contentUnit, allArgsObj.getContentUnit());
         assertEquals(packageUnit, allArgsObj.getPackageUnit());
         assertEquals(purchaseDate, allArgsObj.getPurchaseDate());
@@ -89,7 +94,7 @@ public class PurchaseHistoryTest {
         final Vendors defaultVendor = new Vendors();
         final Brands defaultBrand = new Brands();
         final int defaultContentQuantity = 0;
-        final char defaultIsPackaged = 'F';
+        final boolean defaultIsPackaged = false;
         final ContentUnits defaultContentUnit = new ContentUnits();
         final PackageUnits defaultPackageUnit = new PackageUnits();
         final String defaultPurchaseDate = "2019-01-01";
@@ -114,7 +119,7 @@ public class PurchaseHistoryTest {
         final Vendors vendor = new Vendors("Loblaws");
         final Brands brand = new Brands("Dole");
         final int contentQuantity = 1000;
-        final char isPackaged = 'T';
+        final boolean isPackaged = true;
         final ContentUnits contentUnit = new ContentUnits("ml");
         final PackageUnits packageUnit = new PackageUnits("box");
         final String purchaseDate = "2019-01-07";
@@ -165,7 +170,7 @@ public class PurchaseHistoryTest {
         final Vendors vendor = new Vendors("Loblaws");
         final Brands brand = new Brands("Dole");
         final int contentQuantity = 1000;
-        final char isPackaged = 'T';
+        final boolean isPackaged = true;
         final ContentUnits contentUnit = new ContentUnits("ml");
         final PackageUnits packageUnit = new PackageUnits("box");
         final String purchaseDate = "2019-01-07";
@@ -234,5 +239,169 @@ public class PurchaseHistoryTest {
         final String actualQuery = PurchaseHistory.GetSelectAllQueryStatic();
 
         assertEquals(expectedQuery, actualQuery);
+    }
+
+    @Test
+    public void testFromHTMLTableStr_singleEntry_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(1, convertedObjs.size());
+        final PurchaseHistory convertedObj = Lists.newArrayList(convertedObjs).get(0);
+        assertEquals(1, convertedObj.getUid());
+        assertEquals("egg", convertedObj.getStdName().getStdName());
+        assertEquals("Metro", convertedObj.getVendor().getVendorName());
+        assertEquals("Prestige", convertedObj.getBrand().getBrandName());
+        assertEquals(12, convertedObj.getContentQuantity());
+        assertEquals("items", convertedObj.getContentUnit().getUnit());
+        assertEquals(true, convertedObj.isPackaged());
+        assertEquals("box", convertedObj.getPackageUnit().getUnit());
+        assertEquals("2018-12-21", convertedObj.getPurchaseDate());
+        assertEquals("2018-12-31", convertedObj.getExpiryDate());
+
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleEntries_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>Sealtest</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>Fanny Bay</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>box</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><TD>Lucky Moose</TD><TD>3</TD><TD>lb</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>Dole</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(6, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_severalRowsMissingFields_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +   // Invalid
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>Sealtest</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>Fanny Bay</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>box</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><<TD>3</TD><TD>lb</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" + // Invalid
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>Dole</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(4, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_emptyTable_returnsEmptySet() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertTrue(convertedObjs.isEmpty());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesAllValid_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>Sealtest</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BOARDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>Fanny Bay</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>box</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><TD>Lucky Moose</TD><TD>3</TD><TD>lb</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>Dole</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(6, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesOneValid_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>Sealtest</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BOARDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>Fanny Bay</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>box</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><TD>Lucky Moose</TD><TD>3</TD><TD>lb</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>Dole</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(3, convertedObjs.size());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesNoneValid_returnsEmptyTable() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>Sealtest</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BOARDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>Fanny Bay</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>box</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><TD>Lucky Moose</TD><TD>3</TD><TD>lb</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>Dole</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final Set<PurchaseHistory> convertedObjs = PurchaseHistory.FromHTMLTableStr(htmlTableStr);
+
+        assertTrue(convertedObjs.isEmpty());
+    }
+
+
+    @Test
+    public void testIsValidTableSchema_schemaValid_returnsTrue() {
+        final String validTableSchema = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>brand</TH><TH>content_quantity</TH><TH>content_unit</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Metro</TD><TD>Prestige</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>Sealtest</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>Fanny Bay</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>box</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><TD>Lucky Moose</TD><TD>3</TD><TD>lb</TD><TD>T</TD><TD>box</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>Dole</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>box</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final boolean isValidSchema = PurchaseHistory.isValidTableSchema(Jsoup.parse(validTableSchema));
+
+        assertTrue(isValidSchema);
+    }
+
+    @Test
+    public void testIsValidTableSchema_missingFields_returnsFalse() {
+        final String missingFieldsTableSchema = "<TABLE BORDER=1>" +
+                "<TR><TH>uid</TH><TH>std_name</TH><TH>vendor</TH><TH>content_quantity</TH><TH>is_packaged</TH><TH>package_unit</TH><TH>purchase_date</TH><TH>expiry_date</TH></TR>" +
+                "<TR><TD>1</TD><TD>egg</TD><TD>Metro</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>2</TD><TD>egg</TD><TD>Metro</TD><TD>12</TD><TD>items</TD><TD>T</TD><TD>2018-12-21</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>3</TD><TD>3.25% milk</TD><TD>Metro</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>2018-12-10</TD><TD>2018-12-20</TD></TR>" +
+                "<TR><TD>5</TD><TD>oyster meat</TD><TD>Metro</TD><TD>500</TD><TD>g</TD><TD>T</TD><TD>2018-12-26</TD><TD>2018-12-28</TD></TR>" +
+                "<TR><TD>6</TD><TD>whole chicken</TD><TD>Lucky Moose</TD><TD>3</TD><TD>lb</TD><TD>T</TD><TD>2018-12-21</TD><TD>2018-12-31</TD></TR>" +
+                "<TR><TD>8</TD><TD>Orange juice</TD><TD>Loblaws</TD><TD>1000</TD><TD>ml</TD><TD>T</TD><TD>2019-01-07</TD><TD>2019-02-03</TD></TR>" +
+                "</TABLE>";
+
+        final boolean isValidSchema = PurchaseHistory.isValidTableSchema(Jsoup.parse(missingFieldsTableSchema));
+
+        assertFalse(isValidSchema);
     }
 }

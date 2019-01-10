@@ -1,6 +1,9 @@
 package com.example.zhepingjiang.db;
 
+import org.jsoup.Jsoup;
 import org.junit.Test;
+
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -115,5 +118,130 @@ public class StatusesTest {
         final String actualQuery = Statuses.GetSelectAllQueryStatic();
 
         assertEquals(expectedQuery, actualQuery);
+    }
+
+    @Test
+    public void testFromHTMLTableStr_singleEntry_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "<TR><TD>good</TD></TR>" +
+                "</TABLE>";
+
+        final Set<Statuses> convertedObjs = Statuses.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(1, convertedObjs.size());
+        assertTrue(convertedObjs.contains(new Statuses("good")));
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleEntries_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "<TR><TD>good</TD></TR>" +
+                "<TR><TD>default</TD></TR>" +
+                "<TR><TD>disposed</TD></TR>" +
+                "</TABLE>";
+
+        final Set<Statuses> convertedObjs = Statuses.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(3, convertedObjs.size());
+        assertTrue(convertedObjs.contains(new Statuses("good")));
+        assertTrue(convertedObjs.contains(new Statuses("default")));
+        assertTrue(convertedObjs.contains(new Statuses("disposed")));
+    }
+
+    @Test
+    public void testFromHTMLTableStr_emptyTable_returnsEmptySet() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "</TABLE>";
+
+        final Set<Statuses> convertedObjs = Statuses.FromHTMLTableStr(htmlTableStr);
+
+        assertTrue(convertedObjs.isEmpty());
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesAllValid_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "<TR><TD>good</TD></TR>" +
+                "<TR><TD>default</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "<TR><TD>disposed</TD></TR>" +
+                "</TABLE>";
+
+        final Set<Statuses> convertedObjs = Statuses.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(3, convertedObjs.size());
+        assertTrue(convertedObjs.contains(new Statuses("good")));
+        assertTrue(convertedObjs.contains(new Statuses("default")));
+        assertTrue(convertedObjs.contains(new Statuses("disposed")));
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesOneValid_happyPath() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "<TR><TD>good</TD></TR>" +
+                "<TR><TD>default</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH><TH>some_other_fields</TH></TR>" +
+                "<TR><TD>disposed</TD><TD>blah1</TD></TR>" +
+                "</TABLE>";
+
+        final Set<Statuses> convertedObjs = Statuses.FromHTMLTableStr(htmlTableStr);
+
+        assertEquals(2, convertedObjs.size());
+        assertTrue(convertedObjs.contains(new Statuses("good")));
+        assertTrue(convertedObjs.contains(new Statuses("default")));
+    }
+
+    @Test
+    public void testFromHTMLTableStr_multipleTablesNoneValid_returnsEmptyTable() {
+        final String htmlTableStr = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH><TH>some_other_fields</TH></TR>" +
+                "<TR><TD>good</TD><TD>blah1</TD></TR>" +
+                "<TR><TD>default</TD><TD>blah2</TD></TR>" +
+                "</TABLE>" +
+                "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH><TH>some_other_fields</TH></TR>" +
+                "<TR><TD>disposed</TD><TD>blah3</TD></TR>" +
+                "</TABLE>";
+
+        final Set<Statuses> convertedObjs = Statuses.FromHTMLTableStr(htmlTableStr);
+
+        assertTrue(convertedObjs.isEmpty());
+    }
+
+    @Test
+    public void testIsValidTableSchema_schemaValid_returnsTrue() {
+        final String validTableSchema = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH></TR>" +
+                "<TR><TD>good</TD></TR>" +
+                "<TR><TD>default</TD></TR>" +
+                "<TR><TD>unopened</TD></TR>" +
+                "</TABLE>";
+
+        final boolean isValidSchema = Statuses.isValidTableSchema(Jsoup.parse(validTableSchema));
+
+        assertTrue(isValidSchema);
+    }
+
+    @Test
+    public void testIsValidTableSchema_extraField_returnsFalse() {
+        final String extraFieldTableSchema = "<TABLE BORDER=1>" +
+                "<TR><TH>status</TH><TH>some_other_fields</TH></TR>" +
+                "<TR><TD>good</TD><TD>blah1</TD></TR>" +
+                "<TR><TD>default</TD><TD>blah2</TD></TR>" +
+                "<TR><TD>unopened</TD><TD>blah3</TD></TR>" +
+                "</TABLE>";
+
+        final boolean isValidSchema = Statuses.isValidTableSchema(Jsoup.parse(extraFieldTableSchema));
+
+        assertFalse(isValidSchema);
     }
 }
