@@ -45,6 +45,15 @@
                 android:inputType="date" />
 
             <EditText
+                android:id="@+id/enterDurationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/enterDurationText"
+                android:inputType="number" />
+
+            <EditText
                 android:id="@+id/enterEndDateEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
