@@ -1,0 +1,4803 @@
+CCS811 device successfully opened.
+Allow 48 hours initial burn-in and 20 minutes to warm up (each use)
+eCO2 = 0, TVOC = 0
+00:00 min:sec have passed
+eCO2 = 402, TVOC = 0
+00:05 min:sec have passed
+eCO2 = 402, TVOC = 0
+00:10 min:sec have passed
+eCO2 = 402, TVOC = 0
+00:15 min:sec have passed
+eCO2 = 402, TVOC = 0
+00:20 min:sec have passed
+eCO2 = 424, TVOC = 3
+00:25 min:sec have passed
+eCO2 = 421, TVOC = 3
+00:30 min:sec have passed
+eCO2 = 416, TVOC = 2
+00:35 min:sec have passed
+eCO2 = 416, TVOC = 2
+00:40 min:sec have passed
+eCO2 = 421, TVOC = 3
+00:45 min:sec have passed
+eCO2 = 421, TVOC = 3
+00:50 min:sec have passed
+eCO2 = 424, TVOC = 3
+00:55 min:sec have passed
+eCO2 = 424, TVOC = 3
+01:00 min:sec have passed
+eCO2 = 432, TVOC = 4
+01:05 min:sec have passed
+eCO2 = 424, TVOC = 3
+01:10 min:sec have passed
+eCO2 = 432, TVOC = 4
+01:15 min:sec have passed
+eCO2 = 421, TVOC = 3
+01:20 min:sec have passed
+eCO2 = 424, TVOC = 3
+01:25 min:sec have passed
+eCO2 = 424, TVOC = 3
+01:30 min:sec have passed
+eCO2 = 424, TVOC = 3
+01:35 min:sec have passed
+eCO2 = 436, TVOC = 5
+01:40 min:sec have passed
+eCO2 = 436, TVOC = 5
+01:45 min:sec have passed
+eCO2 = 436, TVOC = 5
+01:50 min:sec have passed
+eCO2 = 432, TVOC = 4
+01:55 min:sec have passed
+eCO2 = 436, TVOC = 5
+02:00 min:sec have passed
+eCO2 = 432, TVOC = 4
+02:05 min:sec have passed
+eCO2 = 432, TVOC = 4
+02:10 min:sec have passed
+eCO2 = 424, TVOC = 3
+02:15 min:sec have passed
+eCO2 = 424, TVOC = 3
+02:20 min:sec have passed
+eCO2 = 424, TVOC = 3
+02:25 min:sec have passed
+eCO2 = 424, TVOC = 3
+02:30 min:sec have passed
+eCO2 = 432, TVOC = 4
+02:35 min:sec have passed
+eCO2 = 424, TVOC = 3
+02:40 min:sec have passed
+eCO2 = 432, TVOC = 4
+02:45 min:sec have passed
+eCO2 = 432, TVOC = 4
+02:50 min:sec have passed
+eCO2 = 424, TVOC = 3
+02:55 min:sec have passed
+eCO2 = 432, TVOC = 4
+03:00 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:05 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:10 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:15 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:20 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:25 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:30 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:35 min:sec have passed
+eCO2 = 421, TVOC = 3
+03:40 min:sec have passed
+eCO2 = 421, TVOC = 3
+03:45 min:sec have passed
+eCO2 = 424, TVOC = 3
+03:50 min:sec have passed
+eCO2 = 421, TVOC = 3
+03:55 min:sec have passed
+eCO2 = 421, TVOC = 3
+04:00 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:05 min:sec have passed
+eCO2 = 421, TVOC = 3
+04:10 min:sec have passed
+eCO2 = 421, TVOC = 3
+04:15 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:20 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:25 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:30 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:35 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:40 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:45 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:50 min:sec have passed
+eCO2 = 424, TVOC = 3
+04:55 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:00 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:05 min:sec have passed
+eCO2 = 432, TVOC = 4
+05:10 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:15 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:20 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:25 min:sec have passed
+eCO2 = 432, TVOC = 4
+05:30 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:35 min:sec have passed
+eCO2 = 424, TVOC = 3
+05:40 min:sec have passed
+eCO2 = 432, TVOC = 4
+05:45 min:sec have passed
+eCO2 = 432, TVOC = 4
+05:50 min:sec have passed
+eCO2 = 432, TVOC = 4
+05:55 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:00 min:sec have passed
+eCO2 = 424, TVOC = 3
+06:05 min:sec have passed
+eCO2 = 424, TVOC = 3
+06:10 min:sec have passed
+eCO2 = 424, TVOC = 3
+06:15 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:20 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:25 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:30 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:35 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:40 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:45 min:sec have passed
+eCO2 = 432, TVOC = 4
+06:50 min:sec have passed
+eCO2 = 436, TVOC = 5
+06:55 min:sec have passed
+eCO2 = 432, TVOC = 4
+07:00 min:sec have passed
+eCO2 = 432, TVOC = 4
+07:05 min:sec have passed
+eCO2 = 432, TVOC = 4
+07:10 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:15 min:sec have passed
+eCO2 = 432, TVOC = 4
+07:20 min:sec have passed
+eCO2 = 432, TVOC = 4
+07:25 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:30 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:35 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:40 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:45 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:50 min:sec have passed
+eCO2 = 436, TVOC = 5
+07:55 min:sec have passed
+eCO2 = 432, TVOC = 4
+08:00 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:05 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:10 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:15 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:20 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:25 min:sec have passed
+eCO2 = 441, TVOC = 6
+08:30 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:35 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:40 min:sec have passed
+eCO2 = 441, TVOC = 6
+08:45 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:50 min:sec have passed
+eCO2 = 436, TVOC = 5
+08:55 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:00 min:sec have passed
+eCO2 = 436, TVOC = 5
+09:05 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:10 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:15 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:20 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:25 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:30 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:35 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:40 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:45 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:50 min:sec have passed
+eCO2 = 441, TVOC = 6
+09:55 min:sec have passed
+eCO2 = 441, TVOC = 6
+10:00 min:sec have passed
+eCO2 = 441, TVOC = 6
+10:05 min:sec have passed
+eCO2 = 441, TVOC = 6
+10:10 min:sec have passed
+eCO2 = 445, TVOC = 6
+10:15 min:sec have passed
+eCO2 = 441, TVOC = 6
+10:20 min:sec have passed
+eCO2 = 441, TVOC = 6
+10:25 min:sec have passed
+eCO2 = 441, TVOC = 6
+10:30 min:sec have passed
+eCO2 = 445, TVOC = 6
+10:35 min:sec have passed
+eCO2 = 445, TVOC = 6
+10:40 min:sec have passed
+eCO2 = 445, TVOC = 6
+10:45 min:sec have passed
+eCO2 = 445, TVOC = 6
+10:50 min:sec have passed
+eCO2 = 445, TVOC = 6
+10:55 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:00 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:05 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:10 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:15 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:20 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:25 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:30 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:35 min:sec have passed
+eCO2 = 450, TVOC = 7
+11:40 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:45 min:sec have passed
+eCO2 = 445, TVOC = 6
+11:50 min:sec have passed
+eCO2 = 450, TVOC = 7
+11:55 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:00 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:05 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:10 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:15 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:20 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:25 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:30 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:35 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:40 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:45 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:50 min:sec have passed
+eCO2 = 450, TVOC = 7
+12:55 min:sec have passed
+eCO2 = 450, TVOC = 7
+13:00 min:sec have passed
+eCO2 = 450, TVOC = 7
+13:05 min:sec have passed
+eCO2 = 450, TVOC = 7
+13:10 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:15 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:20 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:25 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:30 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:35 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:40 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:45 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:50 min:sec have passed
+eCO2 = 455, TVOC = 8
+13:55 min:sec have passed
+eCO2 = 455, TVOC = 8
+14:00 min:sec have passed
+eCO2 = 455, TVOC = 8
+14:05 min:sec have passed
+eCO2 = 455, TVOC = 8
+14:10 min:sec have passed
+eCO2 = 455, TVOC = 8
+14:15 min:sec have passed
+eCO2 = 455, TVOC = 8
+14:20 min:sec have passed
+eCO2 = 455, TVOC = 8
+14:25 min:sec have passed
+eCO2 = 460, TVOC = 9
+14:30 min:sec have passed
+eCO2 = 460, TVOC = 9
+14:35 min:sec have passed
+eCO2 = 460, TVOC = 9
+14:40 min:sec have passed
+eCO2 = 460, TVOC = 9
+14:45 min:sec have passed
+eCO2 = 460, TVOC = 9
+14:50 min:sec have passed
+eCO2 = 460, TVOC = 9
+14:55 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:00 min:sec have passed
+eCO2 = 460, TVOC = 9
+15:05 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:10 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:15 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:20 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:25 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:30 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:35 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:40 min:sec have passed
+eCO2 = 472, TVOC = 10
+15:45 min:sec have passed
+eCO2 = 463, TVOC = 9
+15:50 min:sec have passed
+eCO2 = 472, TVOC = 10
+15:55 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:00 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:05 min:sec have passed
+eCO2 = 463, TVOC = 9
+16:10 min:sec have passed
+eCO2 = 463, TVOC = 9
+16:15 min:sec have passed
+eCO2 = 463, TVOC = 9
+16:20 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:25 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:30 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:35 min:sec have passed
+eCO2 = 463, TVOC = 9
+16:40 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:45 min:sec have passed
+eCO2 = 472, TVOC = 10
+16:50 min:sec have passed
+eCO2 = 477, TVOC = 11
+16:55 min:sec have passed
+eCO2 = 481, TVOC = 12
+17:00 min:sec have passed
+eCO2 = 477, TVOC = 11
+17:05 min:sec have passed
+eCO2 = 477, TVOC = 11
+17:10 min:sec have passed
+eCO2 = 486, TVOC = 13
+17:15 min:sec have passed
+eCO2 = 486, TVOC = 13
+17:20 min:sec have passed
+eCO2 = 481, TVOC = 12
+17:25 min:sec have passed
+eCO2 = 481, TVOC = 12
+17:30 min:sec have passed
+eCO2 = 486, TVOC = 13
+17:35 min:sec have passed
+eCO2 = 486, TVOC = 13
+17:40 min:sec have passed
+eCO2 = 486, TVOC = 13
+17:45 min:sec have passed
+eCO2 = 486, TVOC = 13
+17:50 min:sec have passed
+eCO2 = 481, TVOC = 12
+17:55 min:sec have passed
+eCO2 = 481, TVOC = 12
+18:00 min:sec have passed
+eCO2 = 486, TVOC = 13
+18:05 min:sec have passed
+eCO2 = 481, TVOC = 12
+18:10 min:sec have passed
+eCO2 = 481, TVOC = 12
+18:15 min:sec have passed
+eCO2 = 481, TVOC = 12
+18:20 min:sec have passed
+eCO2 = 477, TVOC = 11
+18:25 min:sec have passed
+eCO2 = 477, TVOC = 11
+18:30 min:sec have passed
+eCO2 = 477, TVOC = 11
+18:35 min:sec have passed
+eCO2 = 472, TVOC = 10
+18:40 min:sec have passed
+eCO2 = 477, TVOC = 11
+18:45 min:sec have passed
+eCO2 = 472, TVOC = 10
+18:50 min:sec have passed
+eCO2 = 463, TVOC = 9
+18:55 min:sec have passed
+eCO2 = 463, TVOC = 9
+19:00 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:05 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:10 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:15 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:20 min:sec have passed
+eCO2 = 463, TVOC = 9
+19:25 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:30 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:35 min:sec have passed
+eCO2 = 472, TVOC = 10
+19:40 min:sec have passed
+eCO2 = 481, TVOC = 12
+19:45 min:sec have passed
+eCO2 = 498, TVOC = 14
+19:50 min:sec have passed
+eCO2 = 493, TVOC = 14
+19:55 min:sec have passed
+eCO2 = 498, TVOC = 14
+20:00 min:sec have passed
+eCO2 = 493, TVOC = 14
+20:05 min:sec have passed
+eCO2 = 486, TVOC = 13
+20:10 min:sec have passed
+eCO2 = 493, TVOC = 14
+20:15 min:sec have passed
+eCO2 = 493, TVOC = 14
+20:20 min:sec have passed
+eCO2 = 493, TVOC = 14
+20:25 min:sec have passed
+eCO2 = 493, TVOC = 14
+20:30 min:sec have passed
+eCO2 = 486, TVOC = 13
+20:35 min:sec have passed
+eCO2 = 486, TVOC = 13
+20:40 min:sec have passed
+eCO2 = 493, TVOC = 14
+20:45 min:sec have passed
+eCO2 = 486, TVOC = 13
+20:50 min:sec have passed
+eCO2 = 486, TVOC = 13
+20:55 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:00 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:05 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:10 min:sec have passed
+eCO2 = 481, TVOC = 12
+21:15 min:sec have passed
+eCO2 = 477, TVOC = 11
+21:20 min:sec have passed
+eCO2 = 481, TVOC = 12
+21:25 min:sec have passed
+eCO2 = 481, TVOC = 12
+21:30 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:35 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:40 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:45 min:sec have passed
+eCO2 = 481, TVOC = 12
+21:50 min:sec have passed
+eCO2 = 486, TVOC = 13
+21:55 min:sec have passed
+eCO2 = 486, TVOC = 13
+22:00 min:sec have passed
+eCO2 = 486, TVOC = 13
+22:05 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:10 min:sec have passed
+eCO2 = 486, TVOC = 13
+22:15 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:20 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:25 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:30 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:35 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:40 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:45 min:sec have passed
+eCO2 = 477, TVOC = 11
+22:50 min:sec have passed
+eCO2 = 481, TVOC = 12
+22:55 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:00 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:05 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:10 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:15 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:20 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:25 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:30 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:35 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:40 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:45 min:sec have passed
+eCO2 = 472, TVOC = 10
+23:50 min:sec have passed
+eCO2 = 477, TVOC = 11
+23:55 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:00 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:05 min:sec have passed
+eCO2 = 472, TVOC = 10
+24:10 min:sec have passed
+eCO2 = 472, TVOC = 10
+24:15 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:20 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:25 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:30 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:35 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:40 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:45 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:50 min:sec have passed
+eCO2 = 477, TVOC = 11
+24:55 min:sec have passed
+eCO2 = 477, TVOC = 11
+25:00 min:sec have passed
+eCO2 = 486, TVOC = 13
+25:05 min:sec have passed
+eCO2 = 493, TVOC = 14
+25:10 min:sec have passed
+eCO2 = 486, TVOC = 13
+25:15 min:sec have passed
+eCO2 = 486, TVOC = 13
+25:20 min:sec have passed
+eCO2 = 486, TVOC = 13
+25:25 min:sec have passed
+eCO2 = 486, TVOC = 13
+25:30 min:sec have passed
+eCO2 = 498, TVOC = 14
+25:35 min:sec have passed
+eCO2 = 508, TVOC = 16
+25:40 min:sec have passed
+eCO2 = 524, TVOC = 18
+25:45 min:sec have passed
+eCO2 = 542, TVOC = 21
+25:50 min:sec have passed
+eCO2 = 524, TVOC = 18
+25:55 min:sec have passed
+eCO2 = 542, TVOC = 21
+26:00 min:sec have passed
+eCO2 = 542, TVOC = 21
+26:05 min:sec have passed
+eCO2 = 553, TVOC = 23
+26:10 min:sec have passed
+eCO2 = 553, TVOC = 23
+26:15 min:sec have passed
+eCO2 = 548, TVOC = 22
+26:20 min:sec have passed
+eCO2 = 574, TVOC = 26
+26:25 min:sec have passed
+eCO2 = 574, TVOC = 26
+26:30 min:sec have passed
+eCO2 = 561, TVOC = 24
+26:35 min:sec have passed
+eCO2 = 580, TVOC = 27
+26:40 min:sec have passed
+eCO2 = 565, TVOC = 25
+26:45 min:sec have passed
+eCO2 = 580, TVOC = 27
+26:50 min:sec have passed
+eCO2 = 596, TVOC = 29
+26:55 min:sec have passed
+eCO2 = 602, TVOC = 30
+27:00 min:sec have passed
+eCO2 = 602, TVOC = 30
+27:05 min:sec have passed
+eCO2 = 602, TVOC = 30
+27:10 min:sec have passed
+eCO2 = 615, TVOC = 32
+27:15 min:sec have passed
+eCO2 = 615, TVOC = 32
+27:20 min:sec have passed
+eCO2 = 624, TVOC = 34
+27:25 min:sec have passed
+eCO2 = 624, TVOC = 34
+27:30 min:sec have passed
+eCO2 = 638, TVOC = 36
+27:35 min:sec have passed
+eCO2 = 638, TVOC = 36
+27:40 min:sec have passed
+eCO2 = 638, TVOC = 36
+27:45 min:sec have passed
+eCO2 = 645, TVOC = 37
+27:50 min:sec have passed
+eCO2 = 645, TVOC = 37
+27:55 min:sec have passed
+eCO2 = 659, TVOC = 39
+28:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+28:05 min:sec have passed
+eCO2 = 659, TVOC = 39
+28:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+28:15 min:sec have passed
+eCO2 = 675, TVOC = 41
+28:20 min:sec have passed
+eCO2 = 675, TVOC = 41
+28:25 min:sec have passed
+eCO2 = 675, TVOC = 41
+28:30 min:sec have passed
+eCO2 = 675, TVOC = 41
+28:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+28:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+28:45 min:sec have passed
+eCO2 = 675, TVOC = 41
+28:50 min:sec have passed
+eCO2 = 686, TVOC = 43
+28:55 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:00 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:05 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:10 min:sec have passed
+eCO2 = 694, TVOC = 44
+29:15 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:20 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:25 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:30 min:sec have passed
+eCO2 = 694, TVOC = 44
+29:35 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:40 min:sec have passed
+eCO2 = 686, TVOC = 43
+29:45 min:sec have passed
+eCO2 = 694, TVOC = 44
+29:50 min:sec have passed
+eCO2 = 694, TVOC = 44
+29:55 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:00 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:05 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:10 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:15 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:20 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:25 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:30 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:35 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:40 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:45 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:50 min:sec have passed
+eCO2 = 694, TVOC = 44
+30:55 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:00 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:05 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+31:15 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:20 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:25 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:30 min:sec have passed
+eCO2 = 694, TVOC = 44
+31:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+31:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+31:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+31:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+31:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+32:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+33:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:30 min:sec have passed
+eCO2 = 710, TVOC = 47
+34:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+34:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+35:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+36:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:05 min:sec have passed
+eCO2 = 710, TVOC = 47
+37:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+37:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:40 min:sec have passed
+eCO2 = 694, TVOC = 44
+38:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+38:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+39:55 min:sec have passed
+eCO2 = 694, TVOC = 44
+40:00 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:35 min:sec have passed
+eCO2 = 694, TVOC = 44
+40:40 min:sec have passed
+eCO2 = 694, TVOC = 44
+40:45 min:sec have passed
+eCO2 = 694, TVOC = 44
+40:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+40:55 min:sec have passed
+eCO2 = 694, TVOC = 44
+41:00 min:sec have passed
+eCO2 = 694, TVOC = 44
+41:05 min:sec have passed
+eCO2 = 702, TVOC = 46
+41:10 min:sec have passed
+eCO2 = 702, TVOC = 46
+41:15 min:sec have passed
+eCO2 = 702, TVOC = 46
+41:20 min:sec have passed
+eCO2 = 702, TVOC = 46
+41:25 min:sec have passed
+eCO2 = 694, TVOC = 44
+41:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+41:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+41:40 min:sec have passed
+eCO2 = 694, TVOC = 44
+41:45 min:sec have passed
+eCO2 = 694, TVOC = 44
+41:50 min:sec have passed
+eCO2 = 694, TVOC = 44
+41:55 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:00 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:05 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:10 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:15 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:20 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:25 min:sec have passed
+eCO2 = 694, TVOC = 44
+42:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+42:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+42:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+42:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+42:50 min:sec have passed
+eCO2 = 726, TVOC = 49
+42:55 min:sec have passed
+eCO2 = 710, TVOC = 47
+43:00 min:sec have passed
+eCO2 = 710, TVOC = 47
+43:05 min:sec have passed
+eCO2 = 710, TVOC = 47
+43:10 min:sec have passed
+eCO2 = 710, TVOC = 47
+43:15 min:sec have passed
+eCO2 = 710, TVOC = 47
+43:20 min:sec have passed
+eCO2 = 710, TVOC = 47
+43:25 min:sec have passed
+eCO2 = 702, TVOC = 46
+43:30 min:sec have passed
+eCO2 = 702, TVOC = 46
+43:35 min:sec have passed
+eCO2 = 702, TVOC = 46
+43:40 min:sec have passed
+eCO2 = 702, TVOC = 46
+43:45 min:sec have passed
+eCO2 = 702, TVOC = 46
+43:50 min:sec have passed
+eCO2 = 702, TVOC = 46
+43:55 min:sec have passed
+eCO2 = 702, TVOC = 46
+44:00 min:sec have passed
+eCO2 = 694, TVOC = 44
+44:05 min:sec have passed
+eCO2 = 694, TVOC = 44
+44:10 min:sec have passed
+eCO2 = 694, TVOC = 44
+44:15 min:sec have passed
+eCO2 = 694, TVOC = 44
+44:20 min:sec have passed
+eCO2 = 694, TVOC = 44
+44:25 min:sec have passed
+eCO2 = 675, TVOC = 41
+44:30 min:sec have passed
+eCO2 = 675, TVOC = 41
+44:35 min:sec have passed
+eCO2 = 686, TVOC = 43
+44:40 min:sec have passed
+eCO2 = 686, TVOC = 43
+44:45 min:sec have passed
+eCO2 = 686, TVOC = 43
+44:50 min:sec have passed
+eCO2 = 686, TVOC = 43
+44:55 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:00 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:05 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:10 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:15 min:sec have passed
+eCO2 = 675, TVOC = 41
+45:20 min:sec have passed
+eCO2 = 675, TVOC = 41
+45:25 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:30 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:35 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:40 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:45 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:50 min:sec have passed
+eCO2 = 686, TVOC = 43
+45:55 min:sec have passed
+eCO2 = 686, TVOC = 43
+46:00 min:sec have passed
+eCO2 = 686, TVOC = 43
+46:05 min:sec have passed
+eCO2 = 686, TVOC = 43
+46:10 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:15 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:20 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:25 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:30 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:35 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:40 min:sec have passed
+eCO2 = 686, TVOC = 43
+46:45 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:50 min:sec have passed
+eCO2 = 694, TVOC = 44
+46:55 min:sec have passed
+eCO2 = 694, TVOC = 44
+47:00 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:05 min:sec have passed
+eCO2 = 694, TVOC = 44
+47:10 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:15 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:20 min:sec have passed
+eCO2 = 694, TVOC = 44
+47:25 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:30 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:35 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:40 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:45 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:50 min:sec have passed
+eCO2 = 686, TVOC = 43
+47:55 min:sec have passed
+eCO2 = 686, TVOC = 43
+48:00 min:sec have passed
+eCO2 = 675, TVOC = 41
+48:05 min:sec have passed
+eCO2 = 686, TVOC = 43
+48:10 min:sec have passed
+eCO2 = 686, TVOC = 43
+48:15 min:sec have passed
+eCO2 = 686, TVOC = 43
+48:20 min:sec have passed
+eCO2 = 675, TVOC = 41
+48:25 min:sec have passed
+eCO2 = 675, TVOC = 41
+48:30 min:sec have passed
+eCO2 = 675, TVOC = 41
+48:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+48:40 min:sec have passed
+data not ready
+48:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+48:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+48:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+49:00 min:sec have passed
+eCO2 = 668, TVOC = 40
+49:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+49:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+49:15 min:sec have passed
+eCO2 = 668, TVOC = 40
+49:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+49:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+49:30 min:sec have passed
+eCO2 = 659, TVOC = 39
+49:35 min:sec have passed
+eCO2 = 659, TVOC = 39
+49:40 min:sec have passed
+eCO2 = 659, TVOC = 39
+49:45 min:sec have passed
+eCO2 = 652, TVOC = 38
+49:50 min:sec have passed
+eCO2 = 659, TVOC = 39
+49:55 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:05 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:10 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:15 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:20 min:sec have passed
+eCO2 = 652, TVOC = 38
+50:25 min:sec have passed
+eCO2 = 652, TVOC = 38
+50:30 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:35 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:40 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:45 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:50 min:sec have passed
+eCO2 = 659, TVOC = 39
+50:55 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:05 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:10 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:15 min:sec have passed
+eCO2 = 668, TVOC = 40
+51:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:25 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:30 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:35 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:40 min:sec have passed
+eCO2 = 659, TVOC = 39
+51:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+51:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+51:55 min:sec have passed
+eCO2 = 659, TVOC = 39
+52:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+52:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:15 min:sec have passed
+eCO2 = 659, TVOC = 39
+52:20 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+52:50 min:sec have passed
+eCO2 = 659, TVOC = 39
+52:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:00 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:05 min:sec have passed
+eCO2 = 659, TVOC = 39
+53:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:15 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:20 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:25 min:sec have passed
+eCO2 = 675, TVOC = 41
+53:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+53:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:00 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:15 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:20 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:45 min:sec have passed
+eCO2 = 659, TVOC = 39
+54:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+54:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+55:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:15 min:sec have passed
+eCO2 = 659, TVOC = 39
+55:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+55:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:45 min:sec have passed
+eCO2 = 659, TVOC = 39
+55:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+55:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:00 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:15 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+56:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+56:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+57:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:15 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+57:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:35 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:50 min:sec have passed
+eCO2 = 668, TVOC = 40
+57:55 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:00 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:05 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:10 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:15 min:sec have passed
+eCO2 = 659, TVOC = 39
+58:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+58:25 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:30 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:35 min:sec have passed
+eCO2 = 659, TVOC = 39
+58:40 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:45 min:sec have passed
+eCO2 = 668, TVOC = 40
+58:50 min:sec have passed
+eCO2 = 659, TVOC = 39
+58:55 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:00 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:05 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:10 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:15 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:20 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:25 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:30 min:sec have passed
+eCO2 = 659, TVOC = 39
+59:35 min:sec have passed
+eCO2 = 637, TVOC = 36
+59:40 min:sec have passed
+eCO2 = 629, TVOC = 34
+59:45 min:sec have passed
+eCO2 = 629, TVOC = 34
+59:50 min:sec have passed
+eCO2 = 629, TVOC = 34
+59:55 min:sec have passed
+eCO2 = 629, TVOC = 34
+60:00 min:sec have passed
+eCO2 = 629, TVOC = 34
+60:05 min:sec have passed
+eCO2 = 629, TVOC = 34
+60:10 min:sec have passed
+eCO2 = 629, TVOC = 34
+60:15 min:sec have passed
+eCO2 = 637, TVOC = 36
+60:20 min:sec have passed
+eCO2 = 629, TVOC = 34
+60:25 min:sec have passed
+eCO2 = 629, TVOC = 34
+60:30 min:sec have passed
+eCO2 = 592, TVOC = 29
+60:35 min:sec have passed
+eCO2 = 592, TVOC = 29
+60:40 min:sec have passed
+eCO2 = 599, TVOC = 30
+60:45 min:sec have passed
+eCO2 = 599, TVOC = 30
+60:50 min:sec have passed
+eCO2 = 599, TVOC = 30
+60:55 min:sec have passed
+eCO2 = 599, TVOC = 30
+61:00 min:sec have passed
+eCO2 = 592, TVOC = 29
+61:05 min:sec have passed
+eCO2 = 592, TVOC = 29
+61:10 min:sec have passed
+eCO2 = 592, TVOC = 29
+61:15 min:sec have passed
+eCO2 = 592, TVOC = 29
+61:20 min:sec have passed
+eCO2 = 592, TVOC = 29
+61:25 min:sec have passed
+eCO2 = 592, TVOC = 29
+61:30 min:sec have passed
+eCO2 = 565, TVOC = 25
+61:35 min:sec have passed
+eCO2 = 565, TVOC = 25
+61:40 min:sec have passed
+eCO2 = 565, TVOC = 25
+61:45 min:sec have passed
+eCO2 = 565, TVOC = 25
+61:50 min:sec have passed
+eCO2 = 565, TVOC = 25
+61:55 min:sec have passed
+eCO2 = 570, TVOC = 25
+62:00 min:sec have passed
+eCO2 = 570, TVOC = 25
+62:05 min:sec have passed
+eCO2 = 565, TVOC = 25
+62:10 min:sec have passed
+eCO2 = 570, TVOC = 25
+62:15 min:sec have passed
+eCO2 = 570, TVOC = 25
+62:20 min:sec have passed
+eCO2 = 565, TVOC = 25
+62:25 min:sec have passed
+eCO2 = 565, TVOC = 25
+62:30 min:sec have passed
+eCO2 = 531, TVOC = 19
+62:35 min:sec have passed
+eCO2 = 531, TVOC = 19
+62:40 min:sec have passed
+eCO2 = 531, TVOC = 19
+62:45 min:sec have passed
+eCO2 = 531, TVOC = 19
+62:50 min:sec have passed
+eCO2 = 531, TVOC = 19
+62:55 min:sec have passed
+eCO2 = 531, TVOC = 19
+63:00 min:sec have passed
+eCO2 = 537, TVOC = 20
+63:05 min:sec have passed
+eCO2 = 531, TVOC = 19
+63:10 min:sec have passed
+eCO2 = 531, TVOC = 19
+63:15 min:sec have passed
+eCO2 = 531, TVOC = 19
+63:20 min:sec have passed
+eCO2 = 531, TVOC = 19
+63:25 min:sec have passed
+eCO2 = 531, TVOC = 19
+63:30 min:sec have passed
+eCO2 = 501, TVOC = 15
+63:35 min:sec have passed
+eCO2 = 506, TVOC = 16
+63:40 min:sec have passed
+eCO2 = 501, TVOC = 15
+63:45 min:sec have passed
+eCO2 = 501, TVOC = 15
+63:50 min:sec have passed
+eCO2 = 501, TVOC = 15
+63:55 min:sec have passed
+eCO2 = 506, TVOC = 16
+64:00 min:sec have passed
+eCO2 = 506, TVOC = 16
+64:05 min:sec have passed
+eCO2 = 501, TVOC = 15
+64:10 min:sec have passed
+eCO2 = 506, TVOC = 16
+64:15 min:sec have passed
+eCO2 = 506, TVOC = 16
+64:20 min:sec have passed
+eCO2 = 501, TVOC = 15
+64:25 min:sec have passed
+eCO2 = 501, TVOC = 15
+64:30 min:sec have passed
+eCO2 = 478, TVOC = 11
+64:35 min:sec have passed
+eCO2 = 478, TVOC = 11
+64:40 min:sec have passed
+eCO2 = 478, TVOC = 11
+64:45 min:sec have passed
+eCO2 = 478, TVOC = 11
+64:50 min:sec have passed
+eCO2 = 478, TVOC = 11
+64:55 min:sec have passed
+eCO2 = 478, TVOC = 11
+65:00 min:sec have passed
+eCO2 = 478, TVOC = 11
+65:05 min:sec have passed
+eCO2 = 478, TVOC = 11
+65:10 min:sec have passed
+eCO2 = 478, TVOC = 11
+65:15 min:sec have passed
+eCO2 = 478, TVOC = 11
+65:20 min:sec have passed
+eCO2 = 483, TVOC = 12
+65:25 min:sec have passed
+eCO2 = 478, TVOC = 11
+65:30 min:sec have passed
+eCO2 = 451, TVOC = 7
+65:35 min:sec have passed
+eCO2 = 456, TVOC = 8
+65:40 min:sec have passed
+eCO2 = 451, TVOC = 7
+65:45 min:sec have passed
+eCO2 = 456, TVOC = 8
+65:50 min:sec have passed
+eCO2 = 451, TVOC = 7
+65:55 min:sec have passed
+eCO2 = 456, TVOC = 8
+66:00 min:sec have passed
+eCO2 = 461, TVOC = 9
+66:05 min:sec have passed
+eCO2 = 461, TVOC = 9
+66:10 min:sec have passed
+eCO2 = 461, TVOC = 9
+66:15 min:sec have passed
+eCO2 = 466, TVOC = 10
+66:20 min:sec have passed
+eCO2 = 466, TVOC = 10
+66:25 min:sec have passed
+eCO2 = 461, TVOC = 9
+66:30 min:sec have passed
+eCO2 = 442, TVOC = 6
+66:35 min:sec have passed
+eCO2 = 447, TVOC = 7
+66:40 min:sec have passed
+eCO2 = 447, TVOC = 7
+66:45 min:sec have passed
+eCO2 = 447, TVOC = 7
+66:50 min:sec have passed
+eCO2 = 442, TVOC = 6
+66:55 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:00 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:05 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:10 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:15 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:20 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:25 min:sec have passed
+eCO2 = 442, TVOC = 6
+67:30 min:sec have passed
+eCO2 = 417, TVOC = 2
+67:35 min:sec have passed
+eCO2 = 413, TVOC = 1
+67:40 min:sec have passed
+eCO2 = 417, TVOC = 2
+67:45 min:sec have passed
+eCO2 = 413, TVOC = 1
+67:50 min:sec have passed
+eCO2 = 413, TVOC = 1
+67:55 min:sec have passed
+eCO2 = 408, TVOC = 1
+68:00 min:sec have passed
+eCO2 = 408, TVOC = 1
+68:05 min:sec have passed
+eCO2 = 403, TVOC = 0
+68:10 min:sec have passed
+eCO2 = 408, TVOC = 1
+68:15 min:sec have passed
+eCO2 = 408, TVOC = 1
+68:20 min:sec have passed
+eCO2 = 408, TVOC = 1
+68:25 min:sec have passed
+eCO2 = 408, TVOC = 1
+68:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+68:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+68:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+68:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+68:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+68:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:20 min:sec have passed
+eCO2 = 409, TVOC = 1
+69:25 min:sec have passed
+eCO2 = 409, TVOC = 1
+69:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+69:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+69:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+69:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+70:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+70:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+70:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+70:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+70:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+70:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+70:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+70:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+70:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+70:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+70:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+70:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+71:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+71:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+71:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+71:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+71:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+71:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+72:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+72:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+72:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+72:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+72:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+73:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+73:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+73:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+73:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+73:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+73:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+73:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+73:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+73:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+73:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+73:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+73:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+74:50 min:sec have passed
+eCO2 = 409, TVOC = 1
+74:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:05 min:sec have passed
+eCO2 = 409, TVOC = 1
+75:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:20 min:sec have passed
+eCO2 = 409, TVOC = 1
+75:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+75:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+75:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+76:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+76:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+76:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+77:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+77:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+77:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+77:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+77:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+77:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+78:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+78:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+78:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+78:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+78:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+78:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+78:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+78:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+78:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+78:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+78:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+78:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+79:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+79:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+80:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+80:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+80:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+80:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+80:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+81:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+81:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+81:55 min:sec have passed
+eCO2 = 410, TVOC = 1
+82:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+82:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+82:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+82:15 min:sec have passed
+eCO2 = 410, TVOC = 1
+82:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+82:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+82:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+82:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+82:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+82:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+82:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+82:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+83:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+83:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+84:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+84:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+84:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+85:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+85:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+85:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+85:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+85:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+85:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+86:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+86:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+87:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+87:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+87:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+87:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+88:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+88:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+89:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+89:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+89:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+89:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+90:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+90:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+90:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+90:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+90:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+90:25 min:sec have passed
+eCO2 = 409, TVOC = 1
+90:30 min:sec have passed
+eCO2 = 409, TVOC = 1
+90:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+90:40 min:sec have passed
+eCO2 = 409, TVOC = 1
+90:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+90:50 min:sec have passed
+eCO2 = 416, TVOC = 2
+90:55 min:sec have passed
+eCO2 = 416, TVOC = 2
+91:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+91:05 min:sec have passed
+eCO2 = 416, TVOC = 2
+91:10 min:sec have passed
+eCO2 = 416, TVOC = 2
+91:15 min:sec have passed
+eCO2 = 421, TVOC = 3
+91:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+91:25 min:sec have passed
+eCO2 = 402, TVOC = 0
+91:30 min:sec have passed
+eCO2 = 402, TVOC = 0
+91:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+91:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+91:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+91:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+91:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+92:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+92:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+92:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+92:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+92:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+92:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+93:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+93:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+93:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+93:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+93:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+93:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:10 min:sec have passed
+eCO2 = 409, TVOC = 1
+94:15 min:sec have passed
+eCO2 = 402, TVOC = 0
+94:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+94:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+94:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+94:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+94:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+95:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+95:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+95:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+95:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+95:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+95:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+95:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+95:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+95:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+95:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+95:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+95:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+96:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+96:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+96:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+97:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+98:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+98:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+98:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+98:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+98:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+99:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+99:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+99:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+99:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+99:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+99:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+99:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+99:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+99:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+99:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+99:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+99:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+100:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+100:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+100:10 min:sec have passed
+eCO2 = 409, TVOC = 1
+100:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+100:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+100:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+101:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+101:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+101:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+101:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+101:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+101:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+102:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+102:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+102:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+102:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+102:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+103:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:10 min:sec have passed
+eCO2 = 407, TVOC = 1
+103:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+103:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+103:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+104:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+104:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+104:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+104:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+105:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+105:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+106:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+106:05 min:sec have passed
+eCO2 = 407, TVOC = 1
+106:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+106:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+106:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+106:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+107:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+107:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+107:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+107:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+107:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+107:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+108:10 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+108:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+108:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:05 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+109:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+109:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+109:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+110:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+110:05 min:sec have passed
+eCO2 = 411, TVOC = 1
+110:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+110:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+110:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+110:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+110:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+110:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+110:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+110:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+110:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+110:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+111:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+111:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+112:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+112:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+112:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+112:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+112:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+112:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+112:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+112:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+112:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+112:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+112:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+112:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+113:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+113:50 min:sec have passed
+eCO2 = 410, TVOC = 1
+113:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+114:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+114:05 min:sec have passed
+eCO2 = 410, TVOC = 1
+114:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+114:55 min:sec have passed
+eCO2 = 410, TVOC = 1
+115:00 min:sec have passed
+eCO2 = 410, TVOC = 1
+115:05 min:sec have passed
+eCO2 = 410, TVOC = 1
+115:10 min:sec have passed
+eCO2 = 402, TVOC = 0
+115:15 min:sec have passed
+eCO2 = 402, TVOC = 0
+115:20 min:sec have passed
+eCO2 = 402, TVOC = 0
+115:25 min:sec have passed
+eCO2 = 402, TVOC = 0
+115:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+115:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+115:40 min:sec have passed
+eCO2 = 414, TVOC = 2
+115:45 min:sec have passed
+eCO2 = 414, TVOC = 2
+115:50 min:sec have passed
+eCO2 = 414, TVOC = 2
+115:55 min:sec have passed
+eCO2 = 409, TVOC = 1
+116:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+116:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+116:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+116:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+116:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+116:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+116:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+116:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+116:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+116:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+116:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+116:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+117:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+117:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+117:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+117:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+117:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+118:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+118:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+118:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+118:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+118:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+118:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+118:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+118:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+118:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+118:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+118:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+118:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+119:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+119:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+119:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+119:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+119:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+119:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+119:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+119:35 min:sec have passed
+eCO2 = 410, TVOC = 1
+119:40 min:sec have passed
+eCO2 = 410, TVOC = 1
+119:45 min:sec have passed
+eCO2 = 410, TVOC = 1
+119:50 min:sec have passed
+eCO2 = 410, TVOC = 1
+119:55 min:sec have passed
+eCO2 = 410, TVOC = 1
+120:00 min:sec have passed
+eCO2 = 410, TVOC = 1
+120:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+120:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+120:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+120:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+121:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+121:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+121:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+121:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+121:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+121:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+121:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+121:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+121:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+121:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+121:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+121:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+122:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+122:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+122:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+123:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+123:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+123:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+124:00 min:sec have passed
+eCO2 = 410, TVOC = 1
+124:05 min:sec have passed
+eCO2 = 402, TVOC = 0
+124:10 min:sec have passed
+eCO2 = 402, TVOC = 0
+124:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+124:20 min:sec have passed
+eCO2 = 402, TVOC = 0
+124:25 min:sec have passed
+eCO2 = 402, TVOC = 0
+124:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+124:35 min:sec have passed
+eCO2 = 402, TVOC = 0
+124:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+124:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+124:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+124:55 min:sec have passed
+eCO2 = 402, TVOC = 0
+125:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+125:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+125:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+125:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+125:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+125:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+126:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+126:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+126:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+127:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+127:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+127:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+127:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+127:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+127:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+127:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+127:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+127:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+127:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+127:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+127:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+128:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+128:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+128:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+129:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+129:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+129:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+129:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+129:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+130:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+130:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+130:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+130:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+130:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+131:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+131:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+132:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+132:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+132:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+132:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+132:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+133:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+133:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+133:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:25 min:sec have passed
+eCO2 = 409, TVOC = 1
+133:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+133:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+134:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+134:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+134:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+134:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+134:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+134:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+135:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+135:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+135:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+136:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+136:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+136:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+136:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+136:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+136:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+136:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+136:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+136:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+136:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+136:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+136:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+137:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+137:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+137:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+137:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+137:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+137:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+137:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+137:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+137:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+137:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+137:50 min:sec have passed
+eCO2 = 409, TVOC = 1
+137:55 min:sec have passed
+eCO2 = 409, TVOC = 1
+138:00 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:05 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:10 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:15 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:20 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:25 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:30 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+138:40 min:sec have passed
+eCO2 = 401, TVOC = 0
+138:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+138:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+138:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+139:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+139:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+139:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+139:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+140:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+140:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+140:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+140:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+140:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+140:25 min:sec have passed
+eCO2 = 409, TVOC = 1
+140:30 min:sec have passed
+eCO2 = 420, TVOC = 3
+140:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+140:40 min:sec have passed
+eCO2 = 409, TVOC = 1
+140:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+140:50 min:sec have passed
+eCO2 = 409, TVOC = 1
+140:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+141:00 min:sec have passed
+eCO2 = 416, TVOC = 2
+141:05 min:sec have passed
+eCO2 = 421, TVOC = 3
+141:10 min:sec have passed
+eCO2 = 416, TVOC = 2
+141:15 min:sec have passed
+eCO2 = 416, TVOC = 2
+141:20 min:sec have passed
+eCO2 = 416, TVOC = 2
+141:25 min:sec have passed
+eCO2 = 411, TVOC = 1
+141:30 min:sec have passed
+eCO2 = 411, TVOC = 1
+141:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+141:40 min:sec have passed
+eCO2 = 411, TVOC = 1
+141:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+141:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+141:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+142:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+142:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+142:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+142:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+142:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+143:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+143:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+143:40 min:sec have passed
+eCO2 = 409, TVOC = 1
+143:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+143:50 min:sec have passed
+eCO2 = 409, TVOC = 1
+143:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:05 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:10 min:sec have passed
+eCO2 = 401, TVOC = 0
+144:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:20 min:sec have passed
+eCO2 = 401, TVOC = 0
+144:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+144:55 min:sec have passed
+eCO2 = 402, TVOC = 0
+145:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+145:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+146:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+146:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+146:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+146:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+146:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+146:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+147:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+147:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+147:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+147:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+147:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+147:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+147:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+147:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+147:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+147:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+147:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+147:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+148:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+148:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+148:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+149:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+149:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+150:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+150:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+150:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+150:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+151:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+151:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+151:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+151:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+151:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+151:25 min:sec have passed
+eCO2 = 409, TVOC = 1
+151:30 min:sec have passed
+eCO2 = 409, TVOC = 1
+151:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+151:40 min:sec have passed
+eCO2 = 409, TVOC = 1
+151:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+151:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+151:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:05 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:10 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+152:30 min:sec have passed
+eCO2 = 414, TVOC = 2
+152:35 min:sec have passed
+eCO2 = 414, TVOC = 2
+152:40 min:sec have passed
+eCO2 = 414, TVOC = 2
+152:45 min:sec have passed
+eCO2 = 414, TVOC = 2
+152:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+152:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+153:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+153:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+153:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+153:15 min:sec have passed
+eCO2 = 409, TVOC = 1
+153:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+153:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+153:30 min:sec have passed
+eCO2 = 409, TVOC = 1
+153:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+153:40 min:sec have passed
+eCO2 = 409, TVOC = 1
+153:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+153:50 min:sec have passed
+eCO2 = 402, TVOC = 0
+153:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+154:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+154:40 min:sec have passed
+eCO2 = 409, TVOC = 1
+154:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+154:50 min:sec have passed
+eCO2 = 402, TVOC = 0
+154:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:40 min:sec have passed
+eCO2 = 411, TVOC = 1
+155:45 min:sec have passed
+eCO2 = 411, TVOC = 1
+155:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+155:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:05 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:10 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:45 min:sec have passed
+eCO2 = 407, TVOC = 1
+156:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+156:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+157:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+157:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+157:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+158:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+158:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+158:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+158:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+158:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+158:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+159:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+159:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+159:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+159:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+160:45 min:sec have passed
+eCO2 = 409, TVOC = 1
+160:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+160:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+161:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+161:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+161:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+161:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+161:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+161:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+162:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+162:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+162:40 min:sec have passed
+eCO2 = 411, TVOC = 1
+162:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+162:50 min:sec have passed
+eCO2 = 407, TVOC = 1
+162:55 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+163:10 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+163:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+163:50 min:sec have passed
+eCO2 = 409, TVOC = 1
+163:55 min:sec have passed
+eCO2 = 409, TVOC = 1
+164:00 min:sec have passed
+eCO2 = 409, TVOC = 1
+164:05 min:sec have passed
+eCO2 = 409, TVOC = 1
+164:10 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:15 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:20 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:25 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:30 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:35 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:40 min:sec have passed
+eCO2 = 420, TVOC = 3
+164:45 min:sec have passed
+eCO2 = 408, TVOC = 1
+164:50 min:sec have passed
+eCO2 = 408, TVOC = 1
+164:55 min:sec have passed
+eCO2 = 402, TVOC = 0
+165:00 min:sec have passed
+eCO2 = 402, TVOC = 0
+165:05 min:sec have passed
+eCO2 = 402, TVOC = 0
+165:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+165:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+165:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+165:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+165:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+165:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+165:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+165:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+165:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+165:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+166:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+166:40 min:sec have passed
+eCO2 = 407, TVOC = 1
+166:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+166:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+167:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+167:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+167:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+167:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+167:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+168:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+168:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+168:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+168:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+168:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+168:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+168:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+168:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+168:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+168:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+168:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+168:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+169:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+170:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+170:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+171:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+171:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+171:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+172:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+172:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+172:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+172:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+172:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+172:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+173:00 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:05 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+173:15 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:20 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+173:40 min:sec have passed
+eCO2 = 402, TVOC = 0
+173:45 min:sec have passed
+eCO2 = 402, TVOC = 0
+173:50 min:sec have passed
+eCO2 = 402, TVOC = 0
+173:55 min:sec have passed
+eCO2 = 402, TVOC = 0
+174:00 min:sec have passed
+eCO2 = 402, TVOC = 0
+174:05 min:sec have passed
+eCO2 = 402, TVOC = 0
+174:10 min:sec have passed
+eCO2 = 402, TVOC = 0
+174:15 min:sec have passed
+eCO2 = 402, TVOC = 0
+174:20 min:sec have passed
+eCO2 = 402, TVOC = 0
+174:25 min:sec have passed
+eCO2 = 407, TVOC = 1
+174:30 min:sec have passed
+eCO2 = 407, TVOC = 1
+174:35 min:sec have passed
+eCO2 = 407, TVOC = 1
+174:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+174:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+174:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+174:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+175:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:25 min:sec have passed
+eCO2 = 409, TVOC = 1
+175:30 min:sec have passed
+eCO2 = 409, TVOC = 1
+175:35 min:sec have passed
+eCO2 = 409, TVOC = 1
+175:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+175:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+175:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+176:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+176:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+176:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+176:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+177:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+177:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+177:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+177:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+178:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+179:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+179:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+179:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+179:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+179:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+180:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+180:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+181:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+181:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+182:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+182:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+183:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+183:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+183:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+183:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+183:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+184:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+184:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+184:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+184:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+185:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+185:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+185:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+185:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+185:20 min:sec have passed
+eCO2 = 410, TVOC = 1
+185:25 min:sec have passed
+eCO2 = 410, TVOC = 1
+185:30 min:sec have passed
+eCO2 = 416, TVOC = 2
+185:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+185:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+185:45 min:sec have passed
+eCO2 = 411, TVOC = 1
+185:50 min:sec have passed
+eCO2 = 411, TVOC = 1
+185:55 min:sec have passed
+eCO2 = 416, TVOC = 2
+186:00 min:sec have passed
+eCO2 = 416, TVOC = 2
+186:05 min:sec have passed
+eCO2 = 416, TVOC = 2
+186:10 min:sec have passed
+eCO2 = 423, TVOC = 3
+186:15 min:sec have passed
+eCO2 = 416, TVOC = 2
+186:20 min:sec have passed
+eCO2 = 416, TVOC = 2
+186:25 min:sec have passed
+eCO2 = 416, TVOC = 2
+186:30 min:sec have passed
+eCO2 = 411, TVOC = 1
+186:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+186:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+186:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+186:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+186:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+187:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+187:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+187:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+187:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+187:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+187:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+187:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+187:35 min:sec have passed
+eCO2 = 401, TVOC = 0
+187:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+187:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+187:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+187:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+188:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:35 min:sec have passed
+eCO2 = 401, TVOC = 0
+188:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+188:45 min:sec have passed
+eCO2 = 401, TVOC = 0
+188:50 min:sec have passed
+eCO2 = 401, TVOC = 0
+188:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+189:00 min:sec have passed
+eCO2 = 401, TVOC = 0
+189:05 min:sec have passed
+eCO2 = 401, TVOC = 0
+189:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+189:15 min:sec have passed
+eCO2 = 401, TVOC = 0
+189:20 min:sec have passed
+eCO2 = 401, TVOC = 0
+189:25 min:sec have passed
+eCO2 = 401, TVOC = 0
+189:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+189:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+189:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+189:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+189:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+189:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+190:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+190:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+190:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+190:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+190:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+190:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+190:30 min:sec have passed
+eCO2 = 406, TVOC = 0
+190:35 min:sec have passed
+eCO2 = 401, TVOC = 0
+190:40 min:sec have passed
+eCO2 = 401, TVOC = 0
+190:45 min:sec have passed
+eCO2 = 401, TVOC = 0
+190:50 min:sec have passed
+eCO2 = 401, TVOC = 0
+190:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+191:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+191:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+191:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+191:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+191:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+191:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+191:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+191:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+191:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+191:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+191:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+191:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+192:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+192:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+192:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+192:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+192:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+193:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+193:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+193:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+193:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+193:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:30 min:sec have passed
+eCO2 = 405, TVOC = 0
+194:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+194:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+194:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+194:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+194:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+195:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+195:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+195:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+195:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+195:35 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:40 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:45 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:50 min:sec have passed
+eCO2 = 405, TVOC = 0
+195:55 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:00 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:05 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:10 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:15 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:20 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:25 min:sec have passed
+eCO2 = 405, TVOC = 0
+196:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+196:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+196:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+196:45 min:sec have passed
+eCO2 = 400, TVOC = 0
+196:50 min:sec have passed
+eCO2 = 400, TVOC = 0
+196:55 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:15 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:20 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:25 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:35 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:40 min:sec have passed
+eCO2 = 400, TVOC = 0
+197:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+197:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+197:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:00 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:05 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:10 min:sec have passed
+eCO2 = 400, TVOC = 0
+198:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:30 min:sec have passed
+eCO2 = 400, TVOC = 0
+198:35 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+198:55 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:00 min:sec have passed
+eCO2 = 400, TVOC = 0
+199:05 min:sec have passed
+eCO2 = 400, TVOC = 0
+199:10 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:15 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:20 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:25 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:30 min:sec have passed
+eCO2 = 401, TVOC = 0
+199:35 min:sec have passed
+eCO2 = 401, TVOC = 0
+199:40 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:45 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:50 min:sec have passed
+eCO2 = 406, TVOC = 0
+199:55 min:sec have passed
+eC
