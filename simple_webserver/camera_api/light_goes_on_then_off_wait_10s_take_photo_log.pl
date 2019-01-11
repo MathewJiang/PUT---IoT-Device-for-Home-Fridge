@@ -4,7 +4,11 @@ use warnings;
 use English;
 use Fcntl ':flock';
 
-my $light_sensor = "/home/pi/proj/gited/ECE496-PUT/sensor_codes/Light_Sensor/light_sensor.py";
+our $path = `pwd`;
+chomp $path;
+$path =~ s/\/ECE496-PUT\/.*//g;
+
+my $light_sensor = "$path/ECE496-PUT/sensor_codes/Light_Sensor/light_sensor.py";
 
 my $lock = $ARGV[1];
 my $threshold = 900;
@@ -49,17 +53,17 @@ sub punlock {
 }
 
 sub write_to_weight_file {
-	`cat /dev/ttyUSB0 | /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.pl >> /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.log`;
+	`cat /dev/ttyUSB0 | $path/ECE496-PUT/sensor_codes/read_scale.pl >> /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.log`;
 }
 
 sub take_photo {
-	`sudo $ARGV[0] -a on -p 2`;
-	`raspistill -vf -hf -w 1920 -h 1080 -q 75 -o /home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/latest.jpg`;
+	`sudo $ARGV[0] -l 1-1 -a on -p 2`;
+	`raspistill -vf -hf -w 1920 -h 1080 -q 75 -o $path/ECE496-PUT/simple_webserver/camera_api/latest.jpg`;
 	 write_to_weight_file();
-	`sudo $ARGV[0] -a off -p 2`;
+	`sudo $ARGV[0] -l 1-1 -a off -p 2`;
 
-	my $date = `/home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/date_photo.pl`;
+	my $date = `$path/ECE496-PUT/simple_webserver/camera_api/date_photo.pl`;
 	chomp $date;
-	`cp /home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/latest.jpg /home/pi/proj/gited/ECE496-PUT/simple_webserver/camera_api/$date.jpg`;
+	`cp $path/ECE496-PUT/simple_webserver/camera_api/latest.jpg $path/ECE496-PUT/simple_webserver/camera_api/$date.jpg`;
 	}
 
