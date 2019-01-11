@@ -30,6 +30,26 @@ public class DBAccessTest {
     }
 
     @Test
+    public void testGetQueryLink_happyPath() {
+        final String query = "select * from blah;";
+        final String expected = DBAccess.ROOT_URL + DBAccess.USE_DB_COMMAND + query;
+
+        final String actual = DBAccess.GetQueryLink(query);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetQueryLink_emptyQuery_happyPath() {
+        final String query = "";
+        final String expected = DBAccess.ROOT_URL + DBAccess.USE_DB_COMMAND + query;
+
+        final String actual = DBAccess.GetQueryLink(query);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testGetLastInsertIdQuery_happyPath() {
         final String expected = "use putsDB;select LAST_INSERT_ID();";
 

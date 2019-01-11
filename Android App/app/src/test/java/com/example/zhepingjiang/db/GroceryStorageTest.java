@@ -101,6 +101,28 @@ public class GroceryStorageTest {
     }
 
     @Test
+    public void testGetInsertQuery_UIDUnspecified_replaceWithLastInsertIDQuery() {
+        final int uid = 0;
+        final StdNames stdName = new StdNames("Orange juice", new Categories("drink"));
+        final int contentQuantity = 800;
+        final ContentUnits contentUnit = new ContentUnits("ml");
+        final String lastUpdatedTimeStamp = "2019-01-07 19:23:45";
+        final String purchaseDate = "2019-01-03";
+        final String expiryDate = "2019-01-12";
+        final Statuses status = new Statuses("good");
+        final String expectedQuery = stdName.getUpsertQuery() +
+                contentUnit.getUpsertQuery() +
+                status.getUpsertQuery() +
+                "insert into grocery_storage values " +
+                "(LAST_INSERT_ID(),'Orange juice',800,'ml','2019-01-07 19:23:45','2019-01-03','2019-01-12','good');";
+
+        final String actualQuery = new GroceryStorage(0, stdName, contentQuantity, contentUnit,
+                lastUpdatedTimeStamp, purchaseDate, expiryDate, status).getInsertQuery();
+
+        assertEquals(expectedQuery, actualQuery);
+    }
+
+    @Test
     public void testGetUpsertQuery_happyPath() {
         final int uid = 6;
         final StdNames stdName = new StdNames("Orange juice", new Categories("drink"));
@@ -117,6 +139,28 @@ public class GroceryStorageTest {
                 "(6,'Orange juice',800,'ml','2019-01-07 19:23:45','2019-01-03','2019-01-12','good');";
 
         final String actualQuery = new GroceryStorage(uid, stdName, contentQuantity, contentUnit,
+                lastUpdatedTimeStamp, purchaseDate, expiryDate, status).getUpsertQuery();
+
+        assertEquals(expectedQuery, actualQuery);
+    }
+
+    @Test
+    public void testGetUpsertQuery_UIDUnspecified_replaceWithLastInsertIDQuery() {
+        final int uid = 0;
+        final StdNames stdName = new StdNames("Orange juice", new Categories("drink"));
+        final int contentQuantity = 800;
+        final ContentUnits contentUnit = new ContentUnits("ml");
+        final String lastUpdatedTimeStamp = "2019-01-07 19:23:45";
+        final String purchaseDate = "2019-01-03";
+        final String expiryDate = "2019-01-12";
+        final Statuses status = new Statuses("good");
+        final String expectedQuery = stdName.getUpsertQuery() +
+                contentUnit.getUpsertQuery() +
+                status.getUpsertQuery() +
+                "insert ignore into grocery_storage values " +
+                "(LAST_INSERT_ID(),'Orange juice',800,'ml','2019-01-07 19:23:45','2019-01-03','2019-01-12','good');";
+
+        final String actualQuery = new GroceryStorage(0, stdName, contentQuantity, contentUnit,
                 lastUpdatedTimeStamp, purchaseDate, expiryDate, status).getUpsertQuery();
 
         assertEquals(expectedQuery, actualQuery);

@@ -111,7 +111,7 @@ public class GroceryStorage {
         return stdName.getUpsertQuery() +
                 contentUnit.getUpsertQuery() +
                 status.getUpsertQuery() +
-                "insert into " + getTableName() + " values (" + uid + ",'" + stdName.getStdName() + "'," +
+                "insert into " + getTableName() + " values (" + ( uid == 0 ? "LAST_INSERT_ID()" : uid) + ",'" + stdName.getStdName() + "'," +
                     contentQuantity + ",'" + contentUnit.getUnit() + "','" + lastUpdatedTimeStamp + "','" +
                     purchaseDate + "','" + expiryDate + "','" + status.getStatus() +  "');";
     }
@@ -120,7 +120,7 @@ public class GroceryStorage {
         return stdName.getUpsertQuery() +
                 contentUnit.getUpsertQuery() +
                 status.getUpsertQuery() +
-                "insert ignore into " + getTableName() + " values (" + uid + ",'" + stdName.getStdName() + "'," +
+                "insert ignore into " + getTableName() + " values (" + ( uid == 0 ? "LAST_INSERT_ID()" : uid) + ",'" + stdName.getStdName() + "'," +
                 contentQuantity + ",'" + contentUnit.getUnit() + "','" + lastUpdatedTimeStamp + "','" +
                 purchaseDate + "','" + expiryDate + "','" + status.getStatus() +  "');";
     }
