@@ -22,6 +22,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 public class AddItemFragment extends Fragment {
@@ -44,11 +48,17 @@ public class AddItemFragment extends Fragment {
 
                 EditText enterFoodNameEditText = cur_view.findViewById(R.id.enterFoodEditText);
                 String foodName = enterFoodNameEditText.getText().toString();
+                EditText enterDurationEditText = cur_view.findViewById(R.id.enterDurationEditText);
+                String duration = enterDurationEditText.getText().toString();
+                EditText enterEndDateEditText = cur_view.findViewById(R.id.enterEndDateEditText);
+                String endDate = enterEndDateEditText.getText().toString();
 
-                if (foodName == null || foodName.isEmpty()) {
+                if (foodName == null || foodName.isEmpty()
+                        || (duration == null || duration.isEmpty()
+                            && (endDate == null || endDate.isEmpty()))) {
                     AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
                     alertDialog.setTitle("Input Error");
-                    alertDialog.setMessage("Food name cannot be empty");
+                    alertDialog.setMessage("Missing mandatory fields");
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
@@ -59,14 +69,31 @@ public class AddItemFragment extends Fragment {
                 } else {
                     Log.i(TAG, "onClick: " + foodName);
 
+                    // get the current Date
+                    Calendar calendar = Calendar.getInstance();
+                    Date curDate = calendar.getTime();
+                    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                    String startDate=dateFormat.format(curDate);
+
+                    // compute the exipration date if only duration is given
+                    if (duration != null && !duration.isEmpty()) {
+                        Integer durationInt = Integer.parseInt(duration);
+
+                        calendar.setTime(curDate);
+                        calendar.add(Calendar.DATE, durationInt);
+                        endDate = dateFormat.format(calendar.getTime());
+
+                        calendar.setTime(curDate);
+                    }
+
 
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
                     String url = "http://ece496puts.ddns.net:59496/raw_sql/" +
                             "use putsDB;" +
                             "insert into std_names values ('" + foodName + "', 'uncategorized');" +
                             "insert into purchase_history (std_name, vendor, brand, content_quantity, content_unit, is_packaged, package_unit, purchase_date, expiry_date) " +
-                            "VALUES ('" + foodName + "', 'default', 'default', '1', 'items', 'T', 'box', '2019-01-01', '2019-01-05');" +
-                            "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1, 'items', '2019-01-04 00:16:32', '2019-01-01', '2019-01-05', 'good');";
+                            "VALUES ('" + foodName + "', 'default', 'default', '1', 'items', 'T', 'box', '" + startDate + "', '" + endDate + "');" +
+                            "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1, 'items', '2019-01-04 00:16:32', '" + startDate +"', '" + endDate + "', 'good');";
 
                     Log.i(TAG, "onClick: " + url);
                     StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -94,22 +121,13 @@ public class AddItemFragment extends Fragment {
 
                     //clear the text if user enter some info
                     enterFoodNameEditText.setText("");
+                    enterEndDateEditText.setText("");
+                    enterDurationEditText.setText("");
 
                     //hide the keyboard
                     InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(cur_view.getWindowToken(), 0);
                 }
-
-//                AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
-//                alertDialog.setTitle("Success");
-//                alertDialog.setMessage("Add successfully");
-//                alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-//                        new DialogInterface.OnClickListener() {
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                dialog.dismiss();
-//                            }
-//                        });
-//                alertDialog.show();
             }
         });
     }

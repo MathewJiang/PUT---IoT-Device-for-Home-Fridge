@@ -31,7 +31,6 @@ public class DisplayItemFragment extends Fragment {
     LayoutInflater f_inflater;
     ViewGroup f_container;
     private LinearLayout parentLinearLayout;
-    private int num_row = 5;
 
     @Nullable
     @Override

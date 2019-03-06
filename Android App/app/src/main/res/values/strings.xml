@@ -10,8 +10,9 @@
 
     <string name="addButtonName">ADD</string>
     <string name="enterFoodNameText">Enter the name of the food</string>
-    <string name="enterStartDateText">Start Date (yyyy-mm-dd/Optional)</string>
-    <string name="enterDurationText">Duaration (Days/Optional)</string>
+    <string name="enterDurationInfoText">\nPlease fill either one of fields:</string>
+    <string name="enterStartDateText">Start Date (yyyy-mm-dd)</string>
+    <string name="enterDurationText">Duaration (Days)</string>
     <string name="enterExpirationDateText">Expiration Date (yyyy-mm-dd/Optional)</string>
     <string name="enterOptionalInfoText">\n\n\nThe following fields are optional:</string>
     <string name="enterQuantityText">Quantity (Optional)</string>
