@@ -33,7 +33,9 @@ my %dispatch = (
     '/show_latest_fridge_image_date' => \&resp_show_latest_fridge_image_date,
     '/get_weight' => \&resp_get_weight,
     '/ls_barcode_cache' => \&resp_ls_barcode_cache,
-    '/get_ccs811' => \&resp_ccs811
+    '/get_ccs811' => \&resp_ccs811,
+    '/turn_on_USB' => \&resp_USB_on,
+    '/turn_off_USB'=> \&resp_USB_off
     # ...
 );
 
@@ -379,7 +381,15 @@ sub resp_image {
 	#`./camera_api/take_a_photo.pl $usb_control`;
 	my @output = `./show_fridge_image.pl $lock_file`;
 	print @output;
-}	
+}
+
+sub resp_USB_on {
+	`sudo $usb_control -l 1-1 -a on -p 2`;
+}
+
+sub resp_USB_off {
+        `sudo $usb_control -l 1-1 -a off -p 2`;
+}
 
 #sub plock {
 #	my $lock_ = shift;

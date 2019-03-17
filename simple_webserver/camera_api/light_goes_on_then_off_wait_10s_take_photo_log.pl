@@ -53,7 +53,7 @@ sub punlock {
 }
 
 sub write_to_weight_file {
-	`cat /dev/ttyUSB0 | $path/ECE496-PUT/sensor_codes/read_scale.pl >> /home/pi/proj/gited/ECE496-PUT/sensor_codes/read_scale.log`;
+	`cat /dev/ttyUSB0 | $path/ECE496-PUT/sensor_codes/read_scale.pl >> $path/ECE496-PUT/sensor_codes/read_scale.log`;
 }
 
 sub take_photo {
