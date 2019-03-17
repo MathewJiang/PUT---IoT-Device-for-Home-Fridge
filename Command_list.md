@@ -59,8 +59,8 @@ returns ``Japan Limited, "coca Cola Clear", Transparent Cola, 280ml``.
 
 ## Control
 
-#### **turn_off_USB**
+#### **/turn_off_USB**
 * This is powering off USB
 
-#### **turn_on_USB**
+#### **/turn_on_USB**
 * This is powering on USB
