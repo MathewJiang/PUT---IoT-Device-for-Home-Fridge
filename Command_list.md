@@ -25,6 +25,8 @@
 
 #### **/read_scanner**
 * This must be called after turnning on USB
+* This blocking and return immediately once get something
+* Expect call turn_on_USB, while(scan_mode) {$number = read_scanner && /barcode_lookup/$number } turn_off_USB fashion
 
 ## data I/O
 #### **/hello_world**
