@@ -1,9 +1,12 @@
 # Zongxin Liu
 ## Comming next
-* Migrate current design into new hardware layout with new Rpi 3B+
+* Integrate barcode scanner
 
-![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/latetest_connections.jpeg?raw=true "board")
+## Jan. 9 2019
 
+* New cardboard all in one package
+
+![Alt Image Text](https://github.com/WyattLiu/ECE496-PUT/blob/master/Individual%20Progress%20Log/Zongxin%20Pictures/prototype.jpeg?raw=true "board")
 
 ## Jan. 6 2019
 ### Weight sensor
