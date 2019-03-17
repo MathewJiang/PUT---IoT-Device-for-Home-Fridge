@@ -23,6 +23,9 @@
 #### **/get_ccs811**
 * Return eCO2 and TVOC readings, unit should be ppm
 
+#### **/read_scanner**
+* This must be called after turnning on USB
+
 ## data I/O
 #### **/hello_world**
 * html, "Hi Android"
@@ -53,3 +56,11 @@
 * If it found it online, it will update cache, write to disk and response, so next query will save time and quota. Example:
 ``http://<URL>:8080/barcode_lookup/4901777227071``
 returns ``Japan Limited, "coca Cola Clear", Transparent Cola, 280ml``.
+
+## Control
+
+#### **turn_off_USB**
+* This is powering off USB
+
+#### **turn_on_USB**
+* This is powering on USB
