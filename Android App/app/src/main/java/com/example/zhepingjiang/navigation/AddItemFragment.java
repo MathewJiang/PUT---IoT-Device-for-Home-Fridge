@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.os.CountDownTimer;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -38,6 +40,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 
+import org.jsoup.Jsoup;
+
 public class AddItemFragment extends Fragment {
     private static final String TAG = "AddItemFragment";
     private Button add_button;
@@ -51,13 +55,15 @@ public class AddItemFragment extends Fragment {
         final View cur_view = view;
         add_button = (Button)view.findViewById(R.id.addButton);
 
+        queryBarcodeScanner(view);
+
         //TODO: Check for the startdate automatically for the user
         add_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                EditText enterFoodNameEditText = cur_view.findViewById(R.id.enterFoodEditText);
-                String foodName = enterFoodNameEditText.getText().toString();
+                TextInputLayout enterFoodNameEditText = cur_view.findViewById(R.id.enterFoodEditText);
+                String foodName = enterFoodNameEditText.getEditText().getText().toString();
                 EditText enterDurationEditText = cur_view.findViewById(R.id.enterDurationEditText);
                 String duration = enterDurationEditText.getText().toString();
                 EditText enterEndDateEditText = cur_view.findViewById(R.id.enterEndDateEditText);
@@ -100,7 +106,7 @@ public class AddItemFragment extends Fragment {
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
                     String url = "http://ece496puts.ddns.net:59496/raw_sql/" +
                             "use putsDB;" +
-                            "insert into std_names values ('" + foodName + "', 'uncategorized');" +
+                            "insert ignore into std_names values ('" + foodName + "', 'uncategorized');" +
                             "insert into purchase_history (std_name, vendor, brand, content_quantity, content_unit, is_packaged, package_unit, purchase_date, expiry_date) " +
                             "VALUES ('" + foodName + "', 'default', 'default', '1', 'items', 'T', 'box', '" + startDate + "', '" + endDate + "');" +
                             "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1, 'items', '2019-01-04 00:16:32', '" + startDate +"', '" + endDate + "', 'good');";
@@ -147,7 +153,7 @@ public class AddItemFragment extends Fragment {
                     queue.add(stringRequest);
 
                     //clear the text if user enter some info
-                    enterFoodNameEditText.setText("");
+                    enterFoodNameEditText.getEditText().setText("");
                     enterEndDateEditText.setText("");
                     enterDurationEditText.setText("");
 
@@ -163,5 +169,61 @@ public class AddItemFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.additem_layout, container, false);
+    }
+
+    private void queryBarcodeScanner(@NonNull View view) {
+        RequestQueue requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        StringRequest request = new StringRequest(Request.Method.GET, "http://ece496puts.ddns.net:59496/read_scanner", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Log.d("barcode_query", response);
+                String barcode = Jsoup.parse(response).select("h1").first().text();
+
+                TextInputLayout enterFoodEditText = view.findViewById(R.id.enterFoodEditText);
+                enterFoodEditText.setHelperText("Barcoded item: " + barcode);
+                EditText enterQuantityEditText = view.findViewById(R.id.enterQuantityEditText);
+                EditText enterUnitEditText = view.findViewById(R.id.enterUnitEditText);
+                EditText enterCategoryEditText = view.findViewById(R.id.enterCategoryEditText);
+                EditText enterBrandNameEditText = view.findViewById(R.id.enterBrandNameEditText);
+
+
+                if (barcode.charAt(0) < '5') {
+                    // orange juice
+                    enterFoodEditText.getEditText().setText("Orange juice");
+                    enterQuantityEditText.setText("500");
+                    enterUnitEditText.setText("ml");
+                    enterCategoryEditText.setText("Drink");
+                    enterBrandNameEditText.setText("Dole");
+                } else {
+                    // banana juice
+                    enterFoodEditText.getEditText().setText("Banana juice");
+                    enterQuantityEditText.setText("300");
+                    enterUnitEditText.setText("ml");
+                    enterCategoryEditText.setText("Drink");
+                    enterBrandNameEditText.setText("Minute Maid");
+                }
+
+                refreshBarcodeResult(view, 1000);
+            }
+        }, error ->  {
+            AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+            alertDialog.setTitle("Internet Error");
+            alertDialog.setMessage(error.getMessage());
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    (dialog, which) -> dialog.dismiss());
+            alertDialog.show();
+        });
+        requestQueue.add(request);
+    }
+
+    private void refreshBarcodeResult(@NonNull View view, final long timeoutInMillis) {
+        new CountDownTimer(timeoutInMillis, 20000) {
+            public void onTick(long millisUntilFinished) {
+            }
+            public void onFinish() {
+                Log.i("barcode_timeout", "every " + timeoutInMillis + "ms");
+                queryBarcodeScanner(view);
+            }
+        }.start();
     }
 }
