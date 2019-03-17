@@ -1,12 +1,22 @@
 package com.example.zhepingjiang.navigation;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -61,13 +71,47 @@ public class MainActivity extends AppCompatActivity
 
         displaySelectedScreen(R.id.content_main);
 
+
+
+//        // Notification tryout
+//        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+//        String NOTIFICATION_CHANNEL_ID = "my_channel_id_01";
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "My Notifications", NotificationManager.IMPORTANCE_MAX);
+//
+//            // Configure the notification channel.
+//            notificationChannel.setDescription("Channel description");
+//            notificationChannel.enableLights(true);
+//            notificationChannel.setLightColor(Color.RED);
+//            notificationChannel.setVibrationPattern(new long[]{0, 1000, 500, 1000});
+//            notificationChannel.enableVibration(true);
+//            notificationManager.createNotificationChannel(notificationChannel);
+//        }
+//
+//
+//        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
+//
+//        notificationBuilder.setAutoCancel(true)
+//                .setDefaults(Notification.DEFAULT_ALL)
+//                .setWhen(System.currentTimeMillis())
+//                .setSmallIcon(android.R.drawable.stat_notify_error)
+//                .setTicker("Hearty365")
+//                //     .setPriority(Notification.PRIORITY_MAX)
+//                .setContentTitle("Default notification")
+//                .setContentText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+//                .setContentInfo("Info");
+//
+//        notificationManager.notify(/*notification id*/1, notificationBuilder.build());
+
+
 //        new downloadDBResultTask().execute("");
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
 //                while (true) {
-////                    f_dbResult = ServerRequestHandler.getAlltemp();
-//                    Log.i(TAG, "The value for f_dbResult is: " + f_dbResult);
+////                    f_tempResult = ServerRequestHandler.getAlltemp();
+//                    Log.i(TAG, "The value for f_tempResult is: " + f_tempResult);
 //                    handler.post(new Runnable() {
 //                        @Override
 //                        public void run() {
@@ -127,6 +171,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_delete:
                 f = new DeleteItemFragment();
                 break;
+            case R.id.nav_info:
+                f = new InfoFragment();
+                break;
             default:
                 f = new DisplayItemFragment();
                 break;
@@ -153,7 +200,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_delete) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_info) {
 
         } else if (id == R.id.nav_share) {
 

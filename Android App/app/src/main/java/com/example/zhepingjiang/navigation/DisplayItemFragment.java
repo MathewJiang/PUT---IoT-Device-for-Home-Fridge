@@ -159,8 +159,8 @@ public class DisplayItemFragment extends Fragment {
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
-//                    f_dbResult = ServerRequestHandler.getAlltemp();
-//                    Log.i(TAG, "The value for f_dbResult is: " + f_dbResult);
+//                    f_tempResult = ServerRequestHandler.getAlltemp();
+//                    Log.i(TAG, "The value for f_tempResult is: " + f_tempResult);
 //                    handler.post(new Runnable() {
 //                        @Override
 //                        public void run() {
