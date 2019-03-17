@@ -72,7 +72,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="ccs811" />
+                    android:text="Air Quality" />
 
                 <TextView
                     android:id="@+id/ccs811_data_text_view"
