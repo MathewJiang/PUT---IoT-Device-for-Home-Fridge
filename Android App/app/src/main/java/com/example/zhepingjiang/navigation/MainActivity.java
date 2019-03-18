@@ -28,6 +28,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.zhepingjiang.service.NotificationService;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -72,6 +75,13 @@ public class MainActivity extends AppCompatActivity
         displaySelectedScreen(R.id.content_main);
 
 
+        Toast.makeText(this, "TOAST!!!", Toast.LENGTH_LONG).show();
+
+        startService(new Intent(this, NotificationService.class));
+        // Intent i = new Intent(this, NotificationService.class);
+        // this.startService(i);
+
+
 
 //        // Notification tryout
 //        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -105,22 +115,6 @@ public class MainActivity extends AppCompatActivity
 //        notificationManager.notify(/*notification id*/1, notificationBuilder.build());
 
 
-//        new downloadDBResultTask().execute("");
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (true) {
-////                    f_tempResult = ServerRequestHandler.getAlltemp();
-//                    Log.i(TAG, "The value for f_tempResult is: " + f_tempResult);
-//                    handler.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            resultTextView.setText("reached");
-//                        }
-//                    });
-//                }
-//            }
-//        }).start();
     }
 
     @Override

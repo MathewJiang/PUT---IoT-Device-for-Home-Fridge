@@ -25,7 +25,9 @@
 
         <service
             android:name="com.example.zhepingjiang.service.NotificationService"
-            android:exported="false"/>
+            android:exported="false"
+            android:enabled="true"
+            android:process=":message"/>
     </application>
 
 </manifest>
