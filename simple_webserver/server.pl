@@ -10,7 +10,8 @@ our $usb_control = `readlink -f ../thirdparty/uhubctl/uhubctl`;
 chomp $usb_control;
 our $testfile = `readlink -f ./testfile.txt`;
 our $data_delivery_on_path = "VOID";
-our $raw_sql = "readlink -f ../db/db_scripts/putsDB.sh";
+our $raw_sql = `readlink -f ../db/db_scripts/putsDB.sh`;
+our $barcode_reader = `readlink -f ../sensor_codes/read_barcode.sh`;
 {
 package PutsWebServerA1;
  
@@ -35,8 +36,9 @@ my %dispatch = (
     '/ls_barcode_cache' => \&resp_ls_barcode_cache,
     '/get_ccs811' => \&resp_ccs811,
     '/turn_on_USB' => \&resp_USB_on,
-    '/turn_off_USB'=> \&resp_USB_off
-    # ...
+    '/turn_off_USB'=> \&resp_USB_off,
+    '/read_scanner' => \&read_barcode
+	# ...
 );
 
 
@@ -189,7 +191,7 @@ sub resp_raw_sql_html {
 	my $cgi  = shift;   # CGI.pm object
     return if !ref $cgi;
     my $who = $cgi->param('name');
-    my @response = `sudo mysql -e "$data_delivery_on_path" -N -s -r -H`;
+    my @response = `sudo mysql -e "$data_delivery_on_path" -s -r -H`;
     #print STDERR "DEBUG: data_delivery_on_path $data_delivery_on_path\n";
     my $response_string = "";
     foreach my $line (@response) {
@@ -389,6 +391,19 @@ sub resp_USB_on {
 
 sub resp_USB_off {
         `sudo $usb_control -l 1-1 -a off -p 2`;
+}
+
+sub read_barcode {
+	my $barcode = `$barcode_reader`;
+	chomp $barcode;
+	my $cgi = shift;
+	 return if !ref $cgi;
+    my $who = $cgi->param('name');
+    print $cgi->header,
+          $cgi->start_html("barcode"),
+          $cgi->h1($barcode),
+	  $cgi->end_html;
+
 }
 
 #sub plock {
