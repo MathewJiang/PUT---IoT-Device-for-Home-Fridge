@@ -23,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.zhepingjiang.db.Barcodes;
 import com.example.zhepingjiang.db.Brands;
 import com.example.zhepingjiang.db.Categories;
 import com.example.zhepingjiang.db.ContentUnits;
@@ -39,6 +40,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
+import java.util.Set;
 
 import org.jsoup.Jsoup;
 
@@ -178,31 +180,51 @@ public class AddItemFragment extends Fragment {
             public void onResponse(String response) {
                 Log.d("barcode_query", response);
                 String barcode = Jsoup.parse(response).select("h1").first().text();
+                String queryBarcode;
 
                 TextInputLayout enterFoodEditText = view.findViewById(R.id.enterFoodEditText);
-                enterFoodEditText.setHelperText("Barcoded item: " + barcode);
                 EditText enterQuantityEditText = view.findViewById(R.id.enterQuantityEditText);
                 EditText enterUnitEditText = view.findViewById(R.id.enterUnitEditText);
                 EditText enterCategoryEditText = view.findViewById(R.id.enterCategoryEditText);
                 EditText enterBrandNameEditText = view.findViewById(R.id.enterBrandNameEditText);
 
-
                 if (barcode.charAt(0) < '5') {
-                    // orange juice
-                    enterFoodEditText.getEditText().setText("Orange juice");
-                    enterQuantityEditText.setText("500");
-                    enterUnitEditText.setText("ml");
-                    enterCategoryEditText.setText("Drink");
-                    enterBrandNameEditText.setText("Dole");
+                    // Milk
+                    queryBarcode = "064420000897";
                 } else {
-                    // banana juice
-                    enterFoodEditText.getEditText().setText("Banana juice");
-                    enterQuantityEditText.setText("300");
-                    enterUnitEditText.setText("ml");
-                    enterCategoryEditText.setText("Drink");
-                    enterBrandNameEditText.setText("Minute Maid");
+                    // Orange juice
+                    queryBarcode = "048500001769";
                 }
 
+                // Query barcode DB for info
+                String barcodeInfoQueryURL = DBAccess.GetQueryLink(Barcodes.GetSelectQueryStatic(queryBarcode));
+
+                StringRequest barcodeInfoQuery = new StringRequest(Request.Method.GET, barcodeInfoQueryURL, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.d("barcode_query", response);
+                        Set<Barcodes> barcodes = Barcodes.FromHTMLTableStr(response);
+
+                        if (!barcodes.isEmpty()) {
+                            Barcodes result = barcodes.iterator().next();
+
+                            enterFoodEditText.setHelperText("Barcoded item: " + queryBarcode);
+                            enterFoodEditText.getEditText().setText(result.getStdName().getStdName());
+                            enterQuantityEditText.setText(String.valueOf(result.getContentQuantity()));
+                            enterUnitEditText.setText(result.getContentUnit().getUnit());
+                            enterCategoryEditText.setText(result.getStdName().getCategory().getCategory());
+                            enterBrandNameEditText.setText(result.getBrand().getBrandName());
+                        }
+                    }
+                }, error ->  {
+                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    alertDialog.setTitle("Internet Error");
+                    alertDialog.setMessage(error.getMessage());
+                    alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            (dialog, which) -> dialog.dismiss());
+                    alertDialog.show();
+                });
+                requestQueue.add(barcodeInfoQuery);
                 refreshBarcodeResult(view, 1000);
             }
         }, error ->  {
