@@ -46,7 +46,12 @@ import org.jsoup.Jsoup;
 
 public class AddItemFragment extends Fragment {
     private static final String TAG = "AddItemFragment";
+    private static final int BARCODE_TIMEOUT_MILLI = 1000;
+
     private Button add_button;
+
+    private String recent_barcode_epoch = "0";
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -180,7 +185,14 @@ public class AddItemFragment extends Fragment {
             public void onResponse(String response) {
                 Log.d("barcode_query", response);
                 String barcode = Jsoup.parse(response).select("h1").first().text();
-                String queryBarcode;
+                String barcode_epoch = Jsoup.parse(response).select("h2").first().text();
+
+                if (recent_barcode_epoch.equals(barcode_epoch)) {
+                    refreshBarcodeResult(view, BARCODE_TIMEOUT_MILLI);
+                    return;
+                }
+
+                recent_barcode_epoch = barcode_epoch;
 
                 TextInputLayout enterFoodEditText = view.findViewById(R.id.enterFoodEditText);
                 EditText enterQuantityEditText = view.findViewById(R.id.enterQuantityEditText);
@@ -188,6 +200,7 @@ public class AddItemFragment extends Fragment {
                 EditText enterCategoryEditText = view.findViewById(R.id.enterCategoryEditText);
                 EditText enterBrandNameEditText = view.findViewById(R.id.enterBrandNameEditText);
 
+                String queryBarcode;
                 if (barcode.charAt(0) < '5') {
                     // Milk
                     queryBarcode = "064420000897";
@@ -225,7 +238,7 @@ public class AddItemFragment extends Fragment {
                     alertDialog.show();
                 });
                 requestQueue.add(barcodeInfoQuery);
-                refreshBarcodeResult(view, 1000);
+                refreshBarcodeResult(view, BARCODE_TIMEOUT_MILLI);
             }
         }, error ->  {
             AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
