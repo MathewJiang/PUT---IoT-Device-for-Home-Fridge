@@ -1,5 +1,6 @@
 package com.example.zhepingjiang.navigation;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,13 +23,42 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.zhepingjiang.db.ConsumptionHistory;
+import com.example.zhepingjiang.db.DBAccess;
+import com.example.zhepingjiang.db.GroceryStorage;
+import com.example.zhepingjiang.db.PurchaseHistory;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+import java.util.Map;
+import java.util.function.BooleanSupplier;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class DisplayItemFragment extends Fragment {
     private final String TAG = DisplayItemFragment.class.getSimpleName();
     public String f_dbResult;
     public Handler handler;
+
+    // DB results
+    Map<Integer, PurchaseHistory> uidToPurchaseHistories = null;
+    Map<Integer, GroceryStorage> uidToGroceryStorages = null;
+    Map<Integer, List<ConsumptionHistory>> uidToConsumptionHistories = null;
+
+    // DB load flags
+    BooleanSupplier isPurchaseHistoryLoaded = () -> (uidToPurchaseHistories != null);
+    BooleanSupplier isGroceryStorageLoaded = () -> (uidToGroceryStorages != null);
+    BooleanSupplier isConsumptionHistoryLoaded = () -> (uidToConsumptionHistories != null);
+    BooleanSupplier isEverythingLoaded = () -> (isPurchaseHistoryLoaded.getAsBoolean()
+            && isGroceryStorageLoaded.getAsBoolean()
+            && isConsumptionHistoryLoaded.getAsBoolean());
+
+    int selectedUid = -1;
+
 
     LayoutInflater f_inflater;
     ViewGroup f_container;
@@ -53,55 +84,64 @@ public class DisplayItemFragment extends Fragment {
 
         //Request towards the server
         RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
-        String url = "http://ece496puts.ddns.net:59496/raw_sql_br/use putsDB;select uid, std_name, expiry_date, status from grocery_storage;";
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
+        String groceryStorageUrl = DBAccess.GetQueryLink(GroceryStorage.GetSelectAllQueryStatic());
+        String purchaseHistoryUrl = DBAccess.GetQueryLink(PurchaseHistory.GetSelectAllQueryStatic());
+        String consumptionHistoryUrl = DBAccess.GetQueryLink(ConsumptionHistory.GetSelectAllQueryStatic());
+
+        StringRequest groceryStorageRequest = new StringRequest(Request.Method.GET, groceryStorageUrl, response -> {
             f_dbResult = response;
             Log.i(TAG, "onResponse: " + f_dbResult);
 
-            Thread t = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    if (f_dbResult != null) {
-                        f_dbResult = f_dbResult.substring(f_dbResult.indexOf("<h1>") + 4, f_dbResult.indexOf("</h1>"));
-                    }
-                }
-            });
-
-            t.start();
-            try {
-                t.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+//            Thread t = new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    if (f_dbResult != null) {
+//                        f_dbResult = f_dbResult.substring(f_dbResult.indexOf("<h1>") + 4, f_dbResult.indexOf("</h1>"));
+//                    }
+//                }
+//            });
+//
+//            t.start();
+//            try {
+//                t.join();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
 
             //Create new rows
             LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             parentLinearLayout = cur_view.findViewById(R.id.display_parent_layout);
 
-            String[][] results =  strParseHelp(f_dbResult);
+            Set<GroceryStorage> groceryRecords = GroceryStorage.FromHTMLTableStr(response);
+            // String[][] results =  strParseHelp(f_dbResult);
             int i;
-            for (String[] result : results) {
+            for (GroceryStorage record : groceryRecords) {
                 final View rowView = inflater.inflate(R.layout.field, null);
                 parentLinearLayout.addView(rowView, parentLinearLayout.getChildCount());
 
                 TextView UIDText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.uid_text_view);
-                UIDText.setText(result[0]);
+                UIDText.setText(String.valueOf(record.getUid()));
+                LinearLayout childLayout = (LinearLayout) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1);
+                setAhahaOnClickListener(UIDText, record.getUid(), cur_view);
 
-                int len = result.length;
-                if (len > 1) {
+                //int len = result.length;
+                if (true) {
                     TextView nameText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.name_text_view);
-                    nameText.setText(result[1]);
+                    nameText.setText(record.getStdName().getStdName());
+                    setAhahaOnClickListener(nameText, record.getUid(), cur_view);
                 }
 
-                if (len > 2) {
+                if (true) {
                     TextView dateText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.date_text_view);
-                    dateText.setText(result[2]);
+                    dateText.setText(record.getExpiryDate());
+                    setAhahaOnClickListener(dateText, record.getUid(), cur_view);
                 }
 
-                if (len > 3) {
+                if (true) {
                     TextView statusText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.status_text_view);
-                    statusText.setText(result[3]);
+                    statusText.setText(record.getStatus().getStatus());
+                    setAhahaOnClickListener(statusText, record.getUid(), cur_view);
                 }
 
                 Button rowButton1 = (Button) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.delete_button);
@@ -125,43 +165,26 @@ public class DisplayItemFragment extends Fragment {
                         parentLinearLayout.removeView((View) v.getParent());
                     });
             }
+            uidToGroceryStorages = groceryRecords.stream().collect(Collectors.toMap(gr->gr.getUid(), gr->gr));
         }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
-        queue.add(stringRequest);
+        queue.add(groceryStorageRequest);
 
-//        //Create new rows
-//        LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        parentLinearLayout = view.findViewById(R.id.display_parent_layout);
-//
-//        int i = 0;
-//        for (i = 0; i < num_row; i++) {
-//            final View rowView = inflater.inflate(R.layout.field, null);
-//            parentLinearLayout.addView(rowView, parentLinearLayout.getChildCount());
-//            Button rowButton1 = (Button) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.delete_button);
-//            rowButton1.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Log.i(TAG, "onClick: " + "rowButton");
-//                    parentLinearLayout.removeView((View) v.getParent());
-//                }
-//            });
-//        }
+        // Now query all purchase histories
+        StringRequest purchaseHistoryRequest = new StringRequest(Request.Method.GET, purchaseHistoryUrl, response -> {
+            Set<PurchaseHistory> purchaseHistories = PurchaseHistory.FromHTMLTableStr(response);
+            uidToPurchaseHistories = purchaseHistories.stream().collect(Collectors.toMap(ph->ph.getUid(), ph->ph));
+        }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
+        queue.add(purchaseHistoryRequest);
 
-
-//        handler = new Handler(getContext().getMainLooper());
-//
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                    f_tempResult = ServerRequestHandler.getAlltemp();
-//                    Log.i(TAG, "The value for f_tempResult is: " + f_tempResult);
-//                    handler.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            textView.setText("reached");
-//                        }
-//                    });
-//            }
-//        }).start();
+        // Now query all consumption histories
+        StringRequest consumptionHistoryRequest = new StringRequest(Request.Method.GET, consumptionHistoryUrl, response -> {
+            Set<ConsumptionHistory> consumptionHistories = ConsumptionHistory.FromHTMLTableStr(response);
+            uidToConsumptionHistories = consumptionHistories.stream()
+                    .sequential()
+                    .sorted(Comparator.comparing(ConsumptionHistory::getTimeStamp).reversed())
+                    .collect(Collectors.groupingBy(ConsumptionHistory::getUid));
+        }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
+        queue.add(consumptionHistoryRequest);
         
     }
 
@@ -182,5 +205,47 @@ public class DisplayItemFragment extends Fragment {
         }
 
         return output;
+    }
+
+    private void setAhahaOnClickListener(View view, int uid, View topLevelView) {
+        view.setOnClickListener(v -> {
+            if (!isEverythingLoaded.getAsBoolean()) {
+                return;
+            }
+            // Populate fields
+            PurchaseHistory ph = uidToPurchaseHistories.getOrDefault(uid, null);
+            TextView name_text = (TextView) (topLevelView.findViewById(R.id.item_name_text_view));
+            TextView remaining_quantity_text = (TextView) (topLevelView.findViewById(R.id.remaining_quantity_text_view));
+            TextView purchased_date_text = (TextView) (topLevelView.findViewById(R.id.purchase_date_text_view));
+            TextView expiry_date_text = (TextView) (topLevelView.findViewById(R.id.expiry_date_text_view));
+
+            if (ph != null) {
+                GroceryStorage gs = uidToGroceryStorages.get(uid);
+                name_text.setText("Name: " + ph.getStdName().getStdName());
+                remaining_quantity_text.setText("Remaining Quantity: " + gs.getContentQuantity() + " " + gs.getContentUnit().getUnit());
+                purchased_date_text.setText("Purchase Date: " + ph.getPurchaseDate());
+                expiry_date_text.setText("Expiry Date: " + ph.getExpiryDate());
+            } else {
+                name_text.setText("Name: Unknown");
+                remaining_quantity_text.setText("Remaining Quantity: Unknown");
+                purchased_date_text.setText("Purchase Date: Unknown");
+                expiry_date_text.setText("Expiry Date: Unknown");
+            }
+
+            // populate consumption history
+            ListView consumption_history_list_view = topLevelView.findViewById(R.id.consumption_history_list_view);
+            List<ConsumptionHistory> ch = uidToConsumptionHistories.getOrDefault(uid, Lists.newArrayList());
+            List<Map<String, String>> chContent = ch.stream().map(ch_entry -> {
+                Map<String, String> entryMap = Maps.newHashMap();
+                entryMap.put("Opid", String.valueOf(ch_entry.getOpid()));
+                entryMap.put("Quantity", String.valueOf(ch_entry.getConsumedQuantity()) + " " + ph.getContentUnit().getUnit());
+                entryMap.put("Action", ch_entry.getAction().getUserAction());
+                entryMap.put("Timestamp", ch_entry.getTimeStamp());
+                return entryMap;
+            }).collect(Collectors.toList());
+            consumption_history_list_view.setAdapter(new ConsumptionHistoryAdapter(getActivity(), chContent));
+
+            selectedUid = uid;
+        });
     }
 }

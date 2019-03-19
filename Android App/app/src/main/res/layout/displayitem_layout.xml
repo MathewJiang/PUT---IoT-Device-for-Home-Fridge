@@ -8,16 +8,21 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
 
         <LinearLayout
+            android:id="@+id/display_parent_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/display_parent_layout"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:layout_margin="5dp"
+            android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/display_child_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -27,29 +32,39 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:clickable="false"
                     android:gravity="center_vertical"
-                    android:text="UID"/>
+                    android:text="UID"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
                 <TextView
                     android:id="@+id/name_text_view"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
                     android:text="Name"
-                    android:gravity="center_vertical"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
                 <TextView
                     android:id="@+id/date_text_view"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
                     android:text="Expiry Date"
-                    android:gravity="center_vertical"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
                 <TextView
                     android:id="@+id/status_text_view"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center_vertical"
-                    android:text="Status"/>
+                    android:text="Status"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
                 <Button
                     android:id="@+id/delete_button"
@@ -75,14 +90,118 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!--
             <TextView
-            android:id="@+id/displayAllText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textAlignment="center" />-->
+                android:id="@+id/ch_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent Consumption History" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ch_title_opid"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:text="Opid" />
+
+                <TextView
+                    android:id="@+id/ch_title_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:text="Quantity" />
+
+                <TextView
+                    android:id="@+id/ch_title_action"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:text="Action" />
+
+                <TextView
+                    android:id="@+id/ch_title_timestamp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:inputType="phone"
+                    android:text="Time" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/consumption_history_list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:cacheColorHint="@android:color/transparent"
+                android:dividerHeight="1dp"
+                android:paddingLeft="2dp"></ListView>
+
+            <TextView
+                android:id="@+id/grocery_storage_detail_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item details" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_name_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/remaining_quantity_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remaining Quantity:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/purchase_date_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase Date:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/expiry_date_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Expiry Date:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/log_consumption_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Consumption" />
+
         </LinearLayout>
     </ScrollView>
 
