@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity
         displaySelectedScreen(R.id.content_main);
 
 
-        Toast.makeText(this, "TOAST!!!", Toast.LENGTH_LONG).show();
+        // Toast.makeText(this, "TOAST!!!", Toast.LENGTH_LONG).show();
 
         startService(new Intent(this, NotificationService.class));
         // Intent i = new Intent(this, NotificationService.class);
