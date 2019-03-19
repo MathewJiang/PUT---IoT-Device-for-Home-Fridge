@@ -2,6 +2,7 @@ package com.example.zhepingjiang.navigation;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -29,6 +30,8 @@ import com.example.zhepingjiang.db.GroceryStorage;
 import com.example.zhepingjiang.db.PurchaseHistory;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+
+import org.w3c.dom.Text;
 
 import java.util.Comparator;
 import java.util.List;
@@ -142,6 +145,10 @@ public class DisplayItemFragment extends Fragment {
                     TextView statusText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.status_text_view);
                     statusText.setText(record.getStatus().getStatus());
                     setAhahaOnClickListener(statusText, record.getUid(), cur_view);
+                    // Show error sign after the expired item.
+                    if (record.getStatus().getStatus().equals("expired")) {
+                        statusText.setError("This item has expired");
+                    }
                 }
 
                 Button rowButton1 = (Button) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.delete_button);
@@ -218,6 +225,7 @@ public class DisplayItemFragment extends Fragment {
             TextView remaining_quantity_text = (TextView) (topLevelView.findViewById(R.id.remaining_quantity_text_view));
             TextView purchased_date_text = (TextView) (topLevelView.findViewById(R.id.purchase_date_text_view));
             TextView expiry_date_text = (TextView) (topLevelView.findViewById(R.id.expiry_date_text_view));
+            TextView expiry_warning_text = (TextView) (topLevelView.findViewById(R.id.item_expired_warning_text));
 
             if (ph != null) {
                 GroceryStorage gs = uidToGroceryStorages.get(uid);
@@ -225,6 +233,12 @@ public class DisplayItemFragment extends Fragment {
                 remaining_quantity_text.setText("Remaining Quantity: " + gs.getContentQuantity() + " " + gs.getContentUnit().getUnit());
                 purchased_date_text.setText("Purchase Date: " + ph.getPurchaseDate());
                 expiry_date_text.setText("Expiry Date: " + ph.getExpiryDate());
+                expiry_warning_text.setVisibility(View.INVISIBLE);
+                expiry_date_text.setError(null);
+                if (gs.getStatus().getStatus().equals("expired")) {
+                    expiry_warning_text.setError("");
+                    expiry_warning_text.setVisibility(View.VISIBLE);
+                }
             } else {
                 name_text.setText("Name: Unknown");
                 remaining_quantity_text.setText("Remaining Quantity: Unknown");
