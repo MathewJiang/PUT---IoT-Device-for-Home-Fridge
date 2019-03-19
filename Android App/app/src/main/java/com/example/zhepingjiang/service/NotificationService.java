@@ -186,7 +186,7 @@ public class NotificationService extends Service {
                                             isExpired = true;
 
                                             String status = result[3];
-                                            if (status.equals("good")) {
+                                            if (status.equals("good") && msDiff <= 0) {
                                                 String uid = result[0];
                                                 RequestQueue queue3 = Volley.newRequestQueue(Objects.requireNonNull(getApplicationContext()));
                                                 String url3 = "http://ece496puts.ddns.net:59496/raw_sql_br/use putsDB;" +
