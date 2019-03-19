@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -47,7 +48,7 @@ public class DisplayItemFragment extends Fragment {
 
         getActivity().setTitle("All items");
 
-        final TextView textView = view.findViewById(R.id.displayAllText);
+        // final TextView textView = view.findViewById(R.id.displayAllText);
         final View cur_view = view;
 
         //Request towards the server
@@ -64,13 +65,6 @@ public class DisplayItemFragment extends Fragment {
                     if (f_dbResult != null) {
                         f_dbResult = f_dbResult.substring(f_dbResult.indexOf("<h1>") + 4, f_dbResult.indexOf("</h1>"));
                     }
-
-                    textView.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            textView.setText(f_dbResult);
-                        }
-                    });
                 }
             });
 
@@ -125,14 +119,13 @@ public class DisplayItemFragment extends Fragment {
                                 Log.i(TAG, "onResponse: " + "Deletion successful!\n");
 //                                        textView.setText("Deletion successful\n");
                             }
-                        }, error -> textView.setText("Deletion failed\n Please check the network"));
+                        }, error -> Toast.makeText(getActivity(),"Deletion failed\n Please check the network", Toast.LENGTH_LONG).show());
 
                         queue1.add(stringRequest1);
                         parentLinearLayout.removeView((View) v.getParent());
                     });
             }
-        }, error -> textView.setText("No response from the server\n Please check the network"));
-
+        }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
         queue.add(stringRequest);
 
 //        //Create new rows
