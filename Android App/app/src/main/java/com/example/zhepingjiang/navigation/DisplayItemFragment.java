@@ -1,13 +1,10 @@
 package com.example.zhepingjiang.navigation;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,31 +15,38 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.DialogFragment;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.zhepingjiang.db.Actions;
 import com.example.zhepingjiang.db.ConsumptionHistory;
 import com.example.zhepingjiang.db.DBAccess;
 import com.example.zhepingjiang.db.GroceryStorage;
 import com.example.zhepingjiang.db.PurchaseHistory;
+import com.example.zhepingjiang.db.StdNames;
+import com.example.zhepingjiang.navigation.LogActionDialogFragment.LogActionListener;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import org.w3c.dom.Text;
-
+import java.text.SimpleDateFormat;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.Map;
 import java.util.function.BooleanSupplier;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class DisplayItemFragment extends Fragment {
+public class DisplayItemFragment extends Fragment implements LogActionListener {
     private final String TAG = DisplayItemFragment.class.getSimpleName();
     public String f_dbResult;
     public Handler handler;
@@ -61,6 +65,8 @@ public class DisplayItemFragment extends Fragment {
             && isConsumptionHistoryLoaded.getAsBoolean());
 
     int selectedUid = -1;
+
+    BooleanSupplier isItemSelected = () -> (selectedUid >= 0);
 
 
     LayoutInflater f_inflater;
@@ -126,25 +132,25 @@ public class DisplayItemFragment extends Fragment {
                 TextView UIDText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.uid_text_view);
                 UIDText.setText(String.valueOf(record.getUid()));
                 LinearLayout childLayout = (LinearLayout) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1);
-                setAhahaOnClickListener(UIDText, record.getUid(), cur_view);
+                setItemOnClickListener(UIDText, record.getUid(), cur_view);
 
                 //int len = result.length;
                 if (true) {
                     TextView nameText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.name_text_view);
                     nameText.setText(record.getStdName().getStdName());
-                    setAhahaOnClickListener(nameText, record.getUid(), cur_view);
+                    setItemOnClickListener(nameText, record.getUid(), cur_view);
                 }
 
                 if (true) {
                     TextView dateText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.date_text_view);
                     dateText.setText(record.getExpiryDate());
-                    setAhahaOnClickListener(dateText, record.getUid(), cur_view);
+                    setItemOnClickListener(dateText, record.getUid(), cur_view);
                 }
 
                 if (true) {
                     TextView statusText = (TextView) parentLinearLayout.getChildAt(parentLinearLayout.getChildCount() - 1).findViewById(R.id.status_text_view);
                     statusText.setText(record.getStatus().getStatus());
-                    setAhahaOnClickListener(statusText, record.getUid(), cur_view);
+                    setItemOnClickListener(statusText, record.getUid(), cur_view);
                     // Show error sign after the expired item.
                     if (record.getStatus().getStatus().equals("expired")) {
                         statusText.setError("This item has expired");
@@ -192,6 +198,44 @@ public class DisplayItemFragment extends Fragment {
                     .collect(Collectors.groupingBy(ConsumptionHistory::getUid));
         }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
         queue.add(consumptionHistoryRequest);
+
+        // Define OnClickListener for Consume and Dispose Button
+        Button consumeButton = cur_view.findViewById(R.id.log_consumption_button);
+        Button disposeButton = cur_view.findViewById(R.id.log_disposal_button);
+
+        consumeButton.setEnabled(true);
+        disposeButton.setEnabled(true);
+        consumeButton.setOnClickListener(l -> {
+            consumeButton.setError(null);
+            if (!isEverythingLoaded.getAsBoolean() || !isItemSelected.getAsBoolean() ) {
+                return;
+            }
+            if (!uidToGroceryStorages.containsKey(selectedUid) || uidToGroceryStorages.get(selectedUid).getStatus().getStatus().equals("expired")) {
+                consumeButton.setError("Invalid item");
+                return;
+            }
+
+            GroceryStorage action_gs = uidToGroceryStorages.get(selectedUid);
+
+            LogActionDialogFragment dialogFragment = LogActionDialogFragment.newInstance(action_gs.getUid(), action_gs.getContentQuantity(),
+                    action_gs.getContentUnit().getUnit(), action_gs.getStdName().getStdName(), "consumption");
+            dialogFragment.setTargetFragment(this, 0);
+            dialogFragment.show(getFragmentManager(), "Log consumption");
+        });
+
+        disposeButton.setOnClickListener(l -> {
+            disposeButton.setError(null);
+            if (!isEverythingLoaded.getAsBoolean() || !isItemSelected.getAsBoolean() ) {
+                return;
+            }
+
+            GroceryStorage action_gs = uidToGroceryStorages.get(selectedUid);
+
+            LogActionDialogFragment dialogFragment = LogActionDialogFragment.newInstance(action_gs.getUid(), action_gs.getContentQuantity(),
+                    action_gs.getContentUnit().getUnit(), action_gs.getStdName().getStdName(), "disposal");
+            dialogFragment.setTargetFragment(this, 0);
+            dialogFragment.show(getFragmentManager(), "Log disposal");
+        });
         
     }
 
@@ -214,7 +258,7 @@ public class DisplayItemFragment extends Fragment {
         return output;
     }
 
-    private void setAhahaOnClickListener(View view, int uid, View topLevelView) {
+    private void setItemOnClickListener(View view, int uid, View topLevelView) {
         view.setOnClickListener(v -> {
             if (!isEverythingLoaded.getAsBoolean()) {
                 return;
@@ -260,6 +304,35 @@ public class DisplayItemFragment extends Fragment {
             consumption_history_list_view.setAdapter(new ConsumptionHistoryAdapter(getActivity(), chContent));
 
             selectedUid = uid;
+
+            // Mute button errors
+            ((Button)topLevelView.findViewById(R.id.log_consumption_button)).setError(null);
         });
+    }
+
+    @Override
+    public void onOKLogAction(int uid, int actionQuantity, String action) {
+        // Build the ultimate query
+        // Locate the grocery record first, then create a consumption record
+        GroceryStorage gs = uidToGroceryStorages.get(uid);
+        ConsumptionHistory newCH = new ConsumptionHistory(uid, gs.getStdName(), actionQuantity, gs.getContentQuantity() - actionQuantity,
+                new Actions(action), (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(new Date()));
+
+        gs.setContentQuantity(newCH.getRemainingQuantity());
+        gs.setLastUpdatedTimeStamp(newCH.getTimeStamp());
+
+        String query = gs.getDeleteQuery() + newCH.getInsertQuery();
+        if (gs.getContentQuantity() > 0) query += gs.getInsertQuery();
+
+        Log.d("LogActionQuery", query);
+
+        String queryLink = DBAccess.GetQueryLink(query);
+        StringRequest logActionRequest = new StringRequest(Request.Method.GET, queryLink, response -> {},
+                error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
+        Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(logActionRequest);
+        // Refresh fragment
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.content_main, new DisplayItemFragment());
+        ft.commit();
     }
 }
