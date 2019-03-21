@@ -193,7 +193,7 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
         StringRequest purchaseHistoryRequest = new StringRequest(Request.Method.GET, purchaseHistoryUrl, response -> {
             Set<PurchaseHistory> purchaseHistories = PurchaseHistory.FromHTMLTableStr(response);
             uidToPurchaseHistories = purchaseHistories.stream().collect(Collectors.toMap(ph->ph.getUid(), ph->ph));
-        }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
+        }, error -> {});
         queue.add(purchaseHistoryRequest);
 
         // Now query all consumption histories
@@ -203,7 +203,7 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
                     .sequential()
                     .sorted(Comparator.comparing(ConsumptionHistory::getTimeStamp).reversed())
                     .collect(Collectors.groupingBy(ConsumptionHistory::getUid));
-        }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
+        }, error -> {});
         queue.add(consumptionHistoryRequest);
 
         // Define OnClickListener for Consume and Dispose Button

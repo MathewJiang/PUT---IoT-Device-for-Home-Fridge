@@ -1,13 +1,13 @@
 package com.example.zhepingjiang.navigation;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,6 +56,7 @@ public class AddItemFragment extends Fragment {
     private String recent_barcode = "0";
 
     private RequestQueue addFragmentRequestQueue;
+    private AlertDialog.Builder alertBuilder;
 
 
     @Override
@@ -67,6 +68,7 @@ public class AddItemFragment extends Fragment {
         final View cur_view = view;
         add_button = (Button)view.findViewById(R.id.addButton);
 
+        alertBuilder = new AlertDialog.Builder(getContext());
         addFragmentRequestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
         initial_epoch = String.valueOf((new Date()).getTime() / 1000);
         Log.d("EPOCH", initial_epoch);
@@ -94,7 +96,7 @@ public class AddItemFragment extends Fragment {
                 if (foodName == null || foodName.isEmpty()
                         || (duration == null || duration.isEmpty()
                             && (endDate == null || endDate.isEmpty()))) {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = alertBuilder.create();
                     alertDialog.setTitle("Input Error");
                     alertDialog.setMessage("Missing mandatory fields");
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
@@ -168,7 +170,7 @@ public class AddItemFragment extends Fragment {
                             ;//TODO: what do we need to do here?
                         }
                     }, error -> {
-                        AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        AlertDialog alertDialog = alertBuilder.create();
                         alertDialog.setTitle("Internet Error");
                         alertDialog.setMessage("Internet Error: Please check your local network");
                         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
@@ -244,7 +246,7 @@ public class AddItemFragment extends Fragment {
                         }
                     }
                 }, error ->  {
-                    AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                    AlertDialog alertDialog = alertBuilder.create();
                     alertDialog.setTitle("Internet Error");
                     alertDialog.setMessage(error.getMessage());
                     alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
@@ -255,7 +257,7 @@ public class AddItemFragment extends Fragment {
                 refreshBarcodeResult(view, BARCODE_TIMEOUT_MILLI);
             }
         }, error ->  {
-            AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+            AlertDialog alertDialog = alertBuilder.create();
             alertDialog.setTitle("Internet Error");
             alertDialog.setMessage(error.getMessage());
             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
