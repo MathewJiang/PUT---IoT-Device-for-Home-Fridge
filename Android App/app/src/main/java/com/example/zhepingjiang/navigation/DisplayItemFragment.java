@@ -91,6 +91,13 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
         // final TextView textView = view.findViewById(R.id.displayAllText);
         final View cur_view = view;
 
+        // Turn off barcode scanner on bridge
+        Log.d("USBSWITCH", "turning off usb");
+        StringRequest turnOffUSBRequest = new StringRequest(Request.Method.GET,
+                "http://ece496puts.ddns.net:59496/turn_off_USB", response -> {}, error -> {});
+        Volley.newRequestQueue(getContext()).add(turnOffUSBRequest);
+
+
         //Request towards the server
         RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
 

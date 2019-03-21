@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.os.CountDownTimer;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -51,6 +52,9 @@ public class AddItemFragment extends Fragment {
     private Button add_button;
 
     private String recent_barcode_epoch = "0";
+    private String recent_barcode = "0";
+
+    private RequestQueue addFragmentRequestQueue;
 
 
     @Override
@@ -61,6 +65,14 @@ public class AddItemFragment extends Fragment {
 
         final View cur_view = view;
         add_button = (Button)view.findViewById(R.id.addButton);
+
+        addFragmentRequestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+
+        // First turn on barcode scanner on bridge
+        Log.d("USBSWITCH", "turning on usb");
+        StringRequest turnOnUSBRequest = new StringRequest(Request.Method.GET,
+                "http://ece496puts.ddns.net:59496/turn_on_USB", response -> {}, error -> {});
+        addFragmentRequestQueue.add(turnOnUSBRequest);
 
         queryBarcodeScanner(view);
 
@@ -111,12 +123,16 @@ public class AddItemFragment extends Fragment {
 
 
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
-                    String url = "http://ece496puts.ddns.net:59496/raw_sql/" +
-                            "use putsDB;" +
-                            "insert ignore into std_names values ('" + foodName + "', 'uncategorized');" +
+                    String url = "insert ignore into std_names values ('" + foodName + "', 'uncategorized');" +
                             "insert into purchase_history (std_name, vendor, brand, content_quantity, content_unit, is_packaged, package_unit, purchase_date, expiry_date) " +
                             "VALUES ('" + foodName + "', 'default', 'default', '1', 'items', 'T', 'box', '" + startDate + "', '" + endDate + "');" +
                             "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1, 'items', '2019-01-04 00:16:32', '" + startDate +"', '" + endDate + "', 'good');";
+
+
+                    // Update Barcode table if the item is barcode scanned.
+                    url += new Barcodes(recent_barcode, new Brands("default"), new StdNames("default"), 1, new ContentUnits("items"),
+                            true, new PackageUnits("box")).getUpsertQuery();
+                    url = DBAccess.GetQueryLink(url);
 
                     Log.i(TAG, "onClick: " + url);
                     StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -164,6 +180,8 @@ public class AddItemFragment extends Fragment {
                     enterEndDateEditText.setText("");
                     enterDurationEditText.setText("");
 
+                    recent_barcode = null;
+
                     //hide the keyboard
                     InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
                     imm.hideSoftInputFromWindow(cur_view.getWindowToken(), 0);
@@ -179,7 +197,6 @@ public class AddItemFragment extends Fragment {
     }
 
     private void queryBarcodeScanner(@NonNull View view) {
-        RequestQueue requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
         StringRequest request = new StringRequest(Request.Method.GET, "http://ece496puts.ddns.net:59496/read_scanner", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -193,6 +210,7 @@ public class AddItemFragment extends Fragment {
                 }
 
                 recent_barcode_epoch = barcode_epoch;
+                recent_barcode = barcode;
 
                 TextInputLayout enterFoodEditText = view.findViewById(R.id.enterFoodEditText);
                 EditText enterQuantityEditText = view.findViewById(R.id.enterQuantityEditText);
@@ -200,14 +218,7 @@ public class AddItemFragment extends Fragment {
                 EditText enterCategoryEditText = view.findViewById(R.id.enterCategoryEditText);
                 EditText enterBrandNameEditText = view.findViewById(R.id.enterBrandNameEditText);
 
-                String queryBarcode;
-                if (barcode.charAt(0) < '5') {
-                    // Milk
-                    queryBarcode = "064420000897";
-                } else {
-                    // Orange juice
-                    queryBarcode = "048500001769";
-                }
+                String queryBarcode = barcode;  // Using acquired barcode
 
                 // Query barcode DB for info
                 String barcodeInfoQueryURL = DBAccess.GetQueryLink(Barcodes.GetSelectQueryStatic(queryBarcode));
@@ -237,7 +248,7 @@ public class AddItemFragment extends Fragment {
                             (dialog, which) -> dialog.dismiss());
                     alertDialog.show();
                 });
-                requestQueue.add(barcodeInfoQuery);
+                addFragmentRequestQueue.add(barcodeInfoQuery);
                 refreshBarcodeResult(view, BARCODE_TIMEOUT_MILLI);
             }
         }, error ->  {
@@ -248,7 +259,7 @@ public class AddItemFragment extends Fragment {
                     (dialog, which) -> dialog.dismiss());
             alertDialog.show();
         });
-        requestQueue.add(request);
+        addFragmentRequestQueue.add(request);
     }
 
     private void refreshBarcodeResult(@NonNull View view, final long timeoutInMillis) {
