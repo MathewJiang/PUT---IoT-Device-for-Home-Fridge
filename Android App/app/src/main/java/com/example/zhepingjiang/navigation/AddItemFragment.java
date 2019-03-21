@@ -51,6 +51,7 @@ public class AddItemFragment extends Fragment {
 
     private Button add_button;
 
+    private String initial_epoch = "";
     private String recent_barcode_epoch = "0";
     private String recent_barcode = "0";
 
@@ -67,6 +68,8 @@ public class AddItemFragment extends Fragment {
         add_button = (Button)view.findViewById(R.id.addButton);
 
         addFragmentRequestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        initial_epoch = String.valueOf((new Date()).getTime() / 1000);
+        Log.d("EPOCH", initial_epoch);
 
         // First turn on barcode scanner on bridge
         Log.d("USBSWITCH", "turning on usb");
@@ -125,12 +128,12 @@ public class AddItemFragment extends Fragment {
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
                     String url = "insert ignore into std_names values ('" + foodName + "', 'uncategorized');" +
                             "insert into purchase_history (std_name, vendor, brand, content_quantity, content_unit, is_packaged, package_unit, purchase_date, expiry_date) " +
-                            "VALUES ('" + foodName + "', 'default', 'default', '1', 'items', 'T', 'box', '" + startDate + "', '" + endDate + "');" +
-                            "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1, 'items', '2019-01-04 00:16:32', '" + startDate +"', '" + endDate + "', 'good');";
+                            "VALUES ('" + foodName + "', 'Metro', 'Tropicana', '1000', 'ml', 'T', 'box', '" + startDate + "', '" + endDate + "');" +
+                            "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1000, 'ml', '2019-03-20 23:16:32', '" + startDate +"', '" + endDate + "', 'good');";
 
 
                     // Update Barcode table if the item is barcode scanned.
-                    url += new Barcodes(recent_barcode, new Brands("default"), new StdNames("default"), 1, new ContentUnits("items"),
+                    url += new Barcodes(recent_barcode, new Brands("Tropicana"), new StdNames(foodName), 1000, new ContentUnits("ml"),
                             true, new PackageUnits("box")).getUpsertQuery();
                     url = DBAccess.GetQueryLink(url);
 
@@ -203,8 +206,7 @@ public class AddItemFragment extends Fragment {
                 Log.d("barcode_query", response);
                 String barcode = Jsoup.parse(response).select("h1").first().text();
                 String barcode_epoch = Jsoup.parse(response).select("h2").first().text();
-
-                if (recent_barcode_epoch.equals(barcode_epoch)) {
+                if (recent_barcode_epoch.equals(barcode_epoch) || Long.valueOf(barcode_epoch) < Long.valueOf(initial_epoch)) {
                     refreshBarcodeResult(view, BARCODE_TIMEOUT_MILLI);
                     return;
                 }
@@ -213,6 +215,8 @@ public class AddItemFragment extends Fragment {
                 recent_barcode = barcode;
 
                 TextInputLayout enterFoodEditText = view.findViewById(R.id.enterFoodEditText);
+                enterFoodEditText.setHelperText("Barcoded item: " + recent_barcode);
+
                 EditText enterQuantityEditText = view.findViewById(R.id.enterQuantityEditText);
                 EditText enterUnitEditText = view.findViewById(R.id.enterUnitEditText);
                 EditText enterCategoryEditText = view.findViewById(R.id.enterCategoryEditText);
@@ -226,13 +230,12 @@ public class AddItemFragment extends Fragment {
                 StringRequest barcodeInfoQuery = new StringRequest(Request.Method.GET, barcodeInfoQueryURL, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Log.d("barcode_query", response);
+                        Log.d("barcode_info_query", response);
                         Set<Barcodes> barcodes = Barcodes.FromHTMLTableStr(response);
 
                         if (!barcodes.isEmpty()) {
                             Barcodes result = barcodes.iterator().next();
 
-                            enterFoodEditText.setHelperText("Barcoded item: " + queryBarcode);
                             enterFoodEditText.getEditText().setText(result.getStdName().getStdName());
                             enterQuantityEditText.setText(String.valueOf(result.getContentQuantity()));
                             enterUnitEditText.setText(result.getContentUnit().getUnit());
