@@ -31,6 +31,7 @@ import com.example.zhepingjiang.db.ConsumptionHistory;
 import com.example.zhepingjiang.db.DBAccess;
 import com.example.zhepingjiang.db.GroceryStorage;
 import com.example.zhepingjiang.db.PurchaseHistory;
+import com.example.zhepingjiang.db.Statuses;
 import com.example.zhepingjiang.db.StdNames;
 import com.example.zhepingjiang.navigation.LogActionDialogFragment.LogActionListener;
 import com.google.common.collect.Lists;
@@ -44,7 +45,12 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.Map;
 import java.util.function.BooleanSupplier;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class DisplayItemFragment extends Fragment implements LogActionListener {
     private final String TAG = DisplayItemFragment.class.getSimpleName();
@@ -63,6 +69,15 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
     BooleanSupplier isEverythingLoaded = () -> (isPurchaseHistoryLoaded.getAsBoolean()
             && isGroceryStorageLoaded.getAsBoolean()
             && isConsumptionHistoryLoaded.getAsBoolean());
+
+    Predicate<GroceryStorage> isItemExpired () {
+        return item -> DateTime.parse(item.getExpiryDate(), DateTimeFormat.forPattern("yyyy-MM-dd"))
+                .plusDays(1)
+                .isBeforeNow(); // Expiry means "expiry date" has gone past (i.e. yesterday).
+    };
+    Predicate<GroceryStorage> shouldSweepItem() {
+        return item -> isItemExpired().test(item) && !"expired".equals(item.getStatus().getStatus());
+    }
 
     int selectedUid = -1;
 
@@ -106,33 +121,36 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
         String consumptionHistoryUrl = DBAccess.GetQueryLink(ConsumptionHistory.GetSelectAllQueryStatic());
 
         StringRequest groceryStorageRequest = new StringRequest(Request.Method.GET, groceryStorageUrl, response -> {
-            f_dbResult = response;
-            Log.i(TAG, "onResponse: " + f_dbResult);
+            uidToGroceryStorages = GroceryStorage.FromHTMLTableStr(response).stream()
+                    .collect(Collectors.toMap(gr->gr.getUid(), gr->gr));
+            // Mark expired items in database.
+            Set<GroceryStorage> expiredItemsToSweep = uidToGroceryStorages.values().stream()
+                    .filter(shouldSweepItem())
+                    .collect(Collectors.toSet());
+            Log.d("SWEEPITEM", "Sweeping " + expiredItemsToSweep.size() + " expired items: "  + expiredItemsToSweep);
 
-//            Thread t = new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    if (f_dbResult != null) {
-//                        f_dbResult = f_dbResult.substring(f_dbResult.indexOf("<h1>") + 4, f_dbResult.indexOf("</h1>"));
-//                    }
-//                }
-//            });
-//
-//            t.start();
-//            try {
-//                t.join();
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            if (!expiredItemsToSweep.isEmpty()) {
+                String sweepItemsQuery = expiredItemsToSweep.stream()
+                        .map(item -> {
+                            item.setStatus(new Statuses("expired"));
+                            item.setLastUpdatedTimeStamp(DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss").print(DateTime.now()));
+                            uidToGroceryStorages.replace(item.getUid(), item);
+                            return item.getDeleteQuery() + item.getInsertQuery();
+                        }).collect(Collectors.joining());
+
+                String sweepQueryLink = DBAccess.GetQueryLink(sweepItemsQuery);
+                StringRequest sweepExpiredItemsRequest = new StringRequest(Request.Method.GET, sweepQueryLink, sweepResponse -> {},
+                        sweepError -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
+                Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(sweepExpiredItemsRequest);
+                // Display notification of swept item
+                Toast.makeText(getActivity(), "Swept " + expiredItemsToSweep.size() + " expired items", Toast.LENGTH_LONG).show();
+            }
 
             //Create new rows
             LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             parentLinearLayout = cur_view.findViewById(R.id.display_parent_layout);
 
-            Set<GroceryStorage> groceryRecords = GroceryStorage.FromHTMLTableStr(response);
-            // String[][] results =  strParseHelp(f_dbResult);
-            int i;
-            for (GroceryStorage record : groceryRecords) {
+            for (GroceryStorage record : uidToGroceryStorages.values()) {
                 final View rowView = inflater.inflate(R.layout.field, null);
                 parentLinearLayout.addView(rowView, parentLinearLayout.getChildCount());
 
@@ -185,20 +203,19 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
                         parentLinearLayout.removeView((View) v.getParent());
                     });
             }
-            uidToGroceryStorages = groceryRecords.stream().collect(Collectors.toMap(gr->gr.getUid(), gr->gr));
         }, error -> Toast.makeText(getActivity(), "No response from the server\n Please check the network", Toast.LENGTH_LONG).show());
         queue.add(groceryStorageRequest);
 
         // Now query all purchase histories
-        StringRequest purchaseHistoryRequest = new StringRequest(Request.Method.GET, purchaseHistoryUrl, response -> {
-            Set<PurchaseHistory> purchaseHistories = PurchaseHistory.FromHTMLTableStr(response);
+        StringRequest purchaseHistoryRequest = new StringRequest(Request.Method.GET, purchaseHistoryUrl, pResponse -> {
+            Set<PurchaseHistory> purchaseHistories = PurchaseHistory.FromHTMLTableStr(pResponse);
             uidToPurchaseHistories = purchaseHistories.stream().collect(Collectors.toMap(ph->ph.getUid(), ph->ph));
         }, error -> {});
         queue.add(purchaseHistoryRequest);
 
         // Now query all consumption histories
-        StringRequest consumptionHistoryRequest = new StringRequest(Request.Method.GET, consumptionHistoryUrl, response -> {
-            Set<ConsumptionHistory> consumptionHistories = ConsumptionHistory.FromHTMLTableStr(response);
+        StringRequest consumptionHistoryRequest = new StringRequest(Request.Method.GET, consumptionHistoryUrl, cResponse -> {
+            Set<ConsumptionHistory> consumptionHistories = ConsumptionHistory.FromHTMLTableStr(cResponse);
             uidToConsumptionHistories = consumptionHistories.stream()
                     .sequential()
                     .sorted(Comparator.comparing(ConsumptionHistory::getTimeStamp).reversed())
@@ -243,7 +260,7 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
             dialogFragment.setTargetFragment(this, 0);
             dialogFragment.show(getFragmentManager(), "Log disposal");
         });
-        
+
     }
 
 

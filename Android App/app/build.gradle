@@ -40,4 +40,6 @@ dependencies {
     api 'com.google.guava:guava:27.0.1-android'
     // jsoup HTML parser library @ https://jsoup.org/
     implementation 'org.jsoup:jsoup:1.11.3'
+    // joda datetime
+    implementation 'joda-time:joda-time:2.10.1'
 }

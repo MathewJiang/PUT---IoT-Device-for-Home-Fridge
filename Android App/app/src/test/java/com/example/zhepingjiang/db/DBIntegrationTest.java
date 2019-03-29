@@ -12,7 +12,7 @@ public class DBIntegrationTest {
         System.out.println("\n\n****Please run following query(s) in mySQL DB, remember to replace any serial ids with actual ones:****");
     }
 
-    @Ignore
+    @Test
     public void testInsertGroceryRecord() {
         final StdNames stdName = new StdNames("Orange juice", new Categories("juice"));
         final Vendors vendor = new Vendors("Loblaws");
@@ -35,18 +35,20 @@ public class DBIntegrationTest {
 
         final String phQuery = new PurchaseHistory(stdName, vendor, brand, contentQuantity, contentUnit,
                 isPackaged, packageUnit, purchaseDate, expiryDate).getInsertQuery();
-        final String gsQuery = new GroceryStorage(8, stdName, contentQuantity, contentUnit,
+        final String gsQuery = new GroceryStorage(0, stdName, contentQuantity, contentUnit,
                 lastUpdatedTimeStamp, purchaseDate, expiryDate, status).getInsertQuery();
         final String csQuery = new ConsumptionHistory(8, stdName, consumedQuantity,
                 remainingQuantity, action, consumptionTimeStamp).getInsertQuery();
 
         printCaveat();
-        System.out.println("purchase query:");
-        System.out.println(DBAccess.GetFullQuery(phQuery));
-        System.out.println("storage query:");
-        System.out.println(DBAccess.GetFullQuery(gsQuery));
-        System.out.println("consumption query:");
-        System.out.println(DBAccess.GetFullQuery(csQuery));
+//        System.out.println("purchase query:");
+//        System.out.println(DBAccess.GetFullQuery(phQuery));
+//        System.out.println("storage query:");
+//        System.out.println(DBAccess.GetFullQuery(gsQuery));
+//        System.out.println("consumption query:");
+//        System.out.println(DBAccess.GetFullQuery(csQuery));
+        System.out.println(DBAccess.GetQueryLink(phQuery + gsQuery));
+
 
     }
 
