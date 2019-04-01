@@ -344,6 +344,7 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
 
         gs.setContentQuantity(newCH.getRemainingQuantity());
         gs.setLastUpdatedTimeStamp(newCH.getTimeStamp());
+        gs.setStatus(new Statuses("good"));
 
         String query = gs.getDeleteQuery() + newCH.getInsertQuery();
         if (gs.getContentQuantity() > 0) query += gs.getInsertQuery();

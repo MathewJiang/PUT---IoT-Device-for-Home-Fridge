@@ -53,7 +53,7 @@ public class AddItemFragment extends Fragment {
 
     private String initial_epoch = "";
     private String recent_barcode_epoch = "0";
-    private String recent_barcode = "0";
+    private String recent_barcode = null;
 
     private RequestQueue addFragmentRequestQueue;
     private AlertDialog.Builder alertBuilder;
@@ -92,6 +92,12 @@ public class AddItemFragment extends Fragment {
                 String duration = enterDurationEditText.getText().toString();
                 EditText enterEndDateEditText = cur_view.findViewById(R.id.enterEndDateEditText);
                 String endDate = enterEndDateEditText.getText().toString();
+//                TextInputLayout enterFoodNameEditText = cur_view.findViewById(R.id.enterFoodEditText);
+//                String foodName = enterFoodNameEditText.getEditText().getText().toString();
+//                EditText enterDurationEditText = cur_view.findViewById(R.id.enterDurationEditText);
+//                String duration = enterDurationEditText.getText().toString();
+//                EditText enterEndDateEditText = cur_view.findViewById(R.id.enterEndDateEditText);
+//                String endDate = enterEndDateEditText.getText().toString();
 
                 if (foodName == null || foodName.isEmpty()
                         || (duration == null || duration.isEmpty()
@@ -128,48 +134,36 @@ public class AddItemFragment extends Fragment {
 
 
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
-                    String url = "insert ignore into std_names values ('" + foodName + "', 'uncategorized');" +
-                            "insert into purchase_history (std_name, vendor, brand, content_quantity, content_unit, is_packaged, package_unit, purchase_date, expiry_date) " +
-                            "VALUES ('" + foodName + "', 'Metro', 'Tropicana', '1000', 'ml', 'T', 'box', '" + startDate + "', '" + endDate + "');" +
-                            "insert into grocery_storage VALUES (LAST_INSERT_ID(), '" + foodName + "', 1000, 'ml', '2019-03-20 23:16:32', '" + startDate +"', '" + endDate + "', 'good');";
 
+                    // Example construct of Business Objects
+                    final PurchaseHistory purchaseHistory = new PurchaseHistory(new StdNames(foodName));
+                    purchaseHistory.getStdName().setCategory(new Categories("drink"));
+                    purchaseHistory.setBrand(new Brands("Dole"));
+                    purchaseHistory.setVendor(new Vendors("Loblaws"));
+                    purchaseHistory.setContentQuantity(1000);
+                    purchaseHistory.setContentUnit(new ContentUnits("ml"));
+                    purchaseHistory.setPackaged(true);
+                    purchaseHistory.setPackageUnit(new PackageUnits("box"));
+                    purchaseHistory.setPurchaseDate("2019-01-08");
+                    purchaseHistory.setExpiryDate("2019-04-22");
 
-                    // Update Barcode table if the item is barcode scanned.
-                    url += new Barcodes(recent_barcode, new Brands("Tropicana"), new StdNames(foodName), 1000, new ContentUnits("ml"),
-                            true, new PackageUnits("box")).getUpsertQuery();
-                    url = DBAccess.GetQueryLink(url);
+                    // UID unknown for now, next query will replace UID with LAST_INSERT_ID().
+                    final Statuses itemStatus = new Statuses("unopened");
+                    final String lastUpdatedTimeStamp = "2019-01-09 19:26:37";
+                    final GroceryStorage groceryStorage = new GroceryStorage(purchaseHistory, itemStatus, lastUpdatedTimeStamp);
+
+                    String insertQueryStr = purchaseHistory.getInsertQuery() + groceryStorage.getInsertQuery();
+
+                    if (recent_barcode != null) {
+                        // Update Barcode table if the item is barcode scanned.
+                        insertQueryStr += new Barcodes(recent_barcode, new Brands("Tropicana"), new StdNames(foodName), 1000, new ContentUnits("ml"),
+                                true, new PackageUnits("box")).getUpsertQuery();
+                    }
+
+                    String url = DBAccess.GetQueryLink(insertQueryStr);
 
                     Log.i(TAG, "onClick: " + url);
-                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-
-//                    // Example construct of Business Objects
-//                    final PurchaseHistory purchaseHistory = new PurchaseHistory(new StdNames(foodName));
-//                    purchaseHistory.getStdName().setCategory(new Categories("drink"));
-//                    purchaseHistory.setBrand(new Brands("Dole"));
-//                    purchaseHistory.setVendor(new Vendors("Loblaws"));
-//                    purchaseHistory.setContentQuantity(1000);
-//                    purchaseHistory.setContentUnit(new ContentUnits("ml"));
-//                    purchaseHistory.setPackaged(true);
-//                    purchaseHistory.setPackageUnit(new PackageUnits("box"));
-//                    purchaseHistory.setPurchaseDate("2019-01-08");
-//                    purchaseHistory.setExpiryDate("2019-01-22");
-//
-//                    // UID unknown for now, next query will replace UID with LAST_INSERT_ID().
-//                    final Statuses itemStatus = new Statuses("unopened");
-//                    final String lastUpdatedTimeStamp = "2019-01-09 19:26:37";
-//                    final GroceryStorage groceryStorage = new GroceryStorage(purchaseHistory, itemStatus, lastUpdatedTimeStamp);
-//
-//                    final String insertQueryStr = purchaseHistory.getInsertQuery() + groceryStorage.getInsertQuery();
-//                    final String queryUrl = DBAccess.GetQueryLink(insertQueryStr);
-//
-//                    Log.i(TAG, "onClick: " + queryUrl);
-//                    StringRequest stringRequest = new StringRequest(Request.Method.GET, queryUrl, new Response.Listener<String>() {
-
-                        @Override
-                        public void onResponse(String response) {
-                            ;//TODO: what do we need to do here?
-                        }
-                    }, error -> {
+                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {}, error -> {
                         AlertDialog alertDialog = alertBuilder.create();
                         alertDialog.setTitle("Internet Error");
                         alertDialog.setMessage("Internet Error: Please check your local network");

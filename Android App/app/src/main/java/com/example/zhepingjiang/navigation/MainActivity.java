@@ -168,6 +168,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_info:
                 f = new InfoFragment();
                 break;
+            case R.id.nav_timeline:
+                f = new TimelineFragment();
+                break;
             default:
                 f = new DisplayItemFragment();
                 break;
@@ -199,6 +202,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+
+        } else if (id == R.id.nav_timeline) {
 
         }
 
