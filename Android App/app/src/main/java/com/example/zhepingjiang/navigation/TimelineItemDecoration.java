@@ -133,7 +133,10 @@ public class TimelineItemDecoration extends RecyclerView.ItemDecoration {
                     DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss"));
 
             c.drawText(itemDateTime.toString("MMM dd"), Text_x, Text_y, datePaint);
-            c.drawText(itemDateTime.toString("HH:mm"), Text_x + 5, Text_y + 50, timePaint);
+
+            if (action != "purchase") {
+                c.drawText(itemDateTime.toString("HH:mm"), Text_x + 5, Text_y + 50, timePaint);
+            }
 
         }
     }
