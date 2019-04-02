@@ -20,6 +20,7 @@
     <string name="enterBrandNameText">Brand Name (Optional)</string>
     <string name="enterCategoryText">Category (Optional)</string>
     <string name="enterVendorNameText">Vendor Name (Optional)</string>
+    <string name="enterPackageUnitText">Package Unit (Optional)</string>
     <string name="fridgeImageText">\n\nMost recent image inside fridge:\n</string>
 
 </resources>

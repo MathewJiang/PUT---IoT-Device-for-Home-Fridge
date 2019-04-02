@@ -61,7 +61,7 @@ public class DeleteItemFragment extends Fragment {
 
 
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
-                    String url = "http://ece496puts.ddns.net:59496/raw_sql/" +
+                    String url = "http://192.168.1.120:8080/raw_sql/" +
                             "use putsDB;" +
                             "delete from std_names where std_name = '" + foodName + "';";
 

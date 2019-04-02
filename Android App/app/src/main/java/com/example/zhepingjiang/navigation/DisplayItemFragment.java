@@ -109,7 +109,7 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
         // Turn off barcode scanner on bridge
         Log.d("USBSWITCH", "turning off usb");
         StringRequest turnOffUSBRequest = new StringRequest(Request.Method.GET,
-                "http://ece496puts.ddns.net:59496/turn_off_USB", response -> {}, error -> {});
+                "http://192.168.1.120:8080/turn_off_USB", response -> {}, error -> {});
         Volley.newRequestQueue(getContext()).add(turnOffUSBRequest);
 
 
@@ -188,7 +188,7 @@ public class DisplayItemFragment extends Fragment implements LogActionListener {
 
                         RequestQueue queue1 = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
                         String cur_uid = ((TextView)((View)v.getParent()).findViewById(R.id.uid_text_view)).getText().toString();
-                        String url1 = "http://ece496puts.ddns.net:59496/raw_sql_br/use putsDB;delete from grocery_storage where uid=" + cur_uid + ";";
+                        String url1 = "http://192.168.1.120:8080/raw_sql_br/use putsDB;delete from grocery_storage where uid=" + cur_uid + ";";
                         Log.i(TAG, "onClick: " + "url for deletion is: " + url1);
                         StringRequest stringRequest1 = new StringRequest(Request.Method.GET, url1, new Response.Listener<String>() {
 

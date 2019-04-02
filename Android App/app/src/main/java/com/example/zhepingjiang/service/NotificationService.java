@@ -111,7 +111,7 @@ public class NotificationService extends Service {
                     // 1. Check if there is error message from server
                     String serverMessage = getServerMessage();
                     RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getApplicationContext()));
-                    String url = "http://ece496puts.ddns.net:59496/get_alert";
+                    String url = "http://192.168.1.120:8080/get_alert";
 
                     StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
                         f_errorResult = response;
@@ -155,7 +155,7 @@ public class NotificationService extends Service {
 
 
                     // 2. Check if food gets expired
-                    String url2 = "http://ece496puts.ddns.net:59496/raw_sql_br/use putsDB;select uid, std_name, expiry_date, status from grocery_storage;";
+                    String url2 = "http://192.168.1.120:8080/raw_sql_br/use putsDB;select uid, std_name, expiry_date, status from grocery_storage;";
                     StringRequest stringRequest2 = new StringRequest(Request.Method.GET, url2, response -> {
                         f_dbResult = response;
                         Log.i(TAG, "onResponses: " + f_dbResult);
@@ -189,7 +189,7 @@ public class NotificationService extends Service {
                                             if (status.equals("good") && msDiff <= 0) {
                                                 String uid = result[0];
                                                 RequestQueue queue3 = Volley.newRequestQueue(Objects.requireNonNull(getApplicationContext()));
-                                                String url3 = "http://ece496puts.ddns.net:59496/raw_sql_br/use putsDB;" +
+                                                String url3 = "http://192.168.1.120:8080/raw_sql_br/use putsDB;" +
                                                         "update grocery_storage set status = 'expired' where uid = '" + uid + "'";
                                                 StringRequest stringRequest3 = new StringRequest(Request.Method.GET, url3, response -> {
 

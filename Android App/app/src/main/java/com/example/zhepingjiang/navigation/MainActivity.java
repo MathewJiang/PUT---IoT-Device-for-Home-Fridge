@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity
 //        protected String doInBackground(String... strings) {
 //            try {
 //
-//                String url_str = "http://ece496puts.ddns.net:59496/raw_sql/use putsDB;select std_name from purchase_history;";
+//                String url_str = "http://192.168.1.120:8080/raw_sql/use putsDB;select std_name from purchase_history;";
 //                url_str = url_str.replaceAll(" ", "%20");
 //                System.out.println("url_str is " + url_str);
 //

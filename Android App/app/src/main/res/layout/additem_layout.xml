@@ -8,7 +8,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="465dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -105,11 +105,11 @@
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/enterVendorNameEditText"
+                android:id="@+id/enterPackageUnitEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/enterVendorNameText"
+                android:hint="Package Unit (e.g. box)"
                 android:inputType="text" />
 
         </LinearLayout>

@@ -7,7 +7,7 @@ public class DBAccess {
 
     public static int DUMMY_VALUE = 1;
 
-    static String ROOT_URL = "http://ece496puts.ddns.net:59496/raw_sql_html/";
+    static String ROOT_URL = "http://192.168.1.120:8080/raw_sql_html/";
     static String USE_DB_COMMAND = "use putsDB;";
 
     public static String GetFullQuery(final String query) {

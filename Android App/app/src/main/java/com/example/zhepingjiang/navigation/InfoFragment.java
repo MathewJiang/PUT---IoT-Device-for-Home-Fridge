@@ -29,7 +29,7 @@ public class InfoFragment extends Fragment {
     public String f_tempResult;
     public String f_weightResult;
     public String f_ccsResult;
-    public String f_fridgeImgURL = "http://ece496puts.ddns.net:59496/show_fridge_image";
+    public String f_fridgeImgURL = "http://192.168.1.120:8080/show_fridge_image";
     // public String f_fridgeImgURL = "http://a4.att.hudong.com/18/69/20300542519369139990697635551_s.jpg";
     ImageView img;
     public Bitmap img_bitmap;
@@ -48,7 +48,7 @@ public class InfoFragment extends Fragment {
         // get temperature
         final TextView tempDataView = view.findViewById(R.id.temperature_data_text_view);
         RequestQueue queue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
-        String url_getTemperature = "http://ece496puts.ddns.net:59496/show_temperature";
+        String url_getTemperature = "http://192.168.1.120:8080/show_temperature";
 
         StringRequest tempRequest = new StringRequest(Request.Method.GET, url_getTemperature, response -> {
             f_tempResult = response;
@@ -82,7 +82,7 @@ public class InfoFragment extends Fragment {
 
 
         // get weight
-        String url_getWeight = "http://ece496puts.ddns.net:59496/get_weight";
+        String url_getWeight = "http://192.168.1.120:8080/get_weight";
         final TextView weightDataView = view.findViewById(R.id.weight_data_text_view);
 
         StringRequest weightRequest = new StringRequest(Request.Method.GET, url_getWeight, response -> {
@@ -116,7 +116,7 @@ public class InfoFragment extends Fragment {
 
 
         // get ccs
-        String url_getccs = "http://ece496puts.ddns.net:59496/get_ccs811";
+        String url_getccs = "http://192.168.1.120:8080/get_ccs811";
         final TextView ccsDataView = view.findViewById(R.id.ccs811_data_text_view);
 
         StringRequest ccsRequest = new StringRequest(Request.Method.GET, url_getccs, response -> {
