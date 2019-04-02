@@ -186,6 +186,7 @@ public class AddItemFragment extends Fragment {
 
                     //clear the text if user enter some info
                     enterFoodNameEditText.getEditText().setText("");
+                    enterFoodNameEditText.setHelperTextEnabled(false);
                     enterEndDateEditText.setText("");
                     enterDurationEditText.setText("");
                     quantityEditText.setText("");
