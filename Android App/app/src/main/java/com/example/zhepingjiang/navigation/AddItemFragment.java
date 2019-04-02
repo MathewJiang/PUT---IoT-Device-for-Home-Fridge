@@ -37,6 +37,7 @@ import com.example.zhepingjiang.db.StdNames;
 import com.example.zhepingjiang.db.Vendors;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Calendar;
@@ -97,6 +98,8 @@ public class AddItemFragment extends Fragment {
                 String endDate = enterEndDateEditText.getText().toString();
 
                 // Optional fields
+                EditText enterStartDateEditText = cur_view.findViewById(R.id.enterStartDateEditText);
+                String startDateEntered = enterStartDateEditText.getText().toString();
                 EditText quantityEditText = cur_view.findViewById(R.id.enterQuantityEditText);
                 String quantity = quantityEditText.getText().toString();
                 EditText enterUnitEditText = cur_view.findViewById(R.id.enterUnitEditText);
@@ -128,13 +131,17 @@ public class AddItemFragment extends Fragment {
                     Calendar calendar = Calendar.getInstance();
                     Date curDate = calendar.getTime();
                     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                    String startDate=dateFormat.format(curDate);
+                    String startDate = startDateEntered.isEmpty() ? dateFormat.format(curDate) : startDateEntered;
 
                     // compute the exipration date if only duration is given
                     if (duration != null && !duration.isEmpty()) {
                         Integer durationInt = Integer.parseInt(duration);
+                        try {
+                            calendar.setTime(dateFormat.parse(startDate));
+                        } catch (ParseException e) {
 
-                        calendar.setTime(curDate);
+                        }
+
                         calendar.add(Calendar.DATE, durationInt);
                         endDate = dateFormat.format(calendar.getTime());
 
