@@ -156,8 +156,8 @@ public class AddItemFragment extends Fragment {
                             new StdNames(foodName, new Categories(category.isEmpty() ? "unknown" : category)));
                     purchaseHistory.setBrand(new Brands(brandName.isEmpty() ? "unknown" : brandName));
                     purchaseHistory.setVendor(new Vendors("Loblaws"));
-                    purchaseHistory.setContentQuantity(quantity.isEmpty() ? 1000 : Integer.valueOf(quantity));
-                    purchaseHistory.setContentUnit(new ContentUnits(unit.isEmpty() ? "ml" : unit));
+                    purchaseHistory.setContentQuantity(quantity.isEmpty() ? 1 : Integer.valueOf(quantity));
+                    purchaseHistory.setContentUnit(new ContentUnits(unit.isEmpty() ? "item" : unit));
                     purchaseHistory.setPackaged(true);
                     purchaseHistory.setPackageUnit(new PackageUnits(packageUnit==null ? "unknown" : packageUnit));
                     purchaseHistory.setPurchaseDate(startDate);
