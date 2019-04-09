@@ -11,7 +11,8 @@ chomp $usb_control;
 our $testfile = `readlink -f ./testfile.txt`;
 our $data_delivery_on_path = "VOID";
 our $raw_sql = `readlink -f ../db/db_scripts/putsDB.sh`;
-our $barcode_reader = `readlink -f ../sensor_codes/read_barcode.sh`;
+our $barcode_reader = `readlink -f ../sensor_codes/read_barcode_real.sh`;
+our $status_file = `readlink -f ./status_file`;
 {
 package PutsWebServerA1;
  
@@ -37,7 +38,8 @@ my %dispatch = (
     '/get_ccs811' => \&resp_ccs811,
     '/turn_on_USB' => \&resp_USB_on,
     '/turn_off_USB'=> \&resp_USB_off,
-    '/read_scanner' => \&read_barcode
+    '/read_scanner' => \&read_barcode,
+    '/get_alert' => \&get_error_msg
 	# ...
 );
 
@@ -300,7 +302,7 @@ my $cgi  = shift;   # CGI.pm object
     chomp $time_stamp;
     print $cgi->header,
           $cgi->start_html("Root"),
-          $cgi->h1("ECE496 Puts projects low level interfaces tester server (Test Jan 4)"),
+          $cgi->h1("ECE496 Puts projects low level interfaces server"),
 	  $cgi->h3("Temperature is $temperature C, Scale is $scale");
 	  print "<p>picture is taken at $time_stamp</p>";
 	print "<style>
@@ -395,28 +397,31 @@ sub resp_USB_off {
 
 sub read_barcode {
 	my $barcode = `$barcode_reader`;
-	chomp $barcode;
+        my @codes = split(/, /,$barcode);
+	my $cgi = shift;
+	 return if !ref $cgi;
+         my $who = $cgi->param('name');
+         print $cgi->header,
+	 $cgi->start_html("barcode"),
+	 $cgi->h1($codes[0]),
+	 $cgi->h2($codes[1]),
+	 $cgi->end_html;
+}
+sub get_error_msg {
+	my $msg = `cat $status_file`;
 	my $cgi = shift;
 	 return if !ref $cgi;
     my $who = $cgi->param('name');
     print $cgi->header,
-          $cgi->start_html("barcode"),
-          $cgi->h1($barcode),
+          $cgi->start_html("alert"),
+          $cgi->h1($msg),
 	  $cgi->end_html;
-
 }
 
-#sub plock {
-#	my $lock_ = shift;
-#	open(my $fh, '>>', $lock_) or die "Cannot lock $lock_\n";
-#	my $ret = flock($fh, LOCK_EX);
-#	return $fh;
-#}
-#
-#sub punlock {
-#	my $fh = shift;
-#	close($fh) or die "cannot unlock\n";
-#}
+# new server code here
+
+
+
 } 
  
 # start the server on port 8080

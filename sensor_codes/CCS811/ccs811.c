@@ -146,7 +146,7 @@ int i, rc;
 			ucTemp[0] = 0xe0;
 			rc = write(file_i2c, ucTemp, 1);
 			i = read(file_i2c, ucTemp, 1); // read the error
-			printf("error = %02x\n", ucTemp[0]);
+			//printf("error = %02x\n", ucTemp[0]);
 			return 0;
 		}
 		if ((ucTemp[4] & 0x99) == 0x98) // firmware valid and data ready
@@ -159,7 +159,7 @@ int i, rc;
 		}
 		else
 		{
-			printf("Error Data not ready error\n");
+			//printf("Error Data not ready error\n");
 			return 0;
 		}
 	}

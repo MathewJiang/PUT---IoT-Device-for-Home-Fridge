@@ -1,8 +1,8 @@
-#!/bin/bash
-continuous_mode_flag=1
-while read -r barcode < /dev/ttyACM0; do
-  echo $barcode
-  if [[ $# -le 1 ]]  && [[ $1 -ne 1 ]]; then
-    exit 0;
-  fi
-done
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+
+my $random_number = int(rand(89999999999999)) + 100000000000;
+print $random_number, "\n";

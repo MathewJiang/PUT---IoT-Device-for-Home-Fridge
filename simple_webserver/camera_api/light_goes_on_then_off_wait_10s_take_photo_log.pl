@@ -26,7 +26,7 @@ LOOP:
 	#print "Bright\n";
 	} while($rc_time < $threshold); # this is bridgt and flash is done
 
-	sleep(100);
+	sleep(45);
 	#print "take a photo\n";
 	$rc_time = `$light_sensor`;
 
@@ -58,7 +58,7 @@ sub write_to_weight_file {
 
 sub take_photo {
 	`sudo $ARGV[0] -l 1-1 -a on -p 2`;
-	`raspistill -vf -hf -w 1920 -h 1080 -q 75 -o $path/ECE496-PUT/simple_webserver/camera_api/latest.jpg`;
+	`raspistill -w 1920 -h 1080 -q 75 -o $path/ECE496-PUT/simple_webserver/camera_api/latest.jpg`;
 	 write_to_weight_file();
 	`sudo $ARGV[0] -l 1-1 -a off -p 2`;
 

@@ -8,5 +8,7 @@ cd CCS811
 ./ccs811demo | egrep ".*,.*," >> css811.log &
 cd ../../simple_webserver/key_value_pair_db/
 ./db.pl &
+cd ../../sensor_codes
+./write_barcode_if_power_in.pl &
 
 echo "Done"
