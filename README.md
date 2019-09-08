@@ -31,4 +31,8 @@ ECE496 design project
 
 
 ## Final Result:
+<img width="300" alt="portfolio_view" src="https://github.com/MathewJiang/PUT---IoT-Device-for-Home-Fridge/blob/master/DisplayFragment.png"> <img width="300" alt="portfolio_view" src="https://github.com/MathewJiang/PUT---IoT-Device-for-Home-Fridge/blob/master/Notification.png">
+
+<img width="300" alt="portfolio_view" src="https://github.com/MathewJiang/PUT---IoT-Device-for-Home-Fridge/blob/master/TimelineFragment.png">
+
 
